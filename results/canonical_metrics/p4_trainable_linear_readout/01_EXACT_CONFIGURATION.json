@@ -1,0 +1,78 @@
+{
+  "bootstrap": {
+    "replicates": 10000,
+    "seed": 20260809
+  },
+  "budgets": [
+    0,
+    7,
+    10,
+    20,
+    21,
+    35,
+    50,
+    100,
+    200,
+    500
+  ],
+  "claim_type": "TARGET_ASSISTED_LABELLED_TARGET_DIAGNOSTIC",
+  "code_identity": {
+    "branch": "codex/p4-trainable-linear-readout-v1",
+    "clean_before_execution": true,
+    "commit": "6335bae1ff43ba25b8d8141de11c1d5a5400c60a",
+    "tree": "bac01b0729317d65e1fc90d2e7f012aa6107614d",
+    "worktree": "<ORIGINAL_WORKSPACE>\\CRFID_research_code_v2_patch_p4_trainable_linear_readout_v1"
+  },
+  "experiment_id": "p4_trainable_linear_readout_v1",
+  "methods": {
+    "linear": "FROZEN_C1_SOURCE_ANCHORED_LINEAR_SOFTMAX",
+    "prototype": "TARGET_ONLY_COSINE_PROTOTYPE",
+    "zero": "FS0_FROZEN_SOURCE_HEAD"
+  },
+  "p4_source_hashes": {
+    "A1_P4.csv": "8f63f8bee3deb7747a88ac0fe1f47eabe8c0feedfe5a65cb503e25fdcf1377ee",
+    "A2_P4.csv": "6b20fb815d6df40ff9ad4c0ecbf3bc7a82762ac96b8fd7df7170504715d75a00",
+    "A3_P4.csv": "6c3bffcca0e81664398423c5c4828c3d7d4698a69e804fe69368e53bb8a9f6e3"
+  },
+  "parent_execution_commit": "b4c83f35e5777b9691509ce588c8188233ac54f1",
+  "parent_final_commit": "5af4b691d92a8949d78883d8e468cd008cc1aae1",
+  "preregistration_sha256": "3981144793981f96b44c486d413f32436129427902bbad34b6974257de57836b",
+  "runtime": {
+    "compute_platform": "cpu",
+    "numpy_version": "2.4.6",
+    "python_executable": "<LOCAL_USER_HOME>\\Envs\\crfid-strict-dg\\Scripts\\python.exe",
+    "python_executable_sha256": "5912d0884b23c0343983a864c6064242391e2265536f50b88624857e353882c9",
+    "python_version": "3.12.13",
+    "torch_version": "2.12.0+cpu"
+  },
+  "selected_lambda": 100.0,
+  "source_seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "support_seeds": [
+    104729,
+    130363,
+    155921,
+    181081,
+    205439,
+    230003,
+    254959,
+    280001,
+    305093,
+    330017,
+    355031,
+    380041,
+    405019,
+    430007,
+    455003,
+    480017,
+    505027,
+    530017,
+    555029,
+    580031
+  ]
+}

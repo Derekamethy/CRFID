@@ -1,0 +1,5 @@
+gate,passed,status
+governed_runtime_binding,True,PASS
+synthetic_mixup_validity,True,PASS
+cross_position_pairing_coverage_above_99_percent,False,FAIL_DOMAIN_AWARE_PAIRING_COVERAGE
+p4_remained_unopened,True,PASS

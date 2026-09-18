@@ -1,0 +1,11 @@
+check,passed,details
+equal_group_losses_preserve_uniform_q,True,uniform q remains uniform
+persistently_higher_loss_group_increases_q,True,P1 receives larger q
+lower_loss_group_loses_relative_q,True,P2 q decreases
+q_finite_nonnegative_and_normalized,True,stable normalized q
+numerical_log_weight_stabilization,True,overflow-safe exp-gradient update
+detached_q_update_and_model_gradient_flow,True,q is detached; weighted loss differentiates model
+group_label_order_invariant,True,mapping insertion order does not affect q
+group_balanced_batching_and_tagid_interleaving,True,every full batch has equal P1/P2 count
+erm_excludes_q_weights,True,ERM path calls erm_loss without GroupDROState
+governed_small_diagnostic,True,"{""both_source_positions_per_batch"": true, ""group_losses_differ"": true, ""q_changed_from_uniform"": true, ""small_true_label_subset_macro_f1"": 1.0, ""status"": ""PASS"", ""tagid_training_loss_decreased"": true}"

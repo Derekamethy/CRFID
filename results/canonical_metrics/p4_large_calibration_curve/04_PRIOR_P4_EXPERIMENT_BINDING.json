@@ -1,0 +1,51 @@
+{
+  "factor_aware_base": {
+    "commit": "9929b84c6e1803d5b3d3c2d6c8c291c7c4312f06",
+    "reused": [
+      "frozen model",
+      "cosine prototype",
+      "Latin-square folds",
+      "query seal",
+      "block bootstrap principle"
+    ],
+    "tag": "p4-factor-aware-few-shot-v1"
+  },
+  "historical_few_shot": {
+    "directly_comparable": false,
+    "prototype_macro_f1": {
+      "21": 0.145141,
+      "35": 0.14436,
+      "7": 0.112159
+    },
+    "reason": "different episode/query population and squared-Euclidean readout",
+    "tag": {
+      "commit": "40693e570d4a39c15246aa865a3aa05271b9c279",
+      "name": "few-shot-v2-final-release-2026-07-29",
+      "object": "b32531e32a38cbbea57563de0a962f01fa5cb019",
+      "object_type": "tag",
+      "tree": "bda85656b06f50bcf5880cef769fa0625595ed09"
+    }
+  },
+  "matched_target_assisted": {
+    "directly_comparable": false,
+    "macro_f1": 0.983494,
+    "reason": "within-condition Adapt/Val/Test with diagnosed near-duplicate dependence"
+  },
+  "retrospective": {
+    "directly_comparable": false,
+    "macro_f1": 0.5835693346352661,
+    "reason": "full-P4 outcomes selected the method and scored the same rows"
+  },
+  "strict_dg": {
+    "accuracy": 0.15663492063492063,
+    "checkpoint_seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "macro_f1": 0.11223088363457531,
+    "method": "C1_FIRST_DIFFERENCE_ERM_1DCNN"
+  }
+}

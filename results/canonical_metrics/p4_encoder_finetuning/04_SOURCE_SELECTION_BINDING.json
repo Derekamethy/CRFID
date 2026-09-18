@@ -1,0 +1,15 @@
+{
+  "candidate_summary_count": 48,
+  "experiment_id": "p4_encoder_finetuning_diagnostic_v1",
+  "p4_files_opened": 0,
+  "p4_metrics_used": false,
+  "phase": "SOURCE_ONLY_SELECTION_COMPLETE_BEFORE_P4_FINETUNING",
+  "source_import_manifest_sha256": "c3cfce2396466bd26a87bb66a6fb9d8523eaf998951165706b25b5e0cf0f7534",
+  "source_protocol_sha256": "01f4c46e2ceb7155d180f016dd3854281c033b95f6439ee9702b284bc63926d8",
+  "source_registry_path": "<EXTERNAL_SOURCE_REGISTRY>/CANONICAL_SOURCE_REGISTRY.csv",
+  "source_registry_sha256": "a1cbb062b4e2a57d62a6662acbe27cb151703ee07fa0ea3ef447bca4f96ad7e7",
+  "source_signals_array_sha256": "e5fa5c635069ad0df4494b83364e872deb98ed1ed660d88ceba6adceede2d34f",
+  "source_signals_file_sha256": "b8fa8d1699d3b5d0da9d7c45a3e709aff2802b6653afb10771d57b401f740aa8",
+  "source_signals_path": "<EXTERNAL_SOURCE_REGISTRY>/source_signals_float64.npy",
+  "unit_count": 2160
+}

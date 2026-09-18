@@ -1,0 +1,182 @@
+{
+  "candidate_rows": [
+    {
+      "familiar_validation_macro_f1_difference": 0.0022766356945457256,
+      "familiar_validation_macro_f1_mean": 0.2624277760015396,
+      "lambda_max": 0.01,
+      "mean_position_reduction": false,
+      "mechanism_eligible": false,
+      "outer_held_lopo_used_for_selection": false,
+      "p4_used": false,
+      "position_probe_difference_interval_95": [
+        -0.008600974299346843,
+        0.010286106402584844
+      ],
+      "position_probe_macro_f1_difference": 0.0007308109732688806,
+      "position_probe_macro_f1_mean": 0.9131947152918557,
+      "run_count": 15,
+      "strong_position_reduction": false,
+      "tagid_probe_macro_f1_difference": -0.006259119654077661,
+      "tagid_probe_macro_f1_mean": 0.22817182319703325,
+      "tagid_representation_retention_gate": {
+        "difference": -0.006259119654077661,
+        "passed": true,
+        "threshold": -0.05
+      },
+      "task_retention_gate": {
+        "difference": 0.0022766356945457256,
+        "passed": true,
+        "threshold": -0.02
+      }
+    },
+    {
+      "familiar_validation_macro_f1_difference": 0.005237759266199182,
+      "familiar_validation_macro_f1_mean": 0.26538889957319306,
+      "lambda_max": 0.03,
+      "mean_position_reduction": false,
+      "mechanism_eligible": false,
+      "outer_held_lopo_used_for_selection": false,
+      "p4_used": false,
+      "position_probe_difference_interval_95": [
+        -0.011312533335083714,
+        0.012240433377081935
+      ],
+      "position_probe_macro_f1_difference": 0.001148643058739962,
+      "position_probe_macro_f1_mean": 0.9136125473773268,
+      "run_count": 15,
+      "strong_position_reduction": false,
+      "tagid_probe_macro_f1_difference": -0.005233689157174315,
+      "tagid_probe_macro_f1_mean": 0.2291972536939366,
+      "tagid_representation_retention_gate": {
+        "difference": -0.005233689157174315,
+        "passed": true,
+        "threshold": -0.05
+      },
+      "task_retention_gate": {
+        "difference": 0.005237759266199182,
+        "passed": true,
+        "threshold": -0.02
+      }
+    },
+    {
+      "familiar_validation_macro_f1_difference": 0.0007052333863633575,
+      "familiar_validation_macro_f1_mean": 0.26085637369335724,
+      "lambda_max": 0.1,
+      "mean_position_reduction": true,
+      "mechanism_eligible": true,
+      "outer_held_lopo_used_for_selection": false,
+      "p4_used": false,
+      "position_probe_difference_interval_95": [
+        -0.019896462379827777,
+        0.00678803695464454
+      ],
+      "position_probe_macro_f1_difference": -0.006806690769456503,
+      "position_probe_macro_f1_mean": 0.9056572135491303,
+      "run_count": 15,
+      "strong_position_reduction": false,
+      "tagid_probe_macro_f1_difference": -0.007685505134863796,
+      "tagid_probe_macro_f1_mean": 0.2267454377162471,
+      "tagid_representation_retention_gate": {
+        "difference": -0.007685505134863796,
+        "passed": true,
+        "threshold": -0.05
+      },
+      "task_retention_gate": {
+        "difference": 0.0007052333863633575,
+        "passed": true,
+        "threshold": -0.02
+      }
+    },
+    {
+      "familiar_validation_macro_f1_difference": 0.01674518423055621,
+      "familiar_validation_macro_f1_mean": 0.2768963245375501,
+      "lambda_max": 0.3,
+      "mean_position_reduction": false,
+      "mechanism_eligible": false,
+      "outer_held_lopo_used_for_selection": false,
+      "p4_used": false,
+      "position_probe_difference_interval_95": [
+        -0.010629302181825295,
+        0.012071648478690045
+      ],
+      "position_probe_macro_f1_difference": 0.0003724324327704087,
+      "position_probe_macro_f1_mean": 0.9128363367513572,
+      "run_count": 15,
+      "strong_position_reduction": false,
+      "tagid_probe_macro_f1_difference": -0.02107001441234077,
+      "tagid_probe_macro_f1_mean": 0.21336092843877014,
+      "tagid_representation_retention_gate": {
+        "difference": -0.02107001441234077,
+        "passed": true,
+        "threshold": -0.05
+      },
+      "task_retention_gate": {
+        "difference": 0.01674518423055621,
+        "passed": true,
+        "threshold": -0.02
+      }
+    },
+    {
+      "familiar_validation_macro_f1_difference": -0.047901316652485676,
+      "familiar_validation_macro_f1_mean": 0.2122498236545082,
+      "lambda_max": 1.0,
+      "mean_position_reduction": false,
+      "mechanism_eligible": false,
+      "outer_held_lopo_used_for_selection": false,
+      "p4_used": false,
+      "position_probe_difference_interval_95": [
+        -0.00064691359072981,
+        0.03634722852667133
+      ],
+      "position_probe_macro_f1_difference": 0.017650489764043265,
+      "position_probe_macro_f1_mean": 0.9301143940826301,
+      "run_count": 15,
+      "strong_position_reduction": false,
+      "tagid_probe_macro_f1_difference": -0.036191659291615025,
+      "tagid_probe_macro_f1_mean": 0.19823928355949588,
+      "tagid_representation_retention_gate": {
+        "difference": -0.036191659291615025,
+        "passed": true,
+        "threshold": -0.05
+      },
+      "task_retention_gate": {
+        "difference": -0.047901316652485676,
+        "passed": false,
+        "threshold": -0.02
+      }
+    }
+  ],
+  "development_runs_completed": 165,
+  "highest_familiar_validation_within_tie": 0.26085637369335724,
+  "highest_tagid_probe_within_tie": 0.2267454377162471,
+  "largest_position_probe_reduction": -0.006806690769456503,
+  "matched_a0_means": {
+    "familiar_validation_macro_f1": 0.2601511403069939,
+    "position_probe_macro_f1": 0.9124639043185868,
+    "tagid_probe_macro_f1": 0.2344309428511109
+  },
+  "mechanism_candidate_class": "WEAK_POSITION_REDUCTION_CANDIDATES",
+  "p4_used": false,
+  "position_tied_lambdas": [
+    0.1
+  ],
+  "rule": "selective_invariance_then_position_tagid_task_smaller_lambda",
+  "schema_version": 1,
+  "selected_lambda": 0.1,
+  "selection_sha256": "efccbf70ab90d8f1bf10b6cf4c2daccfdef750c0c4ae1592ed74db03963975ad",
+  "status": "PASS_DANN_V2_SOURCE_ONLY_LAMBDA_SELECTION",
+  "strong_candidate_lambdas": [],
+  "tagid_probe_retention_threshold": -0.05,
+  "tagid_tied_lambdas": [
+    0.1
+  ],
+  "task_retention_threshold": -0.02,
+  "task_tied_lambdas": [
+    0.1
+  ],
+  "tie_tolerance_absolute_macro_f1": 0.002,
+  "weak_candidate_fallback_preregistered": true,
+  "weak_candidate_lambdas": [
+    0.1
+  ]
+}

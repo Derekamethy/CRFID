@@ -1,0 +1,13 @@
+{
+  "block_weights_sha256": "0ee6f4538a31f295a8029fe85bcbae7c1b93b34d1e8788aaebb52265e9cea7c8",
+  "linear_macro_f1_sha256": "a759fa04805a6615d8731d27582e13a5efa6c6fdf94b0988b0d9b0c80e77664f",
+  "paired_macro_f1_difference_sha256": "36c08f2d57e0879654fc0101169e188b88bf511e4ac1a97f7597116a63af62be",
+  "parent_bootstrap_reproduced_exactly": true,
+  "prototype_macro_f1_sha256": "5d3d56ff450182c8ccbb3d1bab2ad92b1fa3da4b0bb6b29db18139b585d76660",
+  "relative_path": "bootstrap_samples.npz",
+  "replicates": 10000,
+  "seed": 20260809,
+  "sha256": "e2f7db52081626bf109facf0dc3668e8ce329df15e60909e627e6e93eecde86b",
+  "source_counts_sha256": "0578922091f1a20ccfb1cf78b610d28e3e3a6e260fad63f74d43bd3baffc524e",
+  "support_counts_sha256": "43d5846d7dfac8fa4f887bb8b99048e795d1d66918b97cfb05254a1bcbd381bd"
+}

@@ -1,0 +1,7 @@
+{
+  "claim_type": "RETROSPECTIVE_P4_INFORMED_REFERENCE",
+  "same_p4_partition_reused_for_final_metrics": true,
+  "selected_method": "source_cosine_ncm",
+  "selection_type": "retrospective_full_p4_outcome_informed",
+  "source_only_selector_winner": "whiten_l0.75"
+}

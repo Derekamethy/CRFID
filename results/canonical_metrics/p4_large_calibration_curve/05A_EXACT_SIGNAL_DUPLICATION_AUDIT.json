@@ -1,0 +1,8 @@
+{
+  "cross_TagID_digest_groups": 0,
+  "cross_condition_block_digest_groups": 0,
+  "duplicate_digest_groups": 997,
+  "maximum_digest_multiplicity": 18,
+  "rows": 3150,
+  "unique_exact_signal_sha256": 1076
+}

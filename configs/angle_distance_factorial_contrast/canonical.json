@@ -1,0 +1,56 @@
+{
+  "protocol_id": "PAIRED_ANGLE_DISTANCE_FACTORIAL_CONTRAST_V1",
+  "base_commit": "4187fc44e05804ae1ad9ebbdf889ad8ca6f9e6d4",
+  "base_tree": "2ba9157341b90471012d3b51c989d009c93fb965",
+  "positions": {
+    "P1": {"distance_mm": 50, "angle_degrees": 0},
+    "P2": {"distance_mm": 50, "angle_degrees": 45},
+    "P3": {"distance_mm": 150, "angle_degrees": 0},
+    "P4": {"distance_mm": 150, "angle_degrees": 45}
+  },
+  "folds": [1, 2, 3],
+  "seeds": [42, 43, 44, 45, 46],
+  "expected_physical_cells": 63,
+  "expected_runs": 60,
+  "repetitions_per_cell": 50,
+  "primary_endpoint": "paired_condition_block_accuracy",
+  "primary_estimand": "mean_across_five_seeds_of_pooled_63_block_accuracy",
+  "macro_f1_estimand": "mean_across_five_seeds_of_seed_specific_pooled_63_block_macro_f1",
+  "angle_contrast": "0.5*((P2-P1)+(P4-P3))",
+  "distance_contrast": "0.5*((P3-P1)+(P4-P2))",
+  "interaction_contrast": "(P4-P3)-(P2-P1)",
+  "bootstrap": {
+    "primary_method": "paired_tagid_stratified_physical_block_bootstrap_with_seeds_fixed",
+    "sensitivity_method": "paired_tagid_stratified_physical_block_plus_paired_seed_bootstrap",
+    "resamples": 10000,
+    "confidence_level": 0.95,
+    "random_seed": 20260804
+  },
+  "paired_design_decision": "CASE_B_SYNCHRONIZED_RERUN_REQUIRED",
+  "existing_design_audit": {
+    "outer_test_assignments_synchronized": true,
+    "train_validation_assignments_synchronized": false,
+    "mismatched_position_groups": 492,
+    "decision_recorded_before_synchronized_training": true
+  },
+  "synchronized_rerun": {
+    "method_id": "C1_FIRST_DIFFERENCE_ERM_1DCNN",
+    "run_count": 60,
+    "hyperparameter_tuning": false,
+    "outer_folds": 3,
+    "seeds": [42, 43, 44, 45, 46],
+    "validation_selection_rng_material": "PAIRED_ANGLE_DISTANCE_FACTORIAL_CONTRAST_V1|fold={zero_based_fold}|seed={seed}|tag={TagID}",
+    "position_in_validation_rng": false,
+    "training_configuration_source": "configs/fixed_position_grouped_validity/canonical.json",
+    "learning_validity_policy": "reuse_completed_four_position_evidence_without_rerun"
+  },
+  "training_policy": "run_exactly_60_synchronized_C1_primary_runs_without_tuning",
+  "p_values": "not_reported",
+  "classification_categories": [
+    "ANGLE_ASSOCIATED_DEGRADATION",
+    "DISTANCE_ASSOCIATED_DEGRADATION",
+    "ANGLE_DISTANCE_INTERACTION",
+    "MIXED_FACTOR_PATTERN",
+    "FACTOR_EFFECT_NOT_CONFIRMED"
+  ]
+}

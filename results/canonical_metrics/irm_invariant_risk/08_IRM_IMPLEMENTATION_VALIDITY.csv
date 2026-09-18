@@ -1,0 +1,25 @@
+test,passed,evidence
+scalar_scale_starts_at_one,True,1.0
+forward_logits_multiplied_by_scale,True,scale_times_logits
+create_graph_active,True,True
+penalty_finite,True,0.04607817158102989
+penalty_non_negative,True,0.04607817158102989
+penalty_encoder_connectivity,True,0.26106470823287964
+penalty_classifier_connectivity,True,0.3060716986656189
+environment_permutation_invariance,True,0.12255368381738663
+conflicting_shortcut_nonzero_penalty,True,0.04607817158102989
+lambda_relative_contribution,True,1000.0
+pre_anneal_erm_equivalence,True,0.8873088359832764
+post_anneal_formula,True,0.12255368381738663
+anneal_boundary_exact,True,211->0;212->10
+float32_penalty,True,torch.float32
+finite_gradients_lambda_1000,True,finite
+detached_logits_detected,True,True
+create_graph_disabled_detected,True,True
+identical_environments_identical_risks,True,0.04858732968568802
+small_true_label_subset_fitted,True,"{""final"": 0.039430223405361176, ""initial"": 0.8375641107559204}"
+synthetic_invariant_feature_preferred,True,"{""invariant_weight"": 0.45606788992881775, ""shortcut_weight"": 0.41875341534614563}"
+matched_erm_never_receives_penalty,True,separate matched_erm_objective
+mixed_precision_disabled,True,float32_only
+governed_intervention_check,True,"{""both_active_environments_in_each_batch"": true, ""checkpoint_generation_succeeded"": true, ""encoder_second_order_gradient_norm"": 0.05653023347258568, ""final_tagid_cross_entropy"": 1.9963291883468628, ""final_tagid_risk"": 0.12819585477813325, ""initial_tagid_cross_entropy"": 2.0027986764907837, ""initial_tagid_risk"": 0.03571428571428571, ""irm_penalty_nonzero"": true, ""p4_artifact_opened"": false, ""tagid_loss_decreased"": true}"
+synthetic_p4_persistence,True,"{""exact_final_writer_succeeded"": true, ""receipt"": {""development_fold"": null, ""event"": ""P4_METRICS_ATOMICALLY_PERSISTED"", ""execution_stage"": ""FINAL_P4_EVALUATION"", ""held_source_position"": null, ""sha256"": ""98788c7733aaa967efc18d80cc26e13b9833bba951dd13d41081993d201cf691"", ""target_position"": ""P4"", ""training_positions"": ""P1_P2_P3""}, ""silent_retry_rejected"": true, ""simulated_failure_detected"": true}"

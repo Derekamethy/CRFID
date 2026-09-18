@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "datasets": {
+    "paper3_tyndall": {
+      "processed_location_key": "paper3_processed_root",
+      "manifest_location_key": "paper3_manifest_path",
+      "row_count": 9600,
+      "input_channels": 2,
+      "input_length": 512,
+      "class_order": [0,1,2,3,4,5,6,7],
+      "class_count": 8,
+      "label_column": "label__tag_id",
+      "condition_columns": ["domain__position","domain__surface"],
+      "group_column": "raw_sample_group_id",
+      "x_sha256": "548b61c8b4e26f32783a29e4146190185f4c727486ac9a409e59ae257bc79a8d",
+      "metadata_sha256": "dd435eee579845e7fc7f806df14d1a70a2c12a75bbdfe01c5516159bf831317f",
+      "manifest_sha256": "93c7904b80b9be46eda569241792bbf8780ccc33d9c53f354ba1b7ae5dc99974",
+      "parameter_count": 1245896
+    },
+    "paper4_depolarizing": {
+      "processed_location_key": "paper4_processed_root",
+      "manifest_location_key": "paper4_manifest_path",
+      "row_count": 12600,
+      "input_channels": 2,
+      "input_length": 512,
+      "class_order": [1,2,3,4,5,6,7],
+      "class_count": 7,
+      "label_column": "label__tag_id",
+      "condition_columns": ["domain__position","domain__surface_case"],
+      "group_column": "raw_sample_group_id",
+      "x_sha256": "f2ebf450e2f436659f8328e8e12d78efb49eb8e183c8c2e14b8b436acf8532b0",
+      "metadata_sha256": "3a3fb2e27c9f52798bea2f9a70c22d625ddb1b566496d929a715463a0472fcd8",
+      "manifest_sha256": "9cb5d45f4f1bf7233c0594957520510c3c7563a98912c270d550328f973bfba6",
+      "parameter_count": 1245383
+    }
+  }
+}

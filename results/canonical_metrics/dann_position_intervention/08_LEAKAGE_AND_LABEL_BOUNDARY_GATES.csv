@@ -1,0 +1,19 @@
+gate,status
+source condition blocks do not cross train/validation boundaries,PASS
+held source positions do not enter training,PASS
+P4 does not enter source selection,PASS
+ERM and DANN use identical source samples,PASS
+ERM and DANN use identical TagID labels,PASS
+ERM and DANN use identical training seeds,PASS
+ERM and DANN use identical checkpoint rules,PASS
+only the domain head and reversed domain gradient differ,PASS
+source batches are matched,PASS
+lambda selection uses source-only evidence,PASS
+final lambda is frozen before P4 access,PASS
+P4 predictions are frozen before labels open,PASS
+position probes are independent of the DANN domain head,PASS
+probe scaling and fitting use training-only probe data,PASS
+all condition blocks remain grouped,PASS
+repeated P4 rows are not treated as independent,PASS
+no prior-branch target result is imported,PASS
+governed source and target inputs are read-only,PASS

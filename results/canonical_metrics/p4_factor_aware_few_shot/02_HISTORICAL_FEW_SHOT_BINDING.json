@@ -1,0 +1,192 @@
+{
+  "checkpoint_seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "frozen_payload_manifest": {
+    "declared_file_count": 5807,
+    "relative_path": "configs/few_shot/frozen_payload_manifest.csv",
+    "sha256": "d5645c8840504a60d3126ecea585ceeff9f3bd1909fd297fd899c4f51e68d249"
+  },
+  "frozen_preprocessing_files": [
+    {
+      "filename": "FINAL_SOURCE_PREPROCESSING_MEAN_FLOAT64.npy",
+      "sha256": "a8054ebeb3ab6559d49220e530f7ef03996bd1598b070a3907cf390658baca52"
+    },
+    {
+      "filename": "FINAL_SOURCE_PREPROCESSING_SCALE_FLOAT64.npy",
+      "sha256": "8709fd10263b60d3384e6b5b198e27314d8aefa85eb49b9c4c3ae0ccd1e9cecb"
+    }
+  ],
+  "frozen_source_checkpoints": [
+    {
+      "checkpoint_file_sha256": "cc507dcf895b2197d4a98c7c2eeb4c6520911944464da637b5002e1b7f8f9437",
+      "model_state_sha256": "5b5b8d778d1467c8d751676b316d9ac9e6c1605f634c4e85cde1d827ec8275d3",
+      "relative_path": "01_frozen_source_import/frozen_last_code_snapshot/11_final_p4_evaluation/runs/seed_42/FINAL_CHECKPOINT.pt",
+      "seed": 42,
+      "weights_frozen": true
+    },
+    {
+      "checkpoint_file_sha256": "3db0c7d3c3678d0d0b4f78714a86b49759e6526bbbac89a1bb78cd9c1266a6a3",
+      "model_state_sha256": "5f3f0360e559a6522a1af03e57b98c917096f3889afac5a0bfa65b70d9fa1210",
+      "relative_path": "01_frozen_source_import/frozen_last_code_snapshot/11_final_p4_evaluation/runs/seed_43/FINAL_CHECKPOINT.pt",
+      "seed": 43,
+      "weights_frozen": true
+    },
+    {
+      "checkpoint_file_sha256": "4acc015a59aed08faab2492c0cd2639d5c7de711c19c3bf1dcbb9cdda85453ce",
+      "model_state_sha256": "a39e7a2c9ddc9593d812322d95b18129810cee24ba5a66c24f014d3bb4a53e96",
+      "relative_path": "01_frozen_source_import/frozen_last_code_snapshot/11_final_p4_evaluation/runs/seed_44/FINAL_CHECKPOINT.pt",
+      "seed": 44,
+      "weights_frozen": true
+    },
+    {
+      "checkpoint_file_sha256": "8a091de402a9750f5bd0443741afbf694b0155d2c008e6c0aa68123b62b71896",
+      "model_state_sha256": "468c6f1a94ee4ddc16678bc2cc572eccae7f2485220ace919004504da336c776",
+      "relative_path": "01_frozen_source_import/frozen_last_code_snapshot/11_final_p4_evaluation/runs/seed_45/FINAL_CHECKPOINT.pt",
+      "seed": 45,
+      "weights_frozen": true
+    },
+    {
+      "checkpoint_file_sha256": "1cdb5c787ba674e3b5a73fdf03ba0d378f5b46055792408ac4b4ea33a389c879",
+      "model_state_sha256": "a3734a84be6d03e4376772aba8b32ae2d7a46d95f731cc326f616aa94619700a",
+      "relative_path": "01_frozen_source_import/frozen_last_code_snapshot/11_final_p4_evaluation/runs/seed_46/FINAL_CHECKPOINT.pt",
+      "seed": 46,
+      "weights_frozen": true
+    }
+  ],
+  "historical_linear_head": {
+    "implementation": "full-batch float64 LBFGS proximal adaptation of network.13 only",
+    "initialization": "corresponding source-trained network.13 Linear(256,7)",
+    "objective": {
+      "cross_entropy": "ordinary balanced mean CE with equal support-sample weights",
+      "inference_dtype": "float32 canonical model dtype",
+      "optimization_dtype": "float64",
+      "parameter_denominator": 1799,
+      "proximal": "lambda * (||W-W0||_F^2 + ||b-b0||_2^2) / 1799"
+    },
+    "optimizer": {
+      "full_batch": true,
+      "history_size": 20,
+      "line_search_fn": "strong_wolfe",
+      "max_iter": 100,
+      "name": "torch.optim.LBFGS",
+      "query_metric_early_stopping": false,
+      "scheduler": null,
+      "tolerance_change": 1e-12,
+      "tolerance_grad": 1e-09
+    },
+    "selected_lambdas": {
+      "1": 100.0,
+      "3": 100.0,
+      "5": 0.1
+    }
+  },
+  "historical_prototype": "target-only float64 mean; squared Euclidean (not reused as the new cosine method)",
+  "historical_results_preserved": true,
+  "historical_tag": {
+    "commit": "40693e570d4a39c15246aa865a3aa05271b9c279",
+    "name": "few-shot-v2-final-release-2026-07-29",
+    "object": "b32531e32a38cbbea57563de0a962f01fa5cb019",
+    "object_type": "tag",
+    "tree": "bda85656b06f50bcf5880cef769fa0625595ed09"
+  },
+  "label_mapping": "TagID 1..7 -> canonical class_index 0..6",
+  "preprocessing": "281 raw values -> 280 first differences -> frozen P1-P3 population standardization",
+  "released_source_and_result_bindings": [
+    {
+      "payload_manifest_match": true,
+      "relative_path": "src/few_shot/frozen_encoder.py",
+      "sha256": "761b601ccff3205b822e49d3eea32dafce6f3ad584093e686284df899f45a3fc",
+      "size_bytes": 8104
+    },
+    {
+      "payload_manifest_match": true,
+      "relative_path": "src/few_shot/prototypes.py",
+      "sha256": "72762cfd1eb78332b5abedd90a20b2e92c1804f39e51b20de2fe5ceca935e742",
+      "size_bytes": 3086
+    },
+    {
+      "payload_manifest_match": true,
+      "relative_path": "src/few_shot/source_head_adaptation.py",
+      "sha256": "953f7564a0f5b8deb003d2d5ccf354682ad49edc41a2818fbb193467f7835c3a",
+      "size_bytes": 13670
+    },
+    {
+      "payload_manifest_match": true,
+      "relative_path": "04_prototype_adaptation/PROTOTYPE_METHOD_FREEZE.json",
+      "sha256": "30c18a351b65cbbd3d11c85bcbaf2935bdb8b57e432b1e25563d45eed5cc81aa",
+      "size_bytes": 6124
+    },
+    {
+      "payload_manifest_match": true,
+      "relative_path": "05_head_finetuning/fs4_source_recipe_selection/HEAD_METHOD_FREEZE.json",
+      "sha256": "4f57b148f6dbbebe1b76bb9def042fc35941a34cb2a01c26c9e22f457e58bfd1",
+      "size_bytes": 1553
+    },
+    {
+      "payload_manifest_match": true,
+      "relative_path": "02_support_query_protocol/EPISODE_MASTER_MANIFEST.json",
+      "sha256": "4aaff45e78d91b7bf9ea4014ec276cf2f08d230d9684b1e46ca423e1c7f3ca0b",
+      "size_bytes": 9856
+    },
+    {
+      "payload_manifest_match": true,
+      "relative_path": "02_support_query_protocol/SUPPORT_SAMPLE_MANIFEST.csv",
+      "sha256": "72e1d1ef945ac1a1734bb7410196174303d5c27a93ca2b700d03a5f750ad31e0",
+      "size_bytes": 267161
+    },
+    {
+      "payload_manifest_match": true,
+      "relative_path": "02_support_query_protocol/sealed_query_labels/QUERY_CLASS_MAPPING.json",
+      "sha256": "59340dba9ecfc4c91e4168c7b682a745a1dd155f48f0010beb5758f9f9c5033a",
+      "size_bytes": 738
+    },
+    {
+      "payload_manifest_match": true,
+      "relative_path": "02_support_query_protocol/P4_STRUCTURE_AUDIT.json",
+      "sha256": "229f3b1e2ff312840987053ba9746dc390f66984a30965fbc8e86ed4f37f761b",
+      "size_bytes": 4370
+    },
+    {
+      "payload_manifest_match": true,
+      "relative_path": "01_frozen_source_import/frozen_last_code_snapshot/10_final_recipe_freeze/FINAL_SOURCE_PREPROCESSING_STATE.json",
+      "sha256": "18bae13a99f98f9284706b36c9e91c458cf19abdc611645fd8c78365a14630d2",
+      "size_bytes": 1986
+    },
+    {
+      "payload_manifest_match": true,
+      "relative_path": "01_frozen_source_import/frozen_last_code_snapshot/11_final_p4_evaluation/FINAL_CHECKPOINT_MANIFEST.json",
+      "sha256": "46c34ffc51eeca942135393aa98c78cca295c23fe4be1e110c8549809d5c7558",
+      "size_bytes": 4949
+    },
+    {
+      "payload_manifest_match": true,
+      "relative_path": "06_final_comparative_audit_and_archive/FINAL_CANONICAL_RESULTS_TABLE.csv",
+      "sha256": "81165de9ada22c767a3a6de16d931a864c0f60ece4715819f4386aa2792d5481",
+      "size_bytes": 3348
+    },
+    {
+      "payload_manifest_match": true,
+      "relative_path": "06_final_comparative_audit_and_archive/FINAL_METHOD_COMPARISON.csv",
+      "sha256": "6e63489fa572ed9ca91d2c324fc4ef8197b1524f8dc736adc2cdd1ef72f8a295",
+      "size_bytes": 4623
+    },
+    {
+      "payload_manifest_match": true,
+      "relative_path": "04_prototype_adaptation/fs3_execution/FS3_UNIT_RESULTS.csv",
+      "sha256": "19f54cb4807e441cc2d70ee1774c20c083d08ff9968f9f646ec8c959db4395d6",
+      "size_bytes": 71037
+    },
+    {
+      "payload_manifest_match": true,
+      "relative_path": "05_head_finetuning/fs5_p4_execution/FS5_UNIT_RESULTS.csv",
+      "sha256": "e3ba57bcb47a335e278874e45bc31829338f5defbff2b61eccbf8cad56a53456",
+      "size_bytes": 71554
+    }
+  ],
+  "source_method": "C1_FIRST_DIFFERENCE_ERM_1DCNN"
+}

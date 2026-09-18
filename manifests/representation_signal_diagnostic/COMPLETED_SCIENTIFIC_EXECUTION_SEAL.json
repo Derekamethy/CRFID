@@ -1,0 +1,20 @@
+{
+  "bootstrap_rows": 84,
+  "finalize_scope": "reporting, preservation fingerprint, classification, and delivery registers only; no probe or bootstrap rerun",
+  "learning_validity_row_count": 64,
+  "primary_run_count": 180,
+  "scientific_artifact_sha256": {
+    "09_PROBE_LEARNING_VALIDITY.csv": "e313192573372340a60df26b89f84375e6c957a022a667b5d9d4ca95a03cb0cc",
+    "10_RUN_REGISTER.csv": "10b04bd766a6fc579dd14ef87cba8ca66db8d633d56f6cdfb49e67a9b6a2d8c2",
+    "11_PER_RUN_METRICS.csv": "5da202f4c4bbb9e01afd20c450c177dbdc928ae18372fcd89c67427ecde91408",
+    "12_OUT_OF_FOLD_BLOCK_METRICS.csv": "f31c043765963a5de85a05bbd6e0859de0d392615e87421c05674455dd3f1f7d",
+    "13_REPRESENTATION_CONTRASTS.csv": "db0d7e8f17830c836f9d4d59070cd8b9c628468d2c9ed21abfc028578e89b87b",
+    "14_ANGLE_CONTRAST_BY_REPRESENTATION.csv": "d0fd3e0afcc315e53c7e8728a9bbead6c59455799fa1c676dca0ce17c21bf808",
+    "15_PER_CLASS_RESULTS.csv": "600852454b2aa99bef66b643db976693f58bac3e23ddef1175cd994a1f1da549",
+    "16_PREDICTED_CLASS_HISTOGRAMS.csv": "d14088fb96fefcceb251fe45ff94f34e2778f61d374725002c8aba28216afcbc",
+    "17_WITHIN_BLOCK_AGREEMENT.csv": "16dd19c6d8577820f50e8a32a9daddc47aa6d5c61e9575d3923b5bdfec5b514c",
+    "18_BOOTSTRAP_AND_SEED_SENSITIVITY.csv": "f5aacfcdc612056d04e2f46c18fbffa2b0ded532bc3f863fc2abb886975cca94",
+    "19_NCM_SECONDARY_RESULTS.csv": "9bca8c8dbe2799d8a9c837c62f17511b91550bef9d126fcfdd69df3af6ee20cb"
+  },
+  "scientific_execution_completed_before_finalize": true
+}

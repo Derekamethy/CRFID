@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "experiment_id": "DANN_POSITION_INTERVENTION_V1",
+  "canonical_base_commit": "caabe04cd46030e3fb4fdb446743cf6561b81be9",
+  "canonical_base_tag": "v2.0.0-canonical-2026-08-02",
+  "candidate": "C1_FIRST_DIFFERENCE_ERM_1DCNN",
+  "source_positions": ["P1", "P2", "P3"],
+  "target_position": "P4",
+  "folds": ["S1", "S2", "S3"],
+  "seeds": [42, 43, 44, 45, 46],
+  "lambda_grid": [0.0, 0.03, 0.1, 0.3, 1.0],
+  "grl_schedule": "lambda_max * (2 / (1 + exp(-10 * p)) - 1)",
+  "domain_head": {"input_dimension": 256, "hidden_dimension": 128, "activation": "ReLU", "dropout": 0.0},
+  "optimizer": {"name": "AdamW", "learning_rate": 0.001, "weight_decay": 0.0001, "betas": [0.9, 0.999], "epsilon": 1e-08, "amsgrad": false, "foreach": false, "fused": false},
+  "training": {"batch_size": 256, "maximum_epochs": 50, "early_stopping_patience": 8, "minimum_improvement": 1e-12, "scheduler": null, "checkpoint_metric": "source_validation_row_macro_f1"},
+  "probe": {"optimizer": "AdamW", "learning_rate": 0.01, "weight_decay": 0.0001, "maximum_epochs": 200, "selection_rule": "fixed_final_epoch", "seeds": [42, 43, 44, 45, 46]},
+  "source_selection": {"eligibility_margin": 0.01, "probe_tie_margin": 0.01, "source_retention_guardrail": 0.02},
+  "bootstrap": {"replicates": 10000, "seed": 20260804, "interval": "percentile_95", "p4_stratification": "TagID_condition_blocks"},
+  "final_epochs_by_seed": {"42": 13, "43": 13, "44": 9, "45": 10, "46": 9},
+  "p4_block_prediction": "row_prediction_majority_vote_lowest_global_class_tie",
+  "publication_boundary": "compact_metrics_only"
+}

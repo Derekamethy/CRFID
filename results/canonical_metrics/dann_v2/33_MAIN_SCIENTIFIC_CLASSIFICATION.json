@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "classification": "DANN_V2_NO_RELIABLE_POSITION_SUPPRESSION_OR_P4_BENEFIT",
+  "claim_boundary": "POST_HOC_SOURCE_ONLY_FOLLOWUP_DANN_V2",
+  "implementation_validity": "PASS",
+  "development_runs_completed": 165,
+  "selected_lambda": 0.1,
+  "source_mechanism_gate": "PASS_SOURCE_MECHANISM_CONTINUATION_GATE",
+  "historical_gate_label": "PASS_SELECTIVE_INVARIANCE_GATE",
+  "reliable_position_probe_reduction": false,
+  "p4_permitted": true,
+  "p4_runs_completed": 15,
+  "reliable_p4_macro_f1_vs_a0": false,
+  "reliable_p4_macro_f1_vs_a1": false,
+  "a2_exceeds_empirical_p4_chance_interval": false
+}

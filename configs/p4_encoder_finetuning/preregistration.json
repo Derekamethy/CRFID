@@ -1,0 +1,227 @@
+{
+  "schema_version": 1,
+  "experiment_id": "p4_encoder_finetuning_diagnostic_v1",
+  "scientific_role": "FINAL_NARROW_P4_LABELLED_TARGET_REPRESENTATION_ADAPTATION_DIAGNOSTIC",
+  "sealed_before": [
+    "source_only_hyperparameter_selection_results",
+    "all_new_p4_finetuning_predictions",
+    "all_new_p4_query_metrics"
+  ],
+  "lineage": {
+    "branch": "codex/p4-encoder-finetuning-diagnostic-v1",
+    "immediate_parent_branch": "codex/p4-trainable-linear-readout-v1",
+    "immediate_parent_final_commit": "8e4bc66c600b1fa83d0a3f04f71672f8bccca653",
+    "immediate_parent_execution_commit": "6335bae1ff43ba25b8d8141de11c1d5a5400c60a",
+    "immediate_parent_preregistration_sha256": "3981144793981f96b44c486d413f32436129427902bbad34b6974257de57836b",
+    "immediate_parent_final_manifest_sha256": "086a8422a3700e8977c4532d88dc20f2df60971fba6c7fcbdb366f39192bf247",
+    "calibration_parent_final_commit": "5af4b691d92a8949d78883d8e468cd008cc1aae1",
+    "calibration_parent_preregistration_sha256": "30e65854c09773f3ff64054cf04fabc215a9e9fa27919ffc9de448d1f48bb99d",
+    "fold_manifest_sha256": "81b86e65bce6ff35e04b0b6a3fe2310fa5a65173e9d86c6693d40ec9e22c0482",
+    "support_manifest_sha256": "47eacce86bbe1426e780beb9949125130c8348430d4711039f9c6099aaf6eae3"
+  },
+  "question": "Can supervised adaptation of the C1 representation recover TagID transfer to P4 physical-condition blocks absent from labelled support?",
+  "arms": {
+    "FROZEN_LINEAR": {
+      "role": "READOUT_ONLY_ADAPTATION",
+      "execution": "reuse_hash_bound_parent_predictions_and_metrics",
+      "encoder_trainable": false,
+      "head": "source_anchored_Linear(256,7)_lambda_100"
+    },
+    "PARTIAL_FT": {
+      "role": "UPPER_REPRESENTATION_ADAPTATION",
+      "independent_start": "original_source_checkpoint_plus_reproduced_parent_support_fitted_head",
+      "trainable_parameter_names": [
+        "network.8.weight",
+        "network.8.bias",
+        "network.9.weight",
+        "network.9.bias",
+        "network.13.weight",
+        "network.13.bias"
+      ],
+      "frozen_parameter_prefixes": ["network.0", "network.1", "network.4", "network.5"],
+      "trainable_parameters": 100871,
+      "trainable_percent_total": 70.610759161387,
+      "trainable_encoder_parameters": 99072
+    },
+    "FULL_FT": {
+      "role": "FULL_REPRESENTATION_ADAPTATION",
+      "independent_start": "original_source_checkpoint_plus_reproduced_parent_support_fitted_head",
+      "trainable_parameter_prefixes": [
+        "network.0",
+        "network.1",
+        "network.4",
+        "network.5",
+        "network.8",
+        "network.9",
+        "network.13"
+      ],
+      "trainable_parameters": 142855,
+      "trainable_percent_total": 100.0,
+      "trainable_encoder_parameters": 141056
+    }
+  },
+  "data": {
+    "p4_files": {
+      "A1_P4.csv": "8f63f8bee3deb7747a88ac0fe1f47eabe8c0feedfe5a65cb503e25fdcf1377ee",
+      "A2_P4.csv": "6b20fb815d6df40ff9ad4c0ecbf3bc7a82762ac96b8fd7df7170504715d75a00",
+      "A3_P4.csv": "6c3bffcca0e81664398423c5c4828c3d7d4698a69e804fe69368e53bb8a9f6e3"
+    },
+    "primary_budgets": [7, 35, 100, 500],
+    "zero_label_reference": "reuse_parent_strict_source_only_DG_only",
+    "source_seeds": [42, 43, 44, 45, 46],
+    "support_seeds": [104729, 130363, 155921, 181081, 205439, 230003, 254959, 280001, 305093, 330017, 355031, 380041, 405019, 430007, 455003, 480017, 505027, 530017, 555029, 580031],
+    "outer_folds": [0, 1, 2],
+    "independent_unit": "TagID_x_ER_x_surface_x_P4_physical_condition_block",
+    "rows_per_block": 50,
+    "required_disjointness": ["row", "physical_condition_block", "exact_signal"]
+  },
+  "parent_head_reproduction": {
+    "implementation": "exact immediate-parent float64 full-batch LBFGS recipe",
+    "regularization_lambda": 100.0,
+    "anchor": "original source checkpoint network.13 weight and bias",
+    "max_iterations": 100,
+    "history_size": 20,
+    "line_search": "strong_wolfe",
+    "tolerance_grad": 1e-9,
+    "tolerance_change": 1e-12
+  },
+  "source_only_selection": {
+    "p4_access": false,
+    "protocol": "audited_FS4_P1_P3_position_held_pseudo_target",
+    "held_positions": ["P1", "P2", "P3"],
+    "checkpoint_training_positions": "the_other_two_source_positions_only",
+    "episode_keys": [
+      "P1:0", "P1:4", "P1:10",
+      "P2:0", "P2:4", "P2:10",
+      "P3:0", "P3:4", "P3:10"
+    ],
+    "episode_layouts_per_position": ["family_A_local_0", "family_A_local_4", "family_B_local_1"],
+    "layout_union_covers_all_nine_ER_surface_cells": true,
+    "source_seeds": [42, 43, 44, 45, 46],
+    "support_rows": 35,
+    "query_rows_per_unit": 1400,
+    "learning_rate_grid": [1e-5, 3e-5, 1e-4, 3e-4],
+    "encoder_weight_decay_grid": [0.0, 0.0001],
+    "candidate_epoch_counts": [5, 10, 20],
+    "same_grid_for_partial_and_full": true,
+    "selection_per_arm": true,
+    "selection_rule_lexicographic": [
+      "maximize minimum held-position mean query Macro-F1",
+      "maximize overall mean query Macro-F1",
+      "maximize minimum class mean recall",
+      "minimize mean support-minus-query Macro-F1 gap",
+      "prefer fewer epochs",
+      "prefer smaller learning rate",
+      "prefer stronger encoder weight decay"
+    ],
+    "freeze_after_selection": true,
+    "same_selected_arm_configuration_for_every_p4_budget": true
+  },
+  "optimization": {
+    "optimizer": "torch.optim.AdamW",
+    "betas": [0.9, 0.999],
+    "epsilon": 1e-8,
+    "amsgrad": false,
+    "foreach": false,
+    "fused": false,
+    "batching": "deterministic_full_support_batch_one_update_per_epoch",
+    "scheduler": null,
+    "early_stopping": false,
+    "checkpoint": "fixed_source_selected_epoch_count",
+    "loss": "mean_support_cross_entropy_plus_parent_head_proximal_penalty",
+    "head_proximal_lambda": 100.0,
+    "head_proximal_denominator": 1799,
+    "encoder_weight_decay": "source_selected",
+    "head_weight_decay": 0.0,
+    "augmentation": null,
+    "gradient_clipping": null
+  },
+  "randomness": {
+    "platform": "cpu",
+    "python_hash_seed": 0,
+    "torch_deterministic_algorithms": true,
+    "torch_num_threads": 1,
+    "numpy_seed_rule": "uint32(first4(SHA256('P4_ENCODER_FT_V1|arm|source_seed|support_seed|fold|budget')))",
+    "python_seed_rule": "same_as_numpy_seed",
+    "torch_seed_rule": "same_as_numpy_seed",
+    "parameter_initialization": "checkpoint_and_deterministic_parent_head_fit; no random parameter initialization",
+    "dataloader_order": "full_batch_in_inherited_manifest_order"
+  },
+  "query_seal": {
+    "training_access": false,
+    "hyperparameter_access": false,
+    "checkpoint_access": false,
+    "predictions_persisted_and_hashed_before_labels_open": true,
+    "global_scoring_only_after_all_arm_budget_fold_seed_support_predictions_frozen": true
+  },
+  "metrics": {
+    "primary": "Macro-F1",
+    "secondary": ["Accuracy", "balanced_accuracy", "per_class_F1", "worst_class_F1", "confusion_matrix"],
+    "support_diagnostics": ["support_Macro-F1", "support_accuracy", "support_loss"],
+    "representation_diagnostics": [
+      "held_query_embedding_mean_cosine_to_source",
+      "held_query_embedding_RMS_displacement",
+      "TagID_centroid_between_to_within_ratio",
+      "ER_surface_centroid_between_to_within_ratio"
+    ],
+    "representation_diagnostics_used_for_selection": false,
+    "source_retention": "budget_500_first_support_seed_only_all_folds_source_seeds_arms_on_fixed_one_row_per_source_condition_block_subset",
+    "source_retention_used_for_selection": false
+  },
+  "uncertainty": {
+    "replicates": 10000,
+    "bootstrap_seed": 2026080917,
+    "resampling": "TagID_stratified_physical_condition_block_with_crossed_source_and_support_seed_resampling",
+    "paired_comparisons": ["PARTIAL_FT-minus-FROZEN_LINEAR", "FULL_FT-minus-FROZEN_LINEAR", "FULL_FT-minus-PARTIAL_FT"],
+    "raw_rows_as_independent_units": false
+  },
+  "practical_recovery": {
+    "Macro-F1_delta_threshold": 0.05,
+    "reliable": "paired_95_percent_CI_lower_greater_than_zero",
+    "practical_and_reliable": "point_delta_at_least_0.05_and_paired_CI_lower_greater_than_zero",
+    "classification_eligible_budgets": [35, 100, 500]
+  },
+  "classification_rules_in_order": [
+    {
+      "classification": "ENCODER_FINETUNING_DIAGNOSTIC_NON_IDENTIFIABLE",
+      "rule": "any critical validity, deterministic-fitting, finite-optimization, prediction-freeze, or metric-reproduction gate fails"
+    },
+    {
+      "classification": "PARTIAL_ENCODER_ADAPTATION_RESCUES_P4_TRANSFER",
+      "rule": "Partial-minus-Frozen is practical and reliable at any classification-eligible budget"
+    },
+    {
+      "classification": "FULL_ENCODER_ADAPTATION_REQUIRED_FOR_P4_TRANSFER",
+      "rule": "Partial does not meet rescue and Full-minus-Frozen is practical and reliable at any classification-eligible budget"
+    },
+    {
+      "classification": "ENCODER_ADAPTATION_PARTIAL_BENEFIT_ONLY",
+      "rule": "neither arm meets rescue, but at least one eligible-budget Partial-minus-Frozen or Full-minus-Frozen paired CI excludes zero positively"
+    },
+    {
+      "classification": "ENCODER_ADAPTATION_DOES_NOT_RESCUE_HELD_CONDITION_TRANSFER",
+      "rule": "none of the preceding rules applies"
+    }
+  ],
+  "critical_gates": [
+    "parent encoder hashes match",
+    "parent fold manifest matches",
+    "parent support manifest matches",
+    "source seeds match",
+    "support/query row disjoint",
+    "support/query physical-block disjoint",
+    "support/query exact-signal disjoint",
+    "all 50 acquisitions block-consistent",
+    "P4 query labels unavailable to training",
+    "P4 query labels unavailable to checkpoint selection",
+    "hyperparameters selected source-only",
+    "Partial trainable mask exact",
+    "Full trainable mask exact",
+    "both arms independently start from original source checkpoint",
+    "optimizer state does not cross support units",
+    "deterministic rerun probe passes",
+    "prediction freeze barrier passes",
+    "metric and bootstrap reproduction pass"
+  ],
+  "stopping_rule": "After a valid result, stop the current P4 labelled-target adaptation model line and prepare it for external audit, branch freeze, repository-state update, and thesis integration. Do not launch another model family."
+}

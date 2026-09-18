@@ -1,0 +1,17 @@
+gate_id,passed,phase,evidence
+G01_PREREGISTRATION_HASH,True,POST_EXECUTION,30e65854c09773f3ff64054cf04fabc215a9e9fa27919ffc9de448d1f48bb99d
+G02_GOVERNED_P4_STRUCTURE,True,POST_EXECUTION,"3,150 rows; 63 complete blocks"
+G03_EXACT_SIGNAL_BLOCK_CONFINEMENT,True,POST_EXECUTION,no exact signal digest crosses a block
+G04_FIXED_COMPLETE_OOF_QUERY,True,POST_EXECUTION,all 63 blocks queried exactly once
+G05_NESTED_BUDGET_ACCOUNTING,True,POST_EXECUTION,540 fold x seed x budget validations
+G06_SUPPORT_QUERY_ROW_DISJOINT,True,POST_EXECUTION,zero row overlap
+G07_SUPPORT_QUERY_BLOCK_DISJOINT,True,POST_EXECUTION,zero physical-block overlap
+G08_SUPPORT_QUERY_EXACT_SIGNAL_DISJOINT,True,POST_EXECUTION,zero exact-signal overlap
+G09_TAGID_BALANCE,True,POST_EXECUTION,per-TagID counts differ by at most one
+G10_FROZEN_INPUT_HASHES,True,POST_EXECUTION,five checkpoints and two preprocessing arrays hash-match
+G11_QUERY_INDEPENDENT_SUPPORT_POLICY,True,POST_EXECUTION,sampler accepts fold/seed/structure only; no query outcomes or embeddings
+G12_INFERENTIAL_UNIT,True,POST_EXECUTION,TagID x ER x surface physical condition block
+G13_GLOBAL_QUERY_LABEL_BARRIER,True,POST_EXECUTION,2715 prediction units followed the freeze/open/score-once sequence
+G14_FROZEN_ENCODER_INTEGRITY,True,POST_EXECUTION,all five model-state hashes unchanged before/after adaptation
+G15_CANONICAL_ZERO_ANCHOR,True,POST_EXECUTION,all five Accuracy and Macro-F1 values reproduce within 1e-15
+G16_BOOTSTRAP_REPRODUCIBILITY,True,POST_EXECUTION,two deterministic 32-replicate probes matched exactly; final sample hashes recorded

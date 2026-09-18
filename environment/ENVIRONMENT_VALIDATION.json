@@ -1,0 +1,21 @@
+{
+  "environment_id": "CRFID_STRICT_DG_WINDOWS_CPU_V1",
+  "status": "PASS_CRFID_PERMANENT_BASE_MIGRATED_AND_LOCKED",
+  "validated_at": "2026-07-22T23:02:39.7172426+01:00",
+  "base_python": "<LOCAL_USER_HOME>\\Apps\\CPython-3.12.13-CRFID\\python.exe",
+  "checks": {
+    "direct_validator": "PASS_CRFID_LOCKED_ENVIRONMENT",
+    "fresh_shell": "PASS",
+    "required_imports": "PASS_INSIDE_CANONICAL_PREFIX",
+    "torch_cpu_microprobe": "PASS_EXACT_REPEAT",
+    "pip_check": "PASS",
+    "wheelhouse": "PASS_28_OF_28",
+    "negative_tests": "PASS_4_OF_4_REJECTED",
+    "repository_static_synthetic_tests": {"passed": 11, "failed": 0},
+    "permanent_base_independence": "PASS",
+    "canonical_pyvenv_home": "<LOCAL_USER_HOME>\\Apps\\CPython-3.12.13-CRFID",
+    "full_repository_tests": {"passed": 35, "failed": 0},
+    "post_migration_negative_tests": "PASS_8_OF_8_REJECTED",
+    "runtime_archive_crc": "PASS"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "workflow": "strict_dg",
+  "status": "SOURCE_SELECTION_REPRODUCED_RECIPE_FROZEN",
+  "output_path": "outputs/strict_dg",
+  "random_seeds": [42, 43, 44, 45, 46],
+  "domain_access": {"development_domains": ["P1", "P2", "P3"], "target_domain": "P4", "target_before_freeze": false, "target_labels_for_selection": false},
+  "ordered_input_length": 281,
+  "feature_semantics": "ordered_signal_positions_0_through_280",
+  "frequency_axis_status": "PHYSICAL_FREQUENCY_AXIS_PROVENANCE_UNRESOLVED",
+  "class_order": [0, 1, 2, 3, 4, 5, 6],
+  "source_domains": ["P1", "P2", "P3"],
+  "target_domain": "P4",
+  "source_folds": [
+    {"fold_id": "S1", "outer_held": "P1", "inner_train_count": 4200, "inner_validation_count": 2100, "outer_held_count": 3150},
+    {"fold_id": "S2", "outer_held": "P2", "inner_train_count": 4200, "inner_validation_count": 2100, "outer_held_count": 3150},
+    {"fold_id": "S3", "outer_held": "P3", "inner_train_count": 4200, "inner_validation_count": 2100, "outer_held_count": 3150}
+  ],
+  "candidate_set": [
+    "C0_NEUTRAL_ERM_1DCNN",
+    "C1_FIRST_DIFFERENCE_ERM_1DCNN",
+    "C2_SOURCE_EUCLIDEAN_NCM_READOUT",
+    "C3_SOURCE_CORAL_ERM_1DCNN"
+  ],
+  "seeds": [42, 43, 44, 45, 46],
+  "preprocessing": {"representation_order": "representation_then_standardization", "ddof": 0, "minimum_scale": 1e-12, "minimum_scale_replacement": 1.0, "fit_dtype": "float64", "model_dtype": "float32", "target_refit": false},
+  "model": {"architecture": "NeutralSourceOnlyCNN1D", "channels": [64, 128, 256], "kernels": [7, 5, 3], "padding": [3, 2, 1], "group_norm_groups": 8, "activation": "ReLU", "pooling": ["MaxPool1d(2)", "MaxPool1d(2)", "AdaptiveAvgPool1d(1)"], "embedding_dimension": 256, "class_count": 7, "parameter_count": 142855},
+  "initialization": {"conv_linear_weight": "kaiming_uniform_a_0_fan_in_relu", "conv_linear_bias": "uniform_inverse_sqrt_fan_in", "group_norm_weight": "ones", "group_norm_bias": "zeros"},
+  "optimizer": {"name": "AdamW", "learning_rate": 0.001, "weight_decay": 0.0001, "betas": [0.9, 0.999], "epsilon": 1e-8, "amsgrad": false, "foreach": false, "fused": false},
+  "training": {"loss": "unweighted_cross_entropy", "batch_size": 256, "maximum_inner_epochs": 50, "early_stopping_patience": 8, "minimum_improvement": 1e-12, "inner_stage_offset": 0, "outer_and_final_stage_offset": 100000},
+  "selector": [
+    ["worst_outer_held_position_macro_f1", "maximize"],
+    ["mean_outer_held_position_macro_f1", "maximize"],
+    ["worst_class_recall", "maximize"],
+    ["zero_recall_class_frequency", "minimize"],
+    ["condition_block_macro_f1", "maximize"],
+    ["unique_signal_weighted_macro_f1", "maximize"],
+    ["across_seed_standard_deviation", "minimize"],
+    ["candidate_id", "ascending"]
+  ],
+  "selected_candidate": "C1_FIRST_DIFFERENCE_ERM_1DCNN",
+  "final_epochs_by_seed": {"42": 13, "43": 13, "44": 9, "45": 10, "46": 9},
+  "target_policy": {"selection_use": false, "preprocessing_fit": false, "training": false, "optimizer_step": false, "evaluation_only_after_authorization": true}
+}

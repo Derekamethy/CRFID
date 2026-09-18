@@ -1,0 +1,52 @@
+{
+  "artifact_rows": [
+    {
+      "relative_path": "results/canonical_metrics/p4_trainable_linear_readout/09A_LINEAR_PREDICTION_BUNDLE_BINDING.json",
+      "sha256": "621c87d99889e018ca8cce1a869ab18cd6d7a80830cd2583e7470e1ca49aab99",
+      "size_bytes": 403
+    },
+    {
+      "relative_path": "results/canonical_metrics/p4_trainable_linear_readout/13_PRIMARY_RESULTS.csv",
+      "sha256": "c0d96b336bf66aa52d8cb87966f3e0104bda678e320cb3a3d0ae95be6456335a",
+      "size_bytes": 6403
+    },
+    {
+      "relative_path": "results/canonical_metrics/p4_trainable_linear_readout/15_PER_CLASS_COMPARISON.csv",
+      "sha256": "8b915ce240dfe695bc5e21393210165e9bf0fc5f15b06afea048d0d5c14cc1ea",
+      "size_bytes": 10555
+    },
+    {
+      "relative_path": "results/canonical_metrics/p4_trainable_linear_readout/16_CONDITION_COMPARISON.csv",
+      "sha256": "637e9a04a2625a625af2c47ffd2249e16d5f4c62b9da4b512f5aba90033bcaa4",
+      "size_bytes": 2977
+    },
+    {
+      "relative_path": "results/canonical_metrics/p4_trainable_linear_readout/19_TRAIN_VS_QUERY.csv",
+      "sha256": "7d68b504f06a5863e3fc2b44f6a50011df0f1f7279535424a985e513cf9861f6",
+      "size_bytes": 1830
+    },
+    {
+      "relative_path": "results/canonical_metrics/p4_trainable_linear_readout/24_FINAL_AUDIT_MANIFEST.csv",
+      "sha256": "086a8422a3700e8977c4532d88dc20f2df60971fba6c7fcbdb366f39192bf247",
+      "size_bytes": 4715
+    },
+    {
+      "relative_path": "results/canonical_metrics/p4_trainable_linear_readout/25_FINAL_STATUS.json",
+      "sha256": "0dd25dfd16679c8c1589a3196a1325c4f9e53f8d1542ca87c77991b67c37582c",
+      "size_bytes": 24991
+    },
+    {
+      "relative_path": "results/canonical_metrics/p4_trainable_linear_readout/per_run_linear_predictions.npz",
+      "sha256": "cfcf5a1fa2326608f1737669aa116ce8439506587051c8777f70f745a1749932",
+      "size_bytes": 133237
+    }
+  ],
+  "calibration_parent_final_commit": "5af4b691d92a8949d78883d8e468cd008cc1aae1",
+  "fold_manifest_sha256": "81b86e65bce6ff35e04b0b6a3fe2310fa5a65173e9d86c6693d40ec9e22c0482",
+  "immediate_parent_execution_commit": "6335bae1ff43ba25b8d8141de11c1d5a5400c60a",
+  "immediate_parent_final_commit": "8e4bc66c600b1fa83d0a3f04f71672f8bccca653",
+  "immediate_parent_final_manifest_sha256": "086a8422a3700e8977c4532d88dc20f2df60971fba6c7fcbdb366f39192bf247",
+  "immediate_parent_preregistration_sha256": "3981144793981f96b44c486d413f32436129427902bbad34b6974257de57836b",
+  "parent_prediction_array_sha256": "c361c189a30698f0258c19bf37ad7c581b41358f679da79e20b04abf6e7b8e8b",
+  "support_manifest_sha256": "47eacce86bbe1426e780beb9949125130c8348430d4711039f9c6099aaf6eae3"
+}

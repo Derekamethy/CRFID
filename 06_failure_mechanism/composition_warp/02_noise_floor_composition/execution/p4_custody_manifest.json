@@ -1,0 +1,28 @@
+{
+  "created_at_utc": "2026-07-29T15:47:17.429096+00:00",
+  "inputs": [
+    {
+      "absolute_path": "<ORIGINAL_WORKSPACE>\\Dataset-1-Tyndall\\shared_data\\Original-dataset\\A1_P4.csv",
+      "domain": "P4",
+      "file_name": "A1_P4.csv",
+      "sha256": "8f63f8bee3deb7747a88ac0fe1f47eabe8c0feedfe5a65cb503e25fdcf1377ee",
+      "size_bytes": 5627925
+    },
+    {
+      "absolute_path": "<ORIGINAL_WORKSPACE>\\Dataset-1-Tyndall\\shared_data\\Original-dataset\\A2_P4.csv",
+      "domain": "P4",
+      "file_name": "A2_P4.csv",
+      "sha256": "6b20fb815d6df40ff9ad4c0ecbf3bc7a82762ac96b8fd7df7170504715d75a00",
+      "size_bytes": 5633089
+    },
+    {
+      "absolute_path": "<ORIGINAL_WORKSPACE>\\Dataset-1-Tyndall\\shared_data\\Original-dataset\\A3_P4.csv",
+      "domain": "P4",
+      "file_name": "A3_P4.csv",
+      "sha256": "6c3bffcca0e81664398423c5c4828c3d7d4698a69e804fe69368e53bb8a9f6e3",
+      "size_bytes": 5637662
+    }
+  ],
+  "purpose": "composition_warp_single_held_out_p4_evaluation",
+  "schema_version": 1
+}

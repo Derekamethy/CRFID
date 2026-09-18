@@ -1,0 +1,5 @@
+position,sample_count,tagid_count,condition_block_count,rows_per_condition_block,ordered_input_points,first_difference_points,status
+P1,3150,7,63,[50],281,280,PASS
+P2,3150,7,63,[50],281,280,PASS
+P3,3150,7,63,[50],281,280,PASS
+P4,3150,7,63,[50],281,280,PASS

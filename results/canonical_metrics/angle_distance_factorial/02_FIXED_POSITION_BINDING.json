@@ -1,0 +1,63 @@
+{
+  "base_commit": "4187fc44e05804ae1ad9ebbdf889ad8ca6f9e6d4",
+  "base_tree": "2ba9157341b90471012d3b51c989d009c93fb965",
+  "compact_reconstruction": {
+    "confusion_matrix_count": 120,
+    "histogram_row_count": 420,
+    "per_class_row_count": 840,
+    "run_count": 60,
+    "status": "PASS_COMPACT_RESULT_RECONSTRUCTION"
+  },
+  "exported_fixed_position_patch_sha256": "f197d961b27cbf16f3c2125999329c76a573b20fa8cb83984696bd86c34fca1c",
+  "fixed_position_tag": "fixed-position-grouped-validity-v1",
+  "incremental_only": true,
+  "inherited_file_count": 29,
+  "inherited_frozen_inference": {
+    "checkpoint_count": 60,
+    "checkpoint_inventory_sha256": "4f721e6206e3b39781090062694f7c588a25e7e3e9955c462dbed7a05876dd81",
+    "sanitized_block_prediction_count": 1260,
+    "sanitized_block_prediction_sha256": "fe2c586763df5e020108184a682c576cedc5bc57f64500f97c28ba00633abdc5",
+    "source_data_fingerprints": {
+      "P1": "f23f59efc334c577aa0621a72d1684bf804821432996a807b0067e06b4105ecd",
+      "P2": "c41ad2cb7af81f2be580129fb57da19264bbe31fdf7e08ed16b776288cfc09bf",
+      "P3": "462e4061f8f8f393a14831da54c553394ff20f2e4a134348a2e14d589ba2fb9e",
+      "P4": "ecbb27c42caec5eb7ca057cf0d31d3f431884e78e073be4c5615a24d7b88fcb6"
+    },
+    "status": "PASS_FROZEN_CHECKPOINT_INFERENCE_REPRODUCED_RELEASED_RESULTS",
+    "training_performed": false
+  },
+  "inherited_git_blob_inventory_sha256": "667ae6985b317aa1a24221863a3606d6a78308b8e5df7c3e1f939a327062affb",
+  "inherited_pairing_failure": {
+    "check": "train_validation_test_synchronization",
+    "check_id": 4,
+    "details": "failures=492",
+    "status": "FAIL"
+  },
+  "new_training_required": true,
+  "paired_design_case": "B_SYNCHRONIZED_RERUN_REQUIRED_AND_COMPLETED",
+  "status": "PASS_EXACT_FIXED_POSITION_PATCH_BINDING",
+  "synchronized_checkpoint_inference": {
+    "checkpoint_count": 60,
+    "checkpoint_inventory_sha256": "bcd476fd1f0a2164da7461de0a6480b3ba49bf177640304fecdfe2debb3d967b",
+    "sanitized_block_prediction_count": 1260,
+    "sanitized_block_prediction_sha256": "389300d0d4104bb5f1887c5ac043706db599413e67320447cad5ba8eab80ea18",
+    "source_data_fingerprints": {
+      "P1": "f23f59efc334c577aa0621a72d1684bf804821432996a807b0067e06b4105ecd",
+      "P2": "c41ad2cb7af81f2be580129fb57da19264bbe31fdf7e08ed16b776288cfc09bf",
+      "P3": "462e4061f8f8f393a14831da54c553394ff20f2e4a134348a2e14d589ba2fb9e",
+      "P4": "ecbb27c42caec5eb7ca057cf0d31d3f431884e78e073be4c5615a24d7b88fcb6"
+    },
+    "status": "PASS_FROZEN_CHECKPOINT_INFERENCE_REPRODUCED_RELEASED_RESULTS",
+    "training_performed": false
+  },
+  "synchronized_rerun": {
+    "execution_mode": "REUSED_COMPLETED_CASE_B_CHECKPOINTS_AFTER_AUDIT_TYPE_NORMALIZATION_STOP",
+    "hyperparameter_tuning": false,
+    "manifest_sha256": "d3e94891d4b342e233e2d7daf0fa8968ccc338bc11284834c073bbf9d6664957",
+    "method_id": "C1_FIRST_DIFFERENCE_ERM_1DCNN",
+    "run_count": 60,
+    "runtime_root": "<ORIGINAL_WORKSPACE>\\CRFID_research_code_v2_patch_angle_distance_factorial\\outputs\\angle_distance_factorial_contrast\\synchronized_primary",
+    "status": "PASS_CASE_B_SYNCHRONIZED_60_RUN_RERUN",
+    "training_performed": true
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "created_before_any_probe_fit": true,
+  "peak_descriptor_status": "PEAK_DESCRIPTOR_NOT_VALIDATED",
+  "peak_descriptor_validated": false,
+  "peak_validity_sha256": "779e6565d011878c71d2d4012c97acd409b072e09473c09930c6fd040720ad2c",
+  "primary_probe_artifacts_present_at_seal": false,
+  "protocol_register_sha256": "c16bc60a0141a671d22ca0f589188aa5b14bce4b05d4278f515d38a48b19ff0f",
+  "protocol_sha256": "3a37ab7022df90a27c58c5aa6eae429db45d50c1a5fae4fd6c494d32e70e5c3e",
+  "representation_register_sha256": "5325ff3646fd19f148a1a9dc345b179b7922a55c621d9ce5b051080aa4e5db7e",
+  "split_manifest_sha256": "f9df4f7d7ef29e643e2fed9ccf10e6b2f6ed8c894936bddbcb3bb503915b5487"
+}

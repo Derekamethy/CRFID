@@ -1,0 +1,6 @@
+lambda_max,method,frozen_before_execution,development_run_count
+0.0,ERM,True,15
+0.03,DANN,True,15
+0.1,DANN,True,15
+0.3,DANN,True,15
+1.0,DANN,True,15

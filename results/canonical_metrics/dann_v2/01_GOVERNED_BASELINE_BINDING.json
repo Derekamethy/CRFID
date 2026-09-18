@@ -1,0 +1,39 @@
+{
+  "absolute_paths_recorded": false,
+  "binding_conflict": false,
+  "candidate": "C1_FIRST_DIFFERENCE_ERM_1DCNN",
+  "canonical_base_commit": "caabe04cd46030e3fb4fdb446743cf6561b81be9",
+  "canonical_base_tag": "v2.0.0-canonical-2026-08-02",
+  "canonical_base_tree": "207bddb886ec6abf3befdcda873aa28e58bf450b",
+  "canonical_code_hashes": {
+    "configs/strict_dg/canonical.yaml": "2338bbe1f7ec501546512d286b3d2b3d3067f9f8e458a547e2a237c15a1b835e",
+    "src/crfid/protocols/strict_dg.py": "1714dd8ad6a1fa62619a2b16e601f84954a9fc2d2e3c2d2d1675364b71de4aa3",
+    "src/crfid/strict_runtime/neutral_data.py": "09a3d7e4579b63b4257f82bd4711183428e4d4675fcdad9cafd8a263d2dc6cac",
+    "src/crfid/strict_runtime/neutral_metrics.py": "ccb26eecc31993c3f339f174411902539b4599b34fdc018732a63b3c9e2d6471",
+    "src/crfid/strict_runtime/neutral_model.py": "eecf7a5a274d471892590b51e0d79b65e0fe7e13739afbe08cd51828493c6227",
+    "src/crfid/strict_runtime/phase3b_execution.py": "ddc65b7fa4bb8287140cd2837f7a392df968f9dcabd0dfabc5df3b479cf9b010",
+    "src/crfid/strict_runtime/scale_policy.py": "bee7fa226c45eab2480242f9ab246eb08c22bad4df776a98637299d63b6034b1",
+    "src/crfid/strict_runtime/target_evaluation.py": "82413d4b44ab3eef283722738da91ca41e0061eac33c358719d5ff12b9e43b88"
+  },
+  "experiment": "POST_HOC_SOURCE_ONLY_FOLLOWUP_DANN_V2",
+  "governed_source_input_hashes": {
+    "CANONICAL_SOURCE_REGISTRY.csv": "a1cbb062b4e2a57d62a6662acbe27cb151703ee07fa0ea3ef447bca4f96ad7e7",
+    "SOURCE_ONLY_LOPO_SPLITS.csv": "41a275a6f499ee3d3105e09a420ceb92bb8272d879a89a6bb6623ae6f9bc82ca",
+    "source_labels_int64.npy": "a0f74a067fd56c81df7bea54d023e634cf91252cb9b2f75ab18b4ecf7b8525a3",
+    "source_signals_float64.npy": "b8fa8d1699d3b5d0da9d7c45a3e709aff2802b6653afb10771d57b401f740aa8"
+  },
+  "numpy_version": "2.4.6",
+  "p4_accessed": false,
+  "python_executable_sha256": "5912d0884b23c0343983a864c6064242391e2265536f50b88624857e353882c9",
+  "python_version": "3.12.13",
+  "schema_version": 1,
+  "source_positions": [
+    "P1",
+    "P2",
+    "P3"
+  ],
+  "source_rows": 9450,
+  "status": "PASS_GOVERNED_RUNTIME_AND_BASELINE_BINDING",
+  "target_position": "P4",
+  "torch_version": "2.12.0+cpu"
+}

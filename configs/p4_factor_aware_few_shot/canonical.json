@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "scientific_question": "Does matched-budget joint ER/surface support coverage improve condition-block-disjoint P4 Few-Shot adaptation?",
+  "source_method": "C1_FIRST_DIFFERENCE_ERM_1DCNN",
+  "source_checkpoint_seeds": [42, 43, 44, 45, 46],
+  "support_seeds": [104729, 130363, 155921, 181081, 205439],
+  "outer_query_folds": {
+    "Q0": ["E0xS0", "E1xS1", "E2xS2"],
+    "Q1": ["E0xS1", "E1xS2", "E2xS0"],
+    "Q2": ["E0xS2", "E1xS0", "E2xS1"]
+  },
+  "label_budgets": {"1": 7, "3": 21, "5": 35},
+  "strategies": {
+    "1": ["RANDOM_BLOCK"],
+    "3": ["RANDOM_BLOCK", "ER_BALANCED", "SURFACE_BALANCED", "JOINT_FACTOR_COVERAGE"],
+    "5": ["RANDOM_BLOCK", "JOINT_FACTOR_COVERAGE"]
+  },
+  "primary_method": "TARGET_ONLY_COSINE_PROTOTYPE",
+  "secondary_method": "FROZEN_ENCODER_LINEAR_HEAD_ADAPTATION",
+  "baseline": "FS0_FROZEN_SOURCE_HEAD",
+  "primary_contrast": "3-shot TARGET_ONLY_COSINE_PROTOTYPE JOINT_FACTOR_COVERAGE minus RANDOM_BLOCK",
+  "primary_metric": "63-block out-of-fold Macro-F1",
+  "block_prediction": "majority vote; lowest canonical class index breaks an exact tie",
+  "bootstrap": {
+    "replicates": 10000,
+    "seed": 20260804,
+    "scheme": "paired TagID-stratified physical-condition-block percentile bootstrap"
+  },
+  "linear_head_binding": {
+    "optimizer": "full-batch torch.optim.LBFGS",
+    "max_iter": 100,
+    "history_size": 20,
+    "line_search_fn": "strong_wolfe",
+    "tolerance_grad": 1e-09,
+    "tolerance_change": 1e-12,
+    "selected_lambdas": {"1": 100.0, "3": 100.0, "5": 0.1},
+    "support_fit_threshold": "Accuracy >= 0.95 and Macro-F1 >= 0.95"
+  },
+  "query_labels_before_prediction_freeze": false,
+  "encoder_updates": false,
+  "query_informed_selection_or_tuning": false,
+  "inferential_unit": "TagID x ER x surface physical condition block"
+}

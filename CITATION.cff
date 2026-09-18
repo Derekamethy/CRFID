@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite this repository."
+title: "CRFID Domain Generalization, Adaptation, and Physical Redesign"
+type: software
+authors:
+  - family-names: "Yang"
+    given-names: "Yangdeyi"
+date-released: 2026-09-18
+abstract: "Chipless-RFID classification under reader-geometry shift: source-only domain generalization, grouped evaluation, representation and physical-factor diagnostics, controlled target adaptation, and exploratory OpenEMS simulation."
+repository-code: "https://github.com/Derekamethy/CRFID"

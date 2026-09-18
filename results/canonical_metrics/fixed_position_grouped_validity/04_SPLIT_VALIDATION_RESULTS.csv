@@ -1,0 +1,11 @@
+gate,validation,status,checked_run_count,details
+1,no condition block appears in more than one split,PASS,60,all checks passed
+2,all 50 repetitions of each condition block remain together,PASS,60,all checks passed
+3,all seven TagIDs appear in every test fold,PASS,60,all checks passed
+4,"class, block, and row counts are exact",PASS,60,all checks passed
+5,label mappings and registries match canonical Strict-DG,PASS,60,all checks passed
+6,ordered carrier and preprocessing dimensions match canonical Strict-DG,PASS,60,all checks passed
+7,"P1, P2, P3, and P4 run manifests are isolated",PASS,60,all checks passed
+8,no target-assisted or cross-position row is supplied,PASS,60,all checks passed
+9,split manifests are deterministic for a fixed seed,PASS,60,all checks passed
+10,seed changes affect only validation/train membership and training randomness,PASS,60,all checks passed

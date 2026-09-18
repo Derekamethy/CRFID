@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "workflow": "prepare_data",
+  "status": "STATIC_UTILITY_PRE_DG_CUSTODY_PENDING",
+  "dataset": "tyndall",
+  "input_path": "${CRFID_DATA_ROOT:-data}/tyndall_source_with_axis.npz",
+  "output_path": "${CRFID_OUTPUT_ROOT:-outputs}/prepared/tyndall_resampled_512.npz",
+  "class_order": [0, 1, 2, 3, 4, 5, 6],
+  "domain_order": ["P1", "P2", "P3", "P4"],
+  "position_mapping": {"source": ["P1", "P2", "P3"], "target": "P4"},
+  "signal_length": 281,
+  "required_arrays": ["signals", "labels", "domains", "conditions", "frequency_axis"],
+  "included_domains": ["P1", "P2", "P3"],
+  "metadata_fields": ["sample_id", "class_index", "domain_id", "surface_id", "material_id", "condition_id", "repeat_id"],
+  "resampling": {"mode": "conditional_physical_axis", "target_start_ghz": 5.0, "target_stop_ghz": 8.0, "target_length": 512, "extrapolation": false},
+  "frequency_axis_status": "CONDITIONAL_REQUIRES_DECLARED_AXIS",
+  "random_seeds": [42],
+  "normalization": "none_during_registry_creation"
+}

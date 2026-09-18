@@ -1,0 +1,13 @@
+{
+  "best_nonzero_held_macro_f1": 0.1488524385002671,
+  "eligible_nonzero_lambdas": [
+    0.3
+  ],
+  "p4_used": false,
+  "rule": "source_only_frozen_lexicographic_v1",
+  "schema_version": 1,
+  "selected_nonzero_lambda": 0.3,
+  "selection_sha256": "6268c489fbe2a2d43aa93801d6783f9824bfc643f55220b9ab7eea12a0257aa6",
+  "source_only_overall_winner": "DANN",
+  "source_only_overall_winner_lambda": 0.3
+}

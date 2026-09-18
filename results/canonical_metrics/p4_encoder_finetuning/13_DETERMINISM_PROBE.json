@@ -1,0 +1,12 @@
+{
+  "adapted_model_sha256": "422430ea982260b5ab2047d9c1f0f03a5c824d24599c9c32ca04f058ed11dfdf",
+  "arm": "PARTIAL_FT",
+  "budget": 7,
+  "finetuning_seed": 2356896387,
+  "fold": 0,
+  "passed": true,
+  "prediction_sha256": "74109eda32215f1e1c1b0a22615b8eeb18a9aa3edc2ffc8e06a225c9e153104e",
+  "query_labels_opened": false,
+  "source_seed": 42,
+  "support_seed": 104729
+}

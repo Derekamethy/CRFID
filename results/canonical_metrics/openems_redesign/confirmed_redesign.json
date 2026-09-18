@@ -1,0 +1,167 @@
+{
+  "status": "NOT_CONFIRMED",
+  "candidate": "l1_shorter_3pct",
+  "baseline_worst_pair": "110-111",
+  "pilot_min_pair_improvement_fraction": 0.22311406335975792,
+  "confirm_pair_baseline": {
+    "source_weighted_centered_rms_db": 3.1928946761442,
+    "uniform_centered_rms_db": 5.872655298183654
+  },
+  "confirm_pair_candidate": {
+    "source_weighted_centered_rms_db": 6.696563435609957,
+    "uniform_centered_rms_db": 5.618808316400668
+  },
+  "confirm_pair_improvement_fraction": 1.0973330206108938,
+  "all_tag_confirm_available": true,
+  "all_tag_confirm_min_pair_improvement_fraction": 0.006810066146654581,
+  "all_tag_confirm_worst_pairs": {
+    "baseline": "110-111",
+    "candidate": "100-110"
+  },
+  "all_tag_confirm_ranking": {
+    "baseline": {
+      "candidate": "baseline",
+      "mesh_profile": "confirm",
+      "response_column": "cross_polar_backscatter_rcs_dbsm",
+      "min_source_weighted_pair_rms_db": 3.1928946761442,
+      "mean_source_weighted_pair_rms_db": 6.5913971759001795,
+      "min_uniform_pair_rms_db": 5.362275299126524,
+      "mean_uniform_pair_rms_db": 10.071335366946522,
+      "worst_pair": "110-111",
+      "single_bit_probe_order_ok": true,
+      "single_bit_probe_gate_pass": true,
+      "resonance_order_ok": true,
+      "resonance_gate_pass": true,
+      "L3_probe_peak_ghz": 6.025,
+      "L3_probe_delta_db": 7.751120280000002,
+      "L3_probe_interior_local_max": true,
+      "L2_probe_peak_ghz": 6.75,
+      "L2_probe_delta_db": 10.462461538,
+      "L2_probe_interior_local_max": true,
+      "L1_probe_peak_ghz": 7.875,
+      "L1_probe_delta_db": 8.500292232,
+      "L1_probe_interior_local_max": true,
+      "full_111_Lc_peak_ghz": 5.775,
+      "full_111_Lc_window_contrast_db": 57.96527132199999,
+      "full_111_Lc_interior_local_max": true,
+      "full_111_L3_peak_ghz": 6.4,
+      "full_111_L3_window_contrast_db": 33.380736535,
+      "full_111_L3_interior_local_max": true,
+      "full_111_L2_peak_ghz": 7.225,
+      "full_111_L2_window_contrast_db": 30.240468365,
+      "full_111_L2_interior_local_max": true,
+      "full_111_L1_peak_ghz": 7.4,
+      "full_111_L1_window_contrast_db": 4.289990226999997,
+      "full_111_L1_interior_local_max": true,
+      "evidence_boundary": "SYNTHETIC ASSUMPTION-BOUNDED OPENEMS MODEL; NOT AUTHORITATIVE TAG GEOMETRY OR FABRICATION EVIDENCE",
+      "rank": 2,
+      "min_weighted_improvement_vs_baseline_fraction": 0.0
+    },
+    "candidate": {
+      "candidate": "l1_shorter_3pct",
+      "mesh_profile": "confirm",
+      "response_column": "cross_polar_backscatter_rcs_dbsm",
+      "min_source_weighted_pair_rms_db": 3.2146385000880433,
+      "mean_source_weighted_pair_rms_db": 8.532955297620669,
+      "min_uniform_pair_rms_db": 5.362275299126524,
+      "mean_uniform_pair_rms_db": 10.615967638144987,
+      "worst_pair": "100-110",
+      "single_bit_probe_order_ok": true,
+      "single_bit_probe_gate_pass": true,
+      "resonance_order_ok": true,
+      "resonance_gate_pass": true,
+      "L3_probe_peak_ghz": 6.025,
+      "L3_probe_delta_db": 7.751120280000002,
+      "L3_probe_interior_local_max": true,
+      "L2_probe_peak_ghz": 6.75,
+      "L2_probe_delta_db": 10.462461538,
+      "L2_probe_interior_local_max": true,
+      "L1_probe_peak_ghz": 7.875,
+      "L1_probe_delta_db": 9.916856527,
+      "L1_probe_interior_local_max": true,
+      "full_111_Lc_peak_ghz": 5.775,
+      "full_111_Lc_window_contrast_db": 38.331359049999996,
+      "full_111_Lc_interior_local_max": true,
+      "full_111_L3_peak_ghz": 6.425,
+      "full_111_L3_window_contrast_db": 35.666116171,
+      "full_111_L3_interior_local_max": true,
+      "full_111_L2_peak_ghz": 6.75,
+      "full_111_L2_window_contrast_db": 18.29890018900001,
+      "full_111_L2_interior_local_max": true,
+      "full_111_L1_peak_ghz": 7.55,
+      "full_111_L1_window_contrast_db": 35.676826643000005,
+      "full_111_L1_interior_local_max": true,
+      "evidence_boundary": "SYNTHETIC ASSUMPTION-BOUNDED OPENEMS MODEL; NOT AUTHORITATIVE TAG GEOMETRY OR FABRICATION EVIDENCE",
+      "rank": 1,
+      "min_weighted_improvement_vs_baseline_fraction": 0.006810066146654581
+    }
+  },
+  "baseline_111_centered_convergence_rms_db": 3.6582323691346272,
+  "candidate_111_centered_convergence_rms_db": 7.0281718143958605,
+  "candidate_pilot_peaks": {
+    "Lc": {
+      "frequency_ghz": 5.75,
+      "window_contrast_db": 36.08215052600001,
+      "interior_local_max": true,
+      "pass": true
+    },
+    "L3": {
+      "frequency_ghz": 6.4,
+      "window_contrast_db": 34.916352659,
+      "interior_local_max": true,
+      "pass": true
+    },
+    "L2": {
+      "frequency_ghz": 7.3,
+      "window_contrast_db": 32.76420133800001,
+      "interior_local_max": true,
+      "pass": true
+    },
+    "L1": {
+      "frequency_ghz": 7.95,
+      "window_contrast_db": 3.0693717150000026,
+      "interior_local_max": true,
+      "pass": true
+    }
+  },
+  "candidate_confirm_peaks": {
+    "Lc": {
+      "frequency_ghz": 5.775,
+      "window_contrast_db": 38.331359049999996,
+      "interior_local_max": true,
+      "pass": true
+    },
+    "L3": {
+      "frequency_ghz": 6.425,
+      "window_contrast_db": 35.666116171,
+      "interior_local_max": true,
+      "pass": true
+    },
+    "L2": {
+      "frequency_ghz": 6.75,
+      "window_contrast_db": 18.29890018900001,
+      "interior_local_max": true,
+      "pass": true
+    },
+    "L1": {
+      "frequency_ghz": 7.55,
+      "window_contrast_db": 35.676826643000005,
+      "interior_local_max": true,
+      "pass": true
+    }
+  },
+  "candidate_peak_shifts_mhz": {
+    "Lc": 25.000000000000355,
+    "L3": 24.999999999999467,
+    "L2": 549.9999999999998,
+    "L1": 400.00000000000034
+  },
+  "candidate_max_peak_shift_mhz": 549.9999999999998,
+  "thresholds": {
+    "centered_convergence_rms_db_max": 2.0,
+    "peak_shift_mhz_max": 150.0,
+    "minimum_practical_improvement_fraction": 0.05
+  },
+  "selection_target_data_used": false,
+  "evidence_boundary": "SYNTHETIC ASSUMPTION-BOUNDED OPENEMS MODEL; NOT AUTHORITATIVE TAG GEOMETRY OR FABRICATION EVIDENCE"
+}

@@ -1,0 +1,11 @@
+{
+  "array_sha256": "22de53114e72333858823ba37986889191186642f9283d3cfaaa97c5e231270a",
+  "dtype": "int64",
+  "purpose": "final scoring and independent metric replay only",
+  "relative_path": "query_truth_int64.npy",
+  "sha256": "fa333e10fe43b7382eba4248417a4533ce88643fb5f7161282c0152e4f505b54",
+  "shape": [
+    3150
+  ],
+  "written_after_global_prediction_freeze": true
+}

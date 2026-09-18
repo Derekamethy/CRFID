@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "status": "COMPLETE_WITH_RESCORING_FROM_FROZEN_PREDICTIONS",
+  "scientific_classification": "GROUPDRO_NO_RELIABLE_BENEFIT",
+  "governed_runtime_binding_status": "PASS_GOVERNED_RUNTIME_BINDING",
+  "source_bundle_fingerprint_sha256": "b4388de95eab0123178b57e29cfdbc69ac656666101038aca5cf2ca174b32164",
+  "p4_bundle_fingerprint_sha256": "60a65a6117b5625b8b510b21e110a5eac469632a485612c6f5277e8ffa423eef",
+  "post_freeze_scoring": {
+    "status": "PASS_VERIFIED_FROZEN_PREDICTIONS",
+    "prediction_bundle_sha256": "2e77452945cff1c0764aa9557a9cdea49ffed1bb92e774f86588cf80b2808409",
+    "eta_selection_receipt_sha256": "a8a2e2c1d8d08ccd97b83d1740a50f9c4b5df733b068c81f9fcace68d838c319",
+    "rescored_from_unchanged_predictions": true
+  },
+  "absolute_paths_recorded": false
+}

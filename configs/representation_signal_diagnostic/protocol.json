@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "study_id": "CONDITION-BLOCK-DISJOINT_REPRESENTATION-VERSUS-SIGNAL_DIAGNOSTIC",
+  "status_before_execution": "PREREGISTERED",
+  "positions": ["P1", "P2", "P3", "P4"],
+  "position_design": {
+    "P1": {"distance_mm": 50, "angle_deg": 0},
+    "P2": {"distance_mm": 50, "angle_deg": 45},
+    "P3": {"distance_mm": 150, "angle_deg": 0},
+    "P4": {"distance_mm": 150, "angle_deg": 45}
+  },
+  "tag_ids": [1, 2, 3, 4, 5, 6, 7],
+  "class_order": [0, 1, 2, 3, 4, 5, 6],
+  "er_levels": [0, 1, 2],
+  "surfaces": ["A1", "A2", "A3"],
+  "repeats_per_block": 50,
+  "raw_dimension": 281,
+  "first_difference_dimension": 280,
+  "embedding_dimension": 256,
+  "governed_data": {
+    "environment_variable": "CRFID_GOVERNED_DATA_ROOT",
+    "repository_relative_candidates": ["../Dataset-1-Tyndall/shared_data/Original-dataset"],
+    "file_pattern": "A{surface_index}_{position}.csv"
+  },
+  "forensic_archive": {
+    "repository_relative_root": "../CRFID_research_code_v2",
+    "required_commit": "a9dd83ba791a0ac7cc6f233c67ce44a6dbdb4f25",
+    "required_tree": "9a7c965aa338b9a299ddcbbd1e480116666e3c11",
+    "required_tag": "v2-repository-status-final-2026-08-01"
+  },
+  "canonical_base": {
+    "required_commit": "caabe04cd46030e3fb4fdb446743cf6561b81be9",
+    "required_tree": "207bddb886ec6abf3befdcda873aa28e58bf450b",
+    "required_tag": "v2.0.0-canonical-2026-08-02"
+  },
+  "checkpoint_seeds": [42, 43, 44, 45, 46],
+  "probe_seeds": [42, 43, 44, 45, 46],
+  "checkpoint_file_sha256": {
+    "42": "cc507dcf895b2197d4a98c7c2eeb4c6520911944464da637b5002e1b7f8f9437",
+    "43": "3db0c7d3c3678d0d0b4f78714a86b49759e6526bbbac89a1bb78cd9c1266a6a3",
+    "44": "4acc015a59aed08faab2492c0cd2639d5c7de711c19c3bf1dcbb9cdda85453ce",
+    "45": "8a091de402a9750f5bd0443741afbf694b0155d2c008e6c0aa68123b62b71896",
+    "46": "1cdb5c787ba674e3b5a73fdf03ba0d378f5b46055792408ac4b4ea33a389c879"
+  },
+  "checkpoint_state_sha256": {
+    "42": "5b5b8d778d1467c8d751676b316d9ac9e6c1605f634c4e85cde1d827ec8275d3",
+    "43": "5f3f0360e559a6522a1af03e57b98c917096f3889afac5a0bfa65b70d9fa1210",
+    "44": "a39e7a2c9ddc9593d812322d95b18129810cee24ba5a66c24f014d3bb4a53e96",
+    "45": "468c6f1a94ee4ddc16678bc2cc572eccae7f2485220ace919004504da336c776",
+    "46": "a3734a84be6d03e4376772aba8b32ae2d7a46d95f731cc326f616aa94619700a"
+  },
+  "source_preprocessing": {
+    "mean_file_sha256": "a8054ebeb3ab6559d49220e530f7ef03996bd1598b070a3907cf390658baca52",
+    "scale_file_sha256": "8709fd10263b60d3384e6b5b198e27314d8aefa85eb49b9c4c3ae0ccd1e9cecb",
+    "rule": "canonical frozen P1-P3 source first-difference preprocessing; never refit"
+  },
+  "folds": {
+    "test_cells": {
+      "0": [[0, "A1"], [1, "A2"], [2, "A3"]],
+      "1": [[0, "A2"], [1, "A3"], [2, "A1"]],
+      "2": [[0, "A3"], [1, "A1"], [2, "A2"]]
+    },
+    "validation_rule": "for test fold q, validation cells are Latin-square fold (q+1) mod 3 and training cells are fold (q+2) mod 3",
+    "all_repeats_grouped": true
+  },
+  "representations": [
+    "RAW_SIGNAL_281",
+    "FIRST_DIFFERENCE_280",
+    "C1_ENCODER_EMBEDDING",
+    "PEAK_DESCRIPTOR"
+  ],
+  "peak_descriptor": {
+    "canonical_function": "crfid.analysis.reference_peaks.strongest_window_peaks",
+    "mode": "min",
+    "ordered_index_windows_inclusive": {
+      "W0": [10, 69],
+      "W1": [75, 126],
+      "W2": [136, 182],
+      "W3": [192, 252]
+    },
+    "window_provenance": "verified historical 281-point conditional 5-8 GHz windows converted once to ordered-index bounds; outputs use index labels",
+    "fields_per_window": ["index", "amplitude", "missing_flag"],
+    "dimension": 12,
+    "validity_thresholds": {
+      "maximum_global_missing_frequency": 0.05,
+      "maximum_median_within_to_between_index_variance_ratio": 0.25,
+      "maximum_median_within_to_between_amplitude_variance_ratio": 0.25,
+      "require_exact_repeat_determinism": true,
+      "require_all_synthetic_controls": true
+    }
+  },
+  "linear_probe": {
+    "family": "FIXED_SOFTMAX_LINEAR_PROBE",
+    "layers": 1,
+    "optimizer": "Adam",
+    "learning_rate": 0.01,
+    "weight_decay": 0.0001,
+    "maximum_epochs": 200,
+    "batch_size": 2048,
+    "early_stopping_patience": 20,
+    "early_stopping_min_delta": 1e-12,
+    "validation_metric": "row_macro_f1",
+    "initialization": "xavier_uniform_weight_zero_bias",
+    "checkpoint_rule": "highest validation row Macro-F1; exact ties retain earliest epoch",
+    "feature_scaling": "featurewise population mean/scale fit on training rows only; zero scales replaced by 1"
+  },
+  "learning_validity": {
+    "fold": 0,
+    "subset_rule": "one lexicographically first training row per class from fold-0 training blocks",
+    "fit_accuracy_threshold": 1.0,
+    "fit_macro_f1_threshold": 1.0,
+    "maximum_steps": 1000
+  },
+  "majority_vote": {
+    "unit": "condition block",
+    "tie_rule": "lowest canonical class index"
+  },
+  "bootstrap": {
+    "replicates": 10000,
+    "seed": 20260804,
+    "confidence_level": 0.95,
+    "sampling_unit": "condition block within TagID",
+    "paired_representations": true,
+    "paired_positions": true
+  },
+  "interpretation": {
+    "chance_block_accuracy": 0.14285714285714285,
+    "reliable_interval_rule": "two-sided 95% paired bootstrap interval excludes zero",
+    "above_baseline_rule": "95% block-accuracy interval lower bound exceeds 1/7",
+    "stable_across_positions_rule": "same signed point contrast in all four positions with reliable intervals in at least three",
+    "signal_level_weak_rule": "P2 and P4 point block accuracy is at most chance+0.10 and its lower interval does not exceed chance"
+  }
+}

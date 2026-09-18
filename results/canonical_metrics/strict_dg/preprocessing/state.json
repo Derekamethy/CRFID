@@ -1,0 +1,27 @@
+{
+  "candidate_id": "C1_FIRST_DIFFERENCE_ERM_1DCNN",
+  "ddof": 0,
+  "fit_domains": [
+    "P1",
+    "P2",
+    "P3"
+  ],
+  "fit_sample_count": 9450,
+  "input_length": 281,
+  "mean_array_sha256": "44094b13615f470b6fb3c735ffa4a1af0b456b2354dc23b3d7e0c00e89687149",
+  "minimum_scale": 1e-12,
+  "minimum_scale_replacement": 1.0,
+  "operation_order": [
+    "first_difference_without_padding",
+    "featurewise_population_standardization",
+    "float32_model_conversion"
+  ],
+  "output_length": 280,
+  "scale_array_sha256": "244c4dc030ee9b5dc9e4070e1b95904d1480627144dc3ef8bfb81d18cada3466",
+  "schema_version": 1,
+  "source_signal_file_sha256": "b8fa8d1699d3b5d0da9d7c45a3e709aff2802b6653afb10771d57b401f740aa8",
+  "state_sha256": "9e13f14054849e56af238fd4cbeafc2e91cf077a6a0d7ee097d6e620e95827e5",
+  "target_refit_permitted": false,
+  "target_used_for_fit": false,
+  "zero_scale_replacement_count": 0
+}

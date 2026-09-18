@@ -1,0 +1,467 @@
+{
+  "candidate_registry_sha256": "c650b3ae65f64ac4bcc3ab5b912e04ec05167c595c536bfd5788808f8486250b",
+  "candidates": [
+    {
+      "architecture_or_transformation": "Frozen Phase 2 neutral 1D CNN and feature-wise source-train standardization.",
+      "candidate_id": "C0_NEUTRAL_ERM_1DCNN",
+      "checkpoint_lineage": {
+        "checkpoint_binding_status": "BOUND",
+        "checkpoint_count": 15,
+        "checkpoint_set_sha256": "0a6d18128c1213c2899b17a4a7d45a5902dd0070a57d453a0b45d0e4f5033e80"
+      },
+      "configuration": {
+        "architecture": {
+          "class_symmetric": true,
+          "layers": [
+            {
+              "in_channels": 1,
+              "kernel_size": 7,
+              "out_channels": 64,
+              "padding": 3,
+              "type": "Conv1d"
+            },
+            {
+              "num_channels": 64,
+              "num_groups": 8,
+              "type": "GroupNorm"
+            },
+            {
+              "type": "ReLU"
+            },
+            {
+              "kernel_size": 2,
+              "type": "MaxPool1d"
+            },
+            {
+              "in_channels": 64,
+              "kernel_size": 5,
+              "out_channels": 128,
+              "padding": 2,
+              "type": "Conv1d"
+            },
+            {
+              "num_channels": 128,
+              "num_groups": 8,
+              "type": "GroupNorm"
+            },
+            {
+              "type": "ReLU"
+            },
+            {
+              "kernel_size": 2,
+              "type": "MaxPool1d"
+            },
+            {
+              "in_channels": 128,
+              "kernel_size": 3,
+              "out_channels": 256,
+              "padding": 1,
+              "type": "Conv1d"
+            },
+            {
+              "num_channels": 256,
+              "num_groups": 8,
+              "type": "GroupNorm"
+            },
+            {
+              "type": "ReLU"
+            },
+            {
+              "output_size": 1,
+              "type": "AdaptiveAvgPool1d"
+            },
+            {
+              "type": "Flatten"
+            },
+            {
+              "in_features": 256,
+              "out_features": 7,
+              "type": "Linear"
+            }
+          ],
+          "name": "NeutralSourceOnlyCNN1D",
+          "parameter_count": 142855
+        },
+        "candidate_search": false,
+        "class_count": 7,
+        "condition_block_aggregation": "float64_mean_of_sample_logits_then_argmax_with_lowest_index_tie_break",
+        "folds": [
+          "S1",
+          "S2",
+          "S3"
+        ],
+        "frequency_axis_status": "PHYSICAL_FREQUENCY_AXIS_PROVENANCE_UNRESOLVED",
+        "initialization": {
+          "conv1d_and_linear_biases": "uniform_minus_to_plus_inverse_sqrt_fan_in",
+          "conv1d_and_linear_weights": "kaiming_uniform_a_0_mode_fan_in_nonlinearity_relu",
+          "groupnorm_biases": "zeros",
+          "groupnorm_weights": "ones"
+        },
+        "input": {
+          "canonical_label_path": "02_data_registry/source_labels_int64.npy",
+          "canonical_signal_path": "02_data_registry/source_signals_float64.npy",
+          "custody_dtype": "<f8",
+          "custody_shape": [
+            9450,
+            281
+          ],
+          "feature_semantics": "ordered_feature_indices_0_through_280_only",
+          "model_dtype": "float32",
+          "model_shape": [
+            "batch",
+            1,
+            281
+          ],
+          "registry_path": "02_data_registry/CANONICAL_SOURCE_REGISTRY.csv",
+          "split_path": "04_source_only_splits/SOURCE_ONLY_LOPO_SPLITS.csv"
+        },
+        "loss": {
+          "label_smoothing": 0.0,
+          "name": "CrossEntropyLoss",
+          "reduction": "mean",
+          "weight": null
+        },
+        "method_id": "C0_NEUTRAL_ERM_1DCNN",
+        "model_selection": false,
+        "optimizer": {
+          "amsgrad": false,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "epsilon": 1e-08,
+          "foreach": false,
+          "fused": false,
+          "learning_rate": 0.001,
+          "name": "AdamW",
+          "weight_decay": 0.0001
+        },
+        "phase": 2,
+        "phase1_artifact_manifest": "manifests/PHASE1_ARTIFACT_MANIFEST.json",
+        "reproducibility_repeat": {
+          "fold_id": "S1",
+          "predeclared": true,
+          "seed": 42
+        },
+        "scheduler": null,
+        "schema_version": 1,
+        "scientific_label": "SOURCE_ONLY_PROTOCOL_LOCKED_RETROSPECTIVE_P4",
+        "seed_reporting_policy": "report_every_seed_with_equal_weight_and_never_select_a_seed",
+        "seeds": [
+          42,
+          43,
+          44,
+          45,
+          46
+        ],
+        "target_data_access": "PROHIBITED",
+        "training": {
+          "batch_size": 256,
+          "early_stopping_patience": 8,
+          "inner_epoch_selection": "earliest_epoch_with_highest_observed_inner_validation_sample_macro_f1",
+          "inner_stage_offset": 0,
+          "maximum_inner_selection_epochs": 50,
+          "minimum_improvement": 1e-12,
+          "outer_refit_epochs": "selected_inner_epoch_count",
+          "outer_stage_offset": 100000,
+          "permutation_seed_rule": "seed_times_1000000_plus_stage_offset_plus_epoch"
+        },
+        "unique_signal_weighting": "each_sample_weight_is_inverse_exact_signal_multiplicity"
+      },
+      "folds": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "metric_implementation": "src/crfid/strict_runtime/neutral_metrics.py",
+      "positions": [
+        "P1",
+        "P2",
+        "P3"
+      ],
+      "preprocessing": {
+        "policy_binding": "candidate registry hyperparameters plus canonical representation-then-ddof0-standardization policy",
+        "released_state_set_sha256": "23e0aaadc6330f1e92c07efa338bb3fd5d568edd919f707e7abb0260aa00c61c"
+      },
+      "released_evidence": {
+        "per_run_metrics_sha256": "1fcbedafb9813f96f13e47929b029e1e40d8d8f36815af5391ee271d4d63d35d",
+        "prediction_bundle_count": 15,
+        "prediction_set_sha256": "5fbbd5b3ee254f46371693ef9e2fdf5a25973b516904c1b962ef085ff5fe1343"
+      },
+      "seeds": [
+        42,
+        43,
+        44,
+        45,
+        46
+      ],
+      "selection_rule": "EXACT_HISTORICAL_SELECTOR_RESTRICTED_TO_TWO_ALLOWED_SOURCE_POSITIONS"
+    },
+    {
+      "architecture_or_transformation": "x[i+1]-x[i] for feature indices 0 through 279; otherwise the exact C0 architecture.",
+      "candidate_id": "C1_FIRST_DIFFERENCE_ERM_1DCNN",
+      "checkpoint_lineage": {
+        "checkpoint_binding_status": "BOUND",
+        "checkpoint_count": 15,
+        "checkpoint_set_sha256": "da90837c359cf70f241d638342d3b73a4daf65cd35b66e7d561bc90d43b3f3db"
+      },
+      "configuration": {
+        "batch_size": 256,
+        "learning_rate": 0.001,
+        "maximum_inner_epochs": 50,
+        "minimum_scale": 1e-12,
+        "optimizer": "AdamW",
+        "patience": 8,
+        "scheduler": null,
+        "transformation": "first_difference",
+        "weight_decay": 0.0001
+      },
+      "folds": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "metric_implementation": "src/crfid/strict_runtime/neutral_metrics.py",
+      "positions": [
+        "P1",
+        "P2",
+        "P3"
+      ],
+      "preprocessing": {
+        "policy_binding": "candidate registry hyperparameters plus canonical representation-then-ddof0-standardization policy",
+        "released_state_set_sha256": "23e0aaadc6330f1e92c07efa338bb3fd5d568edd919f707e7abb0260aa00c61c"
+      },
+      "released_evidence": {
+        "per_run_metrics_sha256": "1fcbedafb9813f96f13e47929b029e1e40d8d8f36815af5391ee271d4d63d35d",
+        "prediction_bundle_count": 15,
+        "prediction_set_sha256": "2cd8c70d429198597f7c0c621f2071ff30f450e79a06487a9ea4645aa75a7427"
+      },
+      "seeds": [
+        42,
+        43,
+        44,
+        45,
+        46
+      ],
+      "selection_rule": "EXACT_HISTORICAL_SELECTOR_RESTRICTED_TO_TWO_ALLOWED_SOURCE_POSITIONS"
+    },
+    {
+      "architecture_or_transformation": "Train the exact C0 encoder and replace only inference readout with euclidean nearest source-development class centroid in the 256-dimensional embedding.",
+      "candidate_id": "C2_SOURCE_EUCLIDEAN_NCM_READOUT",
+      "checkpoint_lineage": {
+        "checkpoint_binding_status": "BOUND_SHARED_C0_ENCODER",
+        "checkpoint_count": 15,
+        "checkpoint_set_sha256": "0a6d18128c1213c2899b17a4a7d45a5902dd0070a57d453a0b45d0e4f5033e80"
+      },
+      "configuration": {
+        "cosine_epsilon_if_used": 1e-12,
+        "prototype_fit_partition": "outer_development_only",
+        "prototype_grain": "equal_weight_complete_condition_block_embedding_centroids",
+        "readout_metric": "euclidean",
+        "temperature": null
+      },
+      "folds": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "metric_implementation": "src/crfid/strict_runtime/neutral_metrics.py",
+      "positions": [
+        "P1",
+        "P2",
+        "P3"
+      ],
+      "preprocessing": {
+        "policy_binding": "candidate registry hyperparameters plus canonical representation-then-ddof0-standardization policy",
+        "released_state_set_sha256": "23e0aaadc6330f1e92c07efa338bb3fd5d568edd919f707e7abb0260aa00c61c"
+      },
+      "released_evidence": {
+        "per_run_metrics_sha256": "1fcbedafb9813f96f13e47929b029e1e40d8d8f36815af5391ee271d4d63d35d",
+        "prediction_bundle_count": 15,
+        "prediction_set_sha256": "272756acc76f85ffe04d771fbcd852ec2eb77845693b1a528a625ce4b251592a"
+      },
+      "seeds": [
+        42,
+        43,
+        44,
+        45,
+        46
+      ],
+      "selection_rule": "EXACT_HISTORICAL_SELECTOR_RESTRICTED_TO_TWO_ALLOWED_SOURCE_POSITIONS"
+    },
+    {
+      "architecture_or_transformation": "Exact C0 encoder and affine head with paired source-position minibatches and a covariance-alignment penalty on the 256-dimensional embeddings.",
+      "candidate_id": "C3_SOURCE_CORAL_ERM_1DCNN",
+      "checkpoint_lineage": {
+        "checkpoint_binding_status": "NOT_RETAINED_BUT_15_PREDICTION_OUTPUTS_HASH_BOUND",
+        "checkpoint_count": 0,
+        "checkpoint_set_sha256": "UNAVAILABLE"
+      },
+      "configuration": {
+        "alignment_weight": 0.1,
+        "combined_batch_size": 256,
+        "domain_batch_rule": "independent deterministic permutations; pair equal-sized chunks; both source positions present in every update",
+        "embedding_dimension": 256,
+        "learning_rate": 0.001,
+        "maximum_inner_epochs": 50,
+        "optimizer": "AdamW",
+        "patience": 8,
+        "per_position_batch_size": 128,
+        "scheduler": null,
+        "weight_decay": 0.0001
+      },
+      "folds": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "metric_implementation": "src/crfid/strict_runtime/neutral_metrics.py",
+      "positions": [
+        "P1",
+        "P2",
+        "P3"
+      ],
+      "preprocessing": {
+        "policy_binding": "candidate registry hyperparameters plus canonical representation-then-ddof0-standardization policy",
+        "released_state_set_sha256": "23e0aaadc6330f1e92c07efa338bb3fd5d568edd919f707e7abb0260aa00c61c"
+      },
+      "released_evidence": {
+        "per_run_metrics_sha256": "1fcbedafb9813f96f13e47929b029e1e40d8d8f36815af5391ee271d4d63d35d",
+        "prediction_bundle_count": 15,
+        "prediction_set_sha256": "72006bfde88be6186866ea17f45ea03ca0f721ed909e813a3fc6c4745cb3635a"
+      },
+      "seeds": [
+        42,
+        43,
+        44,
+        45,
+        46
+      ],
+      "selection_rule": "EXACT_HISTORICAL_SELECTOR_RESTRICTED_TO_TWO_ALLOWED_SOURCE_POSITIONS"
+    }
+  ],
+  "canonical_config_sha256": "2338bbe1f7ec501546512d286b3d2b3d3067f9f8e458a547e2a237c15a1b835e",
+  "fold_definition": {
+    "mapping": {
+      "S1": "P1",
+      "S2": "P2",
+      "S3": "P3"
+    },
+    "path": "outputs/strict_dg/source_selection/source_fold_manifest.csv",
+    "sha256": "41a275a6f499ee3d3105e09a420ceb92bb8272d879a89a6bb6623ae6f9bc82ca"
+  },
+  "preprocessing": {
+    "policy": "representation_then_featurewise_source_train_standardization; ddof=0; float64 fit; minimum scale 1e-12 replaced by 1.0; float32 model input; no target refit",
+    "released_state_artifacts": [
+      {
+        "path": "outputs/strict_dg/source_selection/preprocessing_state/S1/inner_selection_mean_float64.npy",
+        "sha256": "f851f1dcc467289d66ea1e9accdd1e450c0dc74e4059a8822131f2613347e3e6"
+      },
+      {
+        "path": "outputs/strict_dg/source_selection/preprocessing_state/S1/inner_selection_scale_float64.npy",
+        "sha256": "3dde00b94ba38bdb7e83cbcccd3d6ae541527e37e123b04c2ce9bd8b2f3974dd"
+      },
+      {
+        "path": "outputs/strict_dg/source_selection/preprocessing_state/S1/outer_refit_mean_float64.npy",
+        "sha256": "3e4bae0ed10e9722abd265dce7122d5a4c651e38428f1cb3eb9baedb0d649a0e"
+      },
+      {
+        "path": "outputs/strict_dg/source_selection/preprocessing_state/S1/outer_refit_scale_float64.npy",
+        "sha256": "85bcb518273454444059d112f4b20d81d4f47410017f5ff8524355c37553e82d"
+      },
+      {
+        "path": "outputs/strict_dg/source_selection/preprocessing_state/S2/inner_selection_mean_float64.npy",
+        "sha256": "cf10c307701ac669d96e5344af13785f926d236662808874e6c848dea469fb31"
+      },
+      {
+        "path": "outputs/strict_dg/source_selection/preprocessing_state/S2/inner_selection_scale_float64.npy",
+        "sha256": "7f96924aa7985bea694c8ecfece4449992566c64b088fc2a79ab9ca48232fda8"
+      },
+      {
+        "path": "outputs/strict_dg/source_selection/preprocessing_state/S2/outer_refit_mean_float64.npy",
+        "sha256": "c274c8aa58865f2647c82fa0e27346ce3fa27461729a39e8c66c0ba3080cab05"
+      },
+      {
+        "path": "outputs/strict_dg/source_selection/preprocessing_state/S2/outer_refit_scale_float64.npy",
+        "sha256": "3581d4524005cd2eb455ff3f16ce6731eac318e74ea2f3460c44b6f8714bfa02"
+      },
+      {
+        "path": "outputs/strict_dg/source_selection/preprocessing_state/S3/inner_selection_mean_float64.npy",
+        "sha256": "bfb362d7ad89a49c8cc0e70dcb5ac1545bcad579dfa4d116a522f76bc37d2fd8"
+      },
+      {
+        "path": "outputs/strict_dg/source_selection/preprocessing_state/S3/inner_selection_scale_float64.npy",
+        "sha256": "c9859d46185d72a65eae998daad7b22bdb7fdff16d4edd6740f8aa5862d2506b"
+      },
+      {
+        "path": "outputs/strict_dg/source_selection/preprocessing_state/S3/outer_refit_mean_float64.npy",
+        "sha256": "726d2fcbe6a94c87bb233e2bc498c766b463c7defd37a9c88621d0a743b2d54c"
+      },
+      {
+        "path": "outputs/strict_dg/source_selection/preprocessing_state/S3/outer_refit_scale_float64.npy",
+        "sha256": "90e475df2ec448a229be5dff477a1b2cd96266aebe5f16b1c1b26ddc1e9cfbf9"
+      }
+    ],
+    "released_state_set_sha256": "23e0aaadc6330f1e92c07efa338bb3fd5d568edd919f707e7abb0260aa00c61c"
+  },
+  "schema_version": 1,
+  "seed_definition": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "selection_rule": {
+    "ordered_selector": [
+      {
+        "metric": "worst_outer_held_position_macro_f1",
+        "operation": "maximize"
+      },
+      {
+        "metric": "mean_outer_held_position_macro_f1",
+        "operation": "maximize"
+      },
+      {
+        "metric": "worst_class_recall",
+        "operation": "maximize"
+      },
+      {
+        "metric": "zero_recall_class_frequency",
+        "operation": "minimize"
+      },
+      {
+        "metric": "condition_block_macro_f1",
+        "operation": "maximize"
+      },
+      {
+        "metric": "unique_signal_weighted_macro_f1",
+        "operation": "maximize"
+      },
+      {
+        "metric": "across_seed_standard_deviation",
+        "operation": "minimize"
+      },
+      {
+        "metric": "candidate_id",
+        "operation": "ascending_deterministic"
+      }
+    ],
+    "protocol_sha256": "b0cb8d8a0cefe22e28651e36e416f10d6d51c393c2847065759898676c97aee3",
+    "status": "EXACT_HISTORICAL_SELECTOR_RESTRICTED_TO_TWO_ALLOWED_SOURCE_POSITIONS"
+  },
+  "source_implementation": [
+    {
+      "path": "src/crfid/strict_runtime/phase3b_execution.py",
+      "sha256": "ddc65b7fa4bb8287140cd2837f7a392df968f9dcabd0dfabc5df3b479cf9b010"
+    },
+    {
+      "path": "src/crfid/strict_runtime/phase3b_summary.py",
+      "sha256": "dd76cca10f32982d161cd04b1746cd74287d73440b4684ace7ada1dc23409bf3"
+    },
+    {
+      "path": "src/crfid/strict_runtime/neutral_metrics.py",
+      "sha256": "ccb26eecc31993c3f339f174411902539b4599b34fdc018732a63b3c9e2d6471"
+    }
+  ]
+}

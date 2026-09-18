@@ -1,0 +1,85 @@
+{
+  "bootstrap": {
+    "replicates": 10000,
+    "seed": 2026080917
+  },
+  "branch": "codex/p4-encoder-finetuning-diagnostic-v1",
+  "budgets": [
+    7,
+    35,
+    100,
+    500
+  ],
+  "claim_type": "TARGET_ASSISTED_LABELLED_TARGET_REPRESENTATION_ADAPTATION_DIAGNOSTIC",
+  "code_identity": {
+    "branch": "codex/p4-encoder-finetuning-diagnostic-v1",
+    "code_and_config_clean_before_execution": true,
+    "commit": "c0b8209df148a2e3c1f5d3c68fe5e7eecfd69cb6",
+    "preexisting_output_artifacts_ignored_for_cleanliness": true,
+    "tree": "0a00ab4bb95622e7c74b7128383a2ca343f9ffdc",
+    "worktree": "<ORIGINAL_WORKSPACE>\\CRFID_research_code_v2_patch_p4_encoder_finetuning_diagnostic_v1"
+  },
+  "experiment_id": "p4_encoder_finetuning_diagnostic_v1",
+  "p4_source_hashes": {
+    "A1_P4.csv": "8f63f8bee3deb7747a88ac0fe1f47eabe8c0feedfe5a65cb503e25fdcf1377ee",
+    "A2_P4.csv": "6b20fb815d6df40ff9ad4c0ecbf3bc7a82762ac96b8fd7df7170504715d75a00",
+    "A3_P4.csv": "6c3bffcca0e81664398423c5c4828c3d7d4698a69e804fe69368e53bb8a9f6e3"
+  },
+  "runtime": {
+    "compute_platform": "cpu",
+    "numpy_version": "2.4.6",
+    "python_executable": "<LOCAL_USER_HOME>\\Envs\\crfid-strict-dg\\Scripts\\python.exe",
+    "python_executable_sha256": "5912d0884b23c0343983a864c6064242391e2265536f50b88624857e353882c9",
+    "python_version": "3.12.13",
+    "torch_version": "2.12.0+cpu"
+  },
+  "selected_configuration": {
+    "FULL_FT": {
+      "encoder_weight_decay": 0.0001,
+      "epochs": 20,
+      "learning_rate": 0.0001,
+      "mean_support_minus_query_macro_f1": 0.3722232211079188,
+      "minimum_class_mean_recall": 0.08744444444444445,
+      "minimum_held_position_mean_query_macro_f1": 0.21414487104276514,
+      "overall_mean_query_macro_f1": 0.22215732779643968
+    },
+    "PARTIAL_FT": {
+      "encoder_weight_decay": 0.0,
+      "epochs": 10,
+      "learning_rate": 0.0003,
+      "mean_support_minus_query_macro_f1": 0.26245355002712145,
+      "minimum_class_mean_recall": 0.09166666666666666,
+      "minimum_held_position_mean_query_macro_f1": 0.21934767682644865,
+      "overall_mean_query_macro_f1": 0.224833140354807
+    }
+  },
+  "source_seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "support_seeds": [
+    104729,
+    130363,
+    155921,
+    181081,
+    205439,
+    230003,
+    254959,
+    280001,
+    305093,
+    330017,
+    355031,
+    380041,
+    405019,
+    430007,
+    455003,
+    480017,
+    505027,
+    530017,
+    555029,
+    580031
+  ]
+}

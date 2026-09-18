@@ -1,0 +1,72 @@
+{
+  "bound_files": [
+    {
+      "relative_path": "configs/strict_dg/canonical.yaml",
+      "sha256": "2338bbe1f7ec501546512d286b3d2b3d3067f9f8e458a547e2a237c15a1b835e"
+    },
+    {
+      "relative_path": "src/crfid/strict_runtime/neutral_data.py",
+      "sha256": "09a3d7e4579b63b4257f82bd4711183428e4d4675fcdad9cafd8a263d2dc6cac"
+    },
+    {
+      "relative_path": "src/crfid/strict_runtime/neutral_model.py",
+      "sha256": "eecf7a5a274d471892590b51e0d79b65e0fe7e13739afbe08cd51828493c6227"
+    },
+    {
+      "relative_path": "src/crfid/strict_runtime/phase3b_execution.py",
+      "sha256": "ddc65b7fa4bb8287140cd2837f7a392df968f9dcabd0dfabc5df3b479cf9b010"
+    },
+    {
+      "relative_path": "src/crfid/strict_runtime/neutral_metrics.py",
+      "sha256": "ccb26eecc31993c3f339f174411902539b4599b34fdc018732a63b3c9e2d6471"
+    },
+    {
+      "relative_path": "scripts/train_and_freeze_strict_dg.py",
+      "sha256": "5562360e3cc408490278d40bef490caf60c748e43b0e4b99e71c2228851fbfdd"
+    }
+  ],
+  "canonical_candidate": "C1_FIRST_DIFFERENCE_ERM_1DCNN",
+  "canonical_first_difference": "crfid.strict_runtime.phase3b_execution.fit_first_difference_preprocessing",
+  "canonical_loader": "crfid.strict_runtime.neutral_data.CanonicalPhase2Data",
+  "canonical_metrics": "crfid.strict_runtime.neutral_metrics.classification_metrics",
+  "canonical_model": "crfid.strict_runtime.neutral_model.NeutralSourceOnlyCNN1D",
+  "canonical_optimizer": "torch.optim.AdamW via crfid.strict_runtime.phase3b_execution._optimizer",
+  "canonical_scheduler": null,
+  "input_contract": {
+    "class_count": 7,
+    "first_difference_points": 280,
+    "ordered_points": 281
+  },
+  "p4_used": false,
+  "schema_version": 1,
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "source_folds": {
+    "S1": "P1",
+    "S2": "P2",
+    "S3": "P3"
+  },
+  "training_contract": {
+    "batch_size": 256,
+    "checkpoint_rule": "source_validation_TagID_Macro_F1_earliest_strict_improvement",
+    "early_stopping_patience": 8,
+    "final_epochs_by_seed": {
+      "42": 13,
+      "43": 13,
+      "44": 9,
+      "45": 10,
+      "46": 9
+    },
+    "inner_stage_offset": 0,
+    "maximum_inner_epochs": 50,
+    "minimum_improvement": 1e-12,
+    "outer_refit_rule": "reinitialize_same_seed_and_train_source_development_for_selected_epoch_count",
+    "outer_stage_offset": 100000,
+    "scheduler": null
+  }
+}

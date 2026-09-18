@@ -1,0 +1,6 @@
+method,alpha,beta,pairing,tuned,grid_frozen
+matched_erm,,,none,False,True
+within_position_mixup,0.5,1.0,same_TagID_ER_surface_position,False,True
+cross_position_mixup,0.2,1.0,same_TagID_ER_surface_different_position,True,True
+cross_position_mixup,0.5,1.0,same_TagID_ER_surface_different_position,True,True
+cross_position_mixup,1.0,1.0,same_TagID_ER_surface_different_position,True,True

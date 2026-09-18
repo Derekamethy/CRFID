@@ -1,0 +1,15 @@
+gate_id,passed,evidence
+G01_PREREGISTRATION_HASH,True,3981144793981f96b44c486d413f32436129427902bbad34b6974257de57836b
+G02_PARENT_ARTIFACT_BINDING,True,19 parent artifacts hash-match
+G03_GOVERNED_P4_STRUCTURE,True,3150 rows; 63 complete blocks
+G04_EXACT_PARENT_FOLDS,True,81b86e65bce6ff35e04b0b6a3fe2310fa5a65173e9d86c6693d40ec9e22c0482
+G05_EXACT_PARENT_SUPPORTS,True,60 plans; 540 budget validations
+G06_SUPPORT_QUERY_ROW_DISJOINT,True,all inherited prefixes
+G07_SUPPORT_QUERY_BLOCK_DISJOINT,True,all inherited prefixes
+G08_SUPPORT_QUERY_SIGNAL_DISJOINT,True,all inherited prefixes
+G09_FROZEN_CHECKPOINT_PREPROCESSING_HASHES,True,five checkpoints and two preprocessing arrays
+G10_SOURCE_ONLY_REGULARIZATION,True,lambda=100 from frozen P1-P3 FS4 summary
+G11_QUERY_OBJECT_ABSENT_FROM_FITTER,True,"['anchor_bias', 'anchor_weight', 'regularization_lambda', 'support_embeddings', 'support_labels']"
+G12_PARENT_PROTOTYPE_PREDICTIONS,True,0b2fc9552aa7b5b679118ff2cf046c6b51360acba3730cd52b33d67ee702fa8a
+G13_FIXED_BUDGETS_AND_SEEDS,True,10 budgets x 5 source x 20 support
+G14_PARENT_BOOTSTRAP_BINDING,True,d8ee6b00a2c2173f318a3d618c709401aabb722c09aede4b5ee9d7a3cc449cd8

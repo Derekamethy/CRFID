@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "workflow": "target_assisted",
+  "status": "TARGET_ACCESS_CONTRACT",
+  "random_seeds": [42],
+  "output_path": "outputs/target_assisted_p4",
+  "public_name": "P4 Target-Assisted Adaptation",
+  "target_access": {
+    "allow_features": true,
+    "allow_labels": true,
+    "allowed_adaptation_partition": "p4_full",
+    "allowed_selection_partition": "p4_full",
+    "allowed_evaluation_partition": "p4_full",
+    "metrics_may_influence_selection": true,
+    "source_parameters_may_update": false,
+    "layers_may_update": [],
+    "source_preprocessing_may_refit": false,
+    "target_preprocessing_may_fit": false,
+    "transductive_query_features_allowed": true,
+    "query_labels_allowed": true,
+    "final_claim_type": "RETROSPECTIVE_P4_INFORMED_REFERENCE"
+  },
+  "historical_partition_reuse": {
+    "selection_and_evaluation_are_same_partition": true,
+    "independent_query_partition": false
+  }
+}

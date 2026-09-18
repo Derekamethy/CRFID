@@ -1,0 +1,5 @@
+method,run_count,accuracy,macro_f1,aggregation
+majority_class_0,1,0.2972972972972973,0.11458333333333333,single_run
+pca_logistic_regression,1,0.9962162162162163,0.9948227424886364,single_run
+raw_signal_cnn,5,0.7488648648648649,0.6788395553773673,equal_weight_seed_mean
+first_difference_cnn,5,0.693081081081081,0.6073595276333663,equal_weight_seed_mean

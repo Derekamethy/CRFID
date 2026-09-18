@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "environment_id": "CRFID_STRICT_DG_WINDOWS_CPU_V1",
+  "python_executable_sha256": "5912d0884b23c0343983a864c6064242391e2265536f50b88624857e353882c9",
+  "base_python_sha256": "3c6a206b7d93cca823934a83732220dcffd413fd1036d9fb82eebb64599cf7f3",
+  "python_implementation": "CPython",
+  "python_version": "3.12.13",
+  "architecture_bits": 64,
+  "compute_platform": "cpu",
+  "versions": {
+    "torch": "2.12.0+cpu",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "sklearn": "1.9.0",
+    "pandas": "3.0.3",
+    "yaml": "6.0.3",
+    "pytest": "9.1.1"
+  },
+  "required_imports": ["torch", "numpy", "scipy", "sklearn", "pandas", "yaml", "pytest"],
+  "lock_file": "requirements/crfid-strict-dg-lock.txt",
+  "lock_file_sha256": "bf28355038333c3d6381e03a88e3ee922010458f4782aaf8ef5d19939a37cb3a",
+  "freeze_file": "requirements/crfid-strict-dg-freeze.txt",
+  "freeze_file_sha256": "bf28355038333c3d6381e03a88e3ee922010458f4782aaf8ef5d19939a37cb3a",
+  "global_config_sha256": "09f083fb7defb2425936afdb023aba42ff40ea233fd1d38ad6295691bc7a8e92",
+  "fallback_allowed": false,
+  "status": "LOCKED"
+}

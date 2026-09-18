@@ -1,0 +1,15 @@
+{
+  "absolute_paths_recorded": false,
+  "p4_artifacts": {
+    "evidence_file": "16_P4_PREDICTION_FREEZE_AND_ACCESS_LOG.csv",
+    "evidence_sha256": "e2a3bb1db640dbbe5c2b54366b5c5f4196435056111508344d01fef07cdaf87f",
+    "status": "P4_PREDICTIONS_FROZEN_BEFORE_LABEL_ACCESS"
+  },
+  "schema_version": 1,
+  "source_binding": {
+    "governed_source_hashes_status": "verified during governed execution; raw governed source measurements are not distributed in this public result package",
+    "lineage_binding_file": "02_C1_LINEAGE_BINDING.json",
+    "lineage_binding_sha256": "9f42d8dffda63a01dadc836201a4753e54eeb4cad6db62d55039ea898cb7b67c"
+  },
+  "status": "PASS_PUBLIC_COMPACT_INPUT_BINDING"
+}

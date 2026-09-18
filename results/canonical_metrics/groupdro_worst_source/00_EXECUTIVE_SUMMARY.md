@@ -1,0 +1,5 @@
+# GroupDRO worst-source-position benchmark
+
+GroupDRO was selected with `eta = 0.05` using source-domain evidence only. Its source worst-position Macro-F1 contrast relative to matched ERM was **+0.024357** with 95% CI **[-0.011581, 0.054235]**.On P4, the block-level Macro-F1 contrast was **+0.001405** with 95% CI **[-0.024350, 0.025099]**, and the block-level Accuracy contrast was **0.000000** with 95% CI **[-0.028571, 0.028571]**. These intervals cross zero, so the experiment does not show a reliable GroupDRO benefit over matched ERM.
+
+The P4 metrics were rescored from the unchanged frozen prediction bundle after an output-persistence interruption. Model weights, frozen predictions, labels, estimand, and bootstrap definition were unchanged; the recovery therefore affects provenance reporting, not the numerical comparison.

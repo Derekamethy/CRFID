@@ -1,0 +1,189 @@
+{
+  "domains_used": [
+    "P1",
+    "P2",
+    "P3"
+  ],
+  "factor_pairs": [
+    {
+      "factor_a": "surface",
+      "factor_b": "position",
+      "interaction_to_smaller_main_effect_ratio": 1.1226973704602916,
+      "levels_a": [
+        "A1",
+        "A2",
+        "A3"
+      ],
+      "levels_b": [
+        "P1",
+        "P2",
+        "P3"
+      ],
+      "maximum_absolute_interaction_db": 7.271127188807107,
+      "pair_id": "surface_x_position",
+      "per_tag_id": {
+        "1": {
+          "interaction_to_smaller_main_effect_ratio": 1.0679677662001854,
+          "rms_interaction_db": 2.051319083178184,
+          "rms_main_effect_a_db": 1.9207687236448612,
+          "rms_main_effect_b_db": 4.220940090506969,
+          "verdict": "HIGH"
+        },
+        "2": {
+          "interaction_to_smaller_main_effect_ratio": 0.924040712827201,
+          "rms_interaction_db": 2.405230488178851,
+          "rms_main_effect_a_db": 2.6029486090713387,
+          "rms_main_effect_b_db": 4.467853363153057,
+          "verdict": "HIGH"
+        },
+        "3": {
+          "interaction_to_smaller_main_effect_ratio": 0.8735836567780789,
+          "rms_interaction_db": 2.091235658061742,
+          "rms_main_effect_a_db": 2.3938584952179225,
+          "rms_main_effect_b_db": 4.449577214392461,
+          "verdict": "HIGH"
+        },
+        "4": {
+          "interaction_to_smaller_main_effect_ratio": 1.2561466784271795,
+          "rms_interaction_db": 2.223501636430125,
+          "rms_main_effect_a_db": 1.7700971348458847,
+          "rms_main_effect_b_db": 3.9815918386441083,
+          "verdict": "HIGH"
+        },
+        "5": {
+          "interaction_to_smaller_main_effect_ratio": 0.9754761858306954,
+          "rms_interaction_db": 2.06225113836859,
+          "rms_main_effect_a_db": 2.1140968568211838,
+          "rms_main_effect_b_db": 3.8456116732336394,
+          "verdict": "HIGH"
+        },
+        "6": {
+          "interaction_to_smaller_main_effect_ratio": 1.166636837438657,
+          "rms_interaction_db": 2.3845922635072836,
+          "rms_main_effect_a_db": 2.0439884863764792,
+          "rms_main_effect_b_db": 4.539325658052692,
+          "verdict": "HIGH"
+        },
+        "7": {
+          "interaction_to_smaller_main_effect_ratio": 0.8719835480032233,
+          "rms_interaction_db": 2.1306011808781746,
+          "rms_main_effect_a_db": 2.443396077548815,
+          "rms_main_effect_b_db": 4.319060838359878,
+          "verdict": "HIGH"
+        }
+      },
+      "per_tag_ratio_maximum": 1.2561466784271795,
+      "per_tag_ratio_minimum": 0.8719835480032233,
+      "per_tag_verdicts": [
+        "HIGH"
+      ],
+      "rms_interaction_db": 1.9013208493540887,
+      "rms_main_effect_a_db": 1.6935292620972038,
+      "rms_main_effect_b_db": 4.133040939432336,
+      "samples_per_cell": 1050,
+      "smaller_main_effect_rms_db": 1.6935292620972038,
+      "threshold": 0.3,
+      "verdict": "HIGH"
+    },
+    {
+      "factor_a": "encoding_state_er",
+      "factor_b": "position",
+      "interaction_to_smaller_main_effect_ratio": 1.735160217026292,
+      "levels_a": [
+        "0",
+        "1",
+        "2"
+      ],
+      "levels_b": [
+        "P1",
+        "P2",
+        "P3"
+      ],
+      "maximum_absolute_interaction_db": 4.541068921311499,
+      "pair_id": "encoding_state_x_position",
+      "per_tag_id": {
+        "1": {
+          "interaction_to_smaller_main_effect_ratio": 1.7386075938871086,
+          "rms_interaction_db": 1.657293227837751,
+          "rms_main_effect_a_db": 0.9532301789459241,
+          "rms_main_effect_b_db": 4.220940090506969,
+          "verdict": "HIGH"
+        },
+        "2": {
+          "interaction_to_smaller_main_effect_ratio": 1.5965411286840632,
+          "rms_interaction_db": 1.6470305520134725,
+          "rms_main_effect_a_db": 1.0316242547230994,
+          "rms_main_effect_b_db": 4.467853363153055,
+          "verdict": "HIGH"
+        },
+        "3": {
+          "interaction_to_smaller_main_effect_ratio": 1.0807199992319283,
+          "rms_interaction_db": 1.3799284871076964,
+          "rms_main_effect_a_db": 1.2768603228296105,
+          "rms_main_effect_b_db": 4.449577214392461,
+          "verdict": "HIGH"
+        },
+        "4": {
+          "interaction_to_smaller_main_effect_ratio": 1.8449755278879096,
+          "rms_interaction_db": 1.835323943893963,
+          "rms_main_effect_a_db": 0.9947687197753807,
+          "rms_main_effect_b_db": 3.981591838644108,
+          "verdict": "HIGH"
+        },
+        "5": {
+          "interaction_to_smaller_main_effect_ratio": 1.7145155062175361,
+          "rms_interaction_db": 1.8183526262878882,
+          "rms_main_effect_a_db": 1.060563535117528,
+          "rms_main_effect_b_db": 3.8456116732336394,
+          "verdict": "HIGH"
+        },
+        "6": {
+          "interaction_to_smaller_main_effect_ratio": 1.6928813936858076,
+          "rms_interaction_db": 1.7165333912233567,
+          "rms_main_effect_a_db": 1.0139714439687078,
+          "rms_main_effect_b_db": 4.539325658052692,
+          "verdict": "HIGH"
+        },
+        "7": {
+          "interaction_to_smaller_main_effect_ratio": 1.372681658529175,
+          "rms_interaction_db": 1.5475044105241924,
+          "rms_main_effect_a_db": 1.1273585546282738,
+          "rms_main_effect_b_db": 4.319060838359876,
+          "verdict": "HIGH"
+        }
+      },
+      "per_tag_ratio_maximum": 1.8449755278879096,
+      "per_tag_ratio_minimum": 1.0807199992319283,
+      "per_tag_verdicts": [
+        "HIGH"
+      ],
+      "rms_interaction_db": 1.28295731173884,
+      "rms_main_effect_a_db": 0.7393883856659444,
+      "rms_main_effect_b_db": 4.133040939432334,
+      "samples_per_cell": 1050,
+      "smaller_main_effect_rms_db": 0.7393883856659444,
+      "threshold": 0.3,
+      "verdict": "HIGH"
+    }
+  ],
+  "generated_at_utc": "2026-07-29T15:37:58.509374+00:00",
+  "overall_verdict": "HIGH",
+  "p4_used": false,
+  "preregistered_threshold": {
+    "fixed_before_execution": true,
+    "name": "interaction_to_smaller_main_effect_ratio",
+    "rule": "ratio > 0.30 => HIGH, otherwise LOW",
+    "value": 0.3
+  },
+  "provenance": {
+    "conditional_frequency_axis_sha256": "c1a5432f697829fd05fa3c3b9cf3c8642cf82c685db22a580871f9f1962d17d7",
+    "source_registry_sha256": "a1cbb062b4e2a57d62a6662acbe27cb151703ee07fa0ea3ef447bca4f96ad7e7",
+    "source_row_count": 9450,
+    "source_signals_sha256": "b8fa8d1699d3b5d0da9d7c45a3e709aff2802b6653afb10771d57b401f740aa8"
+  },
+  "schema_version": 1,
+  "signal_point_count": 281,
+  "sub_experiment": "01_factor_interaction_check",
+  "summary_semantic_sha256": "494a820eca1547dab4c1bedb9e51a89a8163b083ff5adaecae35dc9b9827003e",
+  "units": "decibel"
+}

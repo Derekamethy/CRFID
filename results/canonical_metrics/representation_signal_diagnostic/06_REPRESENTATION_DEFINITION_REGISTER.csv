@@ -1,0 +1,5 @@
+representation,dimension,input,transform,probe_scaling,status
+RAW_SIGNAL_281,281,original ordered signal,none before probe scaling,training-only featurewise population standardization,VALIDATED
+FIRST_DIFFERENCE_280,280,canonical x[i+1]-x[i] without padding,np.diff axis=1,training-only featurewise population standardization,VALIDATED
+C1_ENCODER_EMBEDDING,256,canonical checkpoint-bound first difference and frozen source preprocessing,frozen C1 network.12 penultimate output; five source-only checkpoints,training-only featurewise population standardization of embeddings,VALIDATED
+PEAK_DESCRIPTOR,12,raw signal through canonical strongest_window_peaks in four frozen ordered-index windows,"per window: ordered index, amplitude, missing flag; mode=min",training-only featurewise population standardization,PEAK_DESCRIPTOR_NOT_VALIDATED

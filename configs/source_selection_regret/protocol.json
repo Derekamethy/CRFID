@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "study_id": "SOURCE_INTERNAL_LEAVE_ONE_POSITION_OUT_SELECTION_REGRET_V1",
+  "frozen_before_numeric_run_metrics_access": true,
+  "candidate_ids": [
+    "C0_NEUTRAL_ERM_1DCNN",
+    "C1_FIRST_DIFFERENCE_ERM_1DCNN",
+    "C2_SOURCE_EUCLIDEAN_NCM_READOUT",
+    "C3_SOURCE_CORAL_ERM_1DCNN"
+  ],
+  "fold_to_position": {
+    "S1": "P1",
+    "S2": "P2",
+    "S3": "P3"
+  },
+  "seeds": [42, 43, 44, 45, 46],
+  "events": [
+    {"event_id": "HOLD_P1", "allowed_positions": ["P2", "P3"], "held_position": "P1"},
+    {"event_id": "HOLD_P2", "allowed_positions": ["P1", "P3"], "held_position": "P2"},
+    {"event_id": "HOLD_P3", "allowed_positions": ["P1", "P2"], "held_position": "P3"}
+  ],
+  "selector_status": "EXACT_HISTORICAL_SELECTOR_RESTRICTED_TO_TWO_ALLOWED_SOURCE_POSITIONS",
+  "ordered_selector": [
+    {"metric": "worst_outer_held_position_macro_f1", "operation": "maximize"},
+    {"metric": "mean_outer_held_position_macro_f1", "operation": "maximize"},
+    {"metric": "worst_class_recall", "operation": "maximize"},
+    {"metric": "zero_recall_class_frequency", "operation": "minimize"},
+    {"metric": "condition_block_macro_f1", "operation": "maximize"},
+    {"metric": "unique_signal_weighted_macro_f1", "operation": "maximize"},
+    {"metric": "across_seed_standard_deviation", "operation": "minimize"},
+    {"metric": "candidate_id", "operation": "ascending_deterministic"}
+  ],
+  "aggregation": {
+    "worst_outer_held_position_macro_f1": "minimum of the two allowed-position means; each position mean equally averages the five canonical seeds",
+    "mean_outer_held_position_macro_f1": "arithmetic mean over the ten allowed position-by-seed units",
+    "worst_class_recall": "minimum across seven classes of class recall averaged over the ten allowed units; compact evidence does not expose per-class vectors, so this component may be reached only if the preceding components do not resolve the ordering",
+    "zero_recall_class_frequency": "zero-recall class occurrences divided by ten units times seven classes",
+    "condition_block_macro_f1": "arithmetic mean over the ten allowed units",
+    "unique_signal_weighted_macro_f1": "arithmetic mean over the ten allowed units",
+    "across_seed_standard_deviation": "population standard deviation of five seed means; each seed mean equally averages the two allowed positions",
+    "candidate_id": "ascending lexicographic complete tie-break"
+  },
+  "primary_metric": "held_position_sample_macro_f1",
+  "primary_regret_numerical_tolerance": 1e-12,
+  "secondary_within_tolerance": 0.01,
+  "bootstrap": {
+    "replicates": 10000,
+    "random_seed": 20260804,
+    "resampling_unit": "seed",
+    "paired_across_candidates_and_positions": true
+  },
+  "margin_perturbations": [0.001, 0.0025, 0.005],
+  "baselines": [
+    "ALWAYS_C0",
+    "ALWAYS_C1",
+    "TWO_POSITION_MEAN_MACRO_F1",
+    "TWO_POSITION_WORST_CASE_MACRO_F1",
+    "TWO_POSITION_MEAN_MINUS_VARIABILITY"
+  ],
+  "classification_rule": [
+    "FAIL_PROTOCOL_OR_P4_SEAL_DEFECT if a protocol or P4-seal test fails",
+    "BLOCKED_INCOMPLETE_SOURCE_SELECTION_EVIDENCE if the exact 60-row source evidence grid is incomplete, duplicated, or has missing required metrics",
+    "SOURCE_SELECTION_VALIDITY_SUPPORTED if all three event-level primary regrets are zero within 1e-12",
+    "SOURCE_SELECTION_VALIDITY_PARTIALLY_SUPPORTED if one or two events recover held top-1 and the median event Spearman correlation is positive",
+    "SOURCE_SELECTION_RULE_NOT_PREDICTIVE if no event recovers held top-1 and the median event Spearman correlation is non-positive",
+    "SOURCE_SELECTION_UNSTABLE_INCONCLUSIVE otherwise"
+  ],
+  "p4_path_tokens_denied": [
+    "p4",
+    "target",
+    "matched_target",
+    "target_evaluation",
+    "strict_dg_final_results",
+    "final_p4",
+    "few_shot",
+    "openems",
+    ".zip"
+  ]
+}

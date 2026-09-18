@@ -1,0 +1,10 @@
+fold_id,held_position,partition,sample_count,condition_block_count,position_groups,condition_blocks_disjoint,status
+S1,P1,inner_train,4200,84,"[""P2"", ""P3""]",True,PASS
+S1,P1,inner_validation,2100,42,"[""P2"", ""P3""]",True,PASS
+S1,P1,outer_held,3150,63,"[""P1""]",True,PASS
+S2,P2,inner_train,4200,84,"[""P1"", ""P3""]",True,PASS
+S2,P2,inner_validation,2100,42,"[""P1"", ""P3""]",True,PASS
+S2,P2,outer_held,3150,63,"[""P2""]",True,PASS
+S3,P3,inner_train,4200,84,"[""P1"", ""P2""]",True,PASS
+S3,P3,inner_validation,2100,42,"[""P1"", ""P2""]",True,PASS
+S3,P3,outer_held,3150,63,"[""P3""]",True,PASS

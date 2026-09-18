@@ -1,0 +1,13 @@
+{
+  "block_weights_sha256": "0bed53d4d1971b17e7be895b096d59bf5e6f41cd10c01aa4578e053e71e29455",
+  "frozen_macro_f1_sha256": "fa12b8001b0f1a61d3d21bb02bf6b474ceb0300da15b80028b07ce357692158f",
+  "full_macro_f1_sha256": "fc5899dcc68ba2943a461202ee350dc3dbe7a92a3fef23132ebbbb0ab52584c7",
+  "paired_draws_identical_for_all_methods": true,
+  "partial_macro_f1_sha256": "9b61600a70f5ee47947094a124ecf8c2b3fe0efc636aa721f41ad40bb73d6696",
+  "relative_path": "bootstrap_samples.npz",
+  "replicates": 10000,
+  "seed": 2026080917,
+  "sha256": "74bd5e265568aa1a0e6661082d17af202584c5edd764405f45b6d76febbe8a90",
+  "source_counts_sha256": "ffb63c13feadab79c7ff808c5b62ef89dd5a3256d74440508b50870f4eced2ba",
+  "support_counts_sha256": "2a4de127c1738795b1ccca641797bf0b01c172716c33243b424e96e055c4d4f4"
+}

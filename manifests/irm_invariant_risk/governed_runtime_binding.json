@@ -1,0 +1,46 @@
+{
+  "absolute_paths_recorded": false,
+  "governed_data_copied_into_git": false,
+  "locked_runtime": {
+    "interpreter": "<LOCKED_CRFID_PYTHON>",
+    "launcher": "crfid-python.cmd",
+    "numpy_version": "2.4.6",
+    "python_version": "3.12.13",
+    "torch_version": "2.12.0+cpu"
+  },
+  "p4_artifacts": {
+    "er_column_accessed": false,
+    "file_hashes": {
+      "A1_P4.csv": "8f63f8bee3deb7747a88ac0fe1f47eabe8c0feedfe5a65cb503e25fdcf1377ee",
+      "A2_P4.csv": "6b20fb815d6df40ff9ad4c0ecbf3bc7a82762ac96b8fd7df7170504715d75a00",
+      "A3_P4.csv": "6c3bffcca0e81664398423c5c4828c3d7d4698a69e804fe69368e53bb8a9f6e3"
+    },
+    "labels_accessed": false,
+    "signal_sha256": "d0190605e49c4ada292f3f3e4258942968362df22f39d29d26ae6bc5cf3c6699",
+    "signal_shape": [
+      3150,
+      281
+    ],
+    "status": "PASS_P4_FEATURES_ONLY_PRECHECK",
+    "tagid_column_accessed": false
+  },
+  "read_only_governed_access": true,
+  "resolved_environment": {
+    "CRFID_IRM_P4_GOVERNED_ROOT": "<GOVERNED_P4_ROOT>",
+    "CRFID_IRM_RUN_ROOT": "<EXTERNAL_RUNTIME_ROOT>",
+    "CRFID_IRM_STRICT_ARTIFACT_ROOT": "<GOVERNED_DATA_ROOT>",
+    "CRFID_LOCKED_PYTHON": "<LOCKED_CRFID_PYTHON>"
+  },
+  "schema_version": 1,
+  "source_artifacts": {
+    "bundle_fingerprint_sha256": "b4388de95eab0123178b57e29cfdbc69ac656666101038aca5cf2ca174b32164",
+    "file_hashes": {
+      "CANONICAL_SOURCE_REGISTRY.csv": "a1cbb062b4e2a57d62a6662acbe27cb151703ee07fa0ea3ef447bca4f96ad7e7",
+      "SOURCE_ONLY_LOPO_SPLITS.csv": "41a275a6f499ee3d3105e09a420ceb92bb8272d879a89a6bb6623ae6f9bc82ca",
+      "source_labels_int64.npy": "a0f74a067fd56c81df7bea54d023e634cf91252cb9b2f75ab18b4ecf7b8525a3",
+      "source_signals_float64.npy": "b8fa8d1699d3b5d0da9d7c45a3e709aff2802b6653afb10771d57b401f740aa8"
+    },
+    "relative_root": "source_inputs"
+  },
+  "status": "PASS_GOVERNED_RUNTIME_BINDING_RECOVERED"
+}

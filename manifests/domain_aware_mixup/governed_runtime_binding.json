@@ -1,0 +1,37 @@
+{
+  "absolute_paths_recorded": false,
+  "governed_data_copied_into_git": false,
+  "locked_runtime": {
+    "interpreter": "<LOCKED_CRFID_PYTHON>",
+    "launcher": "crfid-python.cmd",
+    "numpy_version": "2.4.6",
+    "python_version": "3.12.13",
+    "torch_version": "2.12.0+cpu"
+  },
+  "p4_artifacts": {
+    "er_column_accessed": false,
+    "labels_accessed": false,
+    "signals_accessed": false,
+    "status": "NOT_OPENED_DUE_TO_PAIRING_COVERAGE_GATE",
+    "tagid_column_accessed": false
+  },
+  "read_only_governed_access": true,
+  "resolved_environment": {
+    "CRFID_LOCKED_PYTHON": "<LOCKED_CRFID_PYTHON>",
+    "CRFID_MIXUP_P4_GOVERNED_ROOT": "<GOVERNED_P4_ROOT>",
+    "CRFID_MIXUP_RUN_ROOT": "<EXTERNAL_RUNTIME_ROOT>",
+    "CRFID_MIXUP_STRICT_ARTIFACT_ROOT": "<GOVERNED_DATA_ROOT>"
+  },
+  "schema_version": 1,
+  "source_artifacts": {
+    "bundle_fingerprint_sha256": "b4388de95eab0123178b57e29cfdbc69ac656666101038aca5cf2ca174b32164",
+    "file_hashes": {
+      "CANONICAL_SOURCE_REGISTRY.csv": "a1cbb062b4e2a57d62a6662acbe27cb151703ee07fa0ea3ef447bca4f96ad7e7",
+      "SOURCE_ONLY_LOPO_SPLITS.csv": "41a275a6f499ee3d3105e09a420ceb92bb8272d879a89a6bb6623ae6f9bc82ca",
+      "source_labels_int64.npy": "a0f74a067fd56c81df7bea54d023e634cf91252cb9b2f75ab18b4ecf7b8525a3",
+      "source_signals_float64.npy": "b8fa8d1699d3b5d0da9d7c45a3e709aff2802b6653afb10771d57b401f740aa8"
+    },
+    "relative_root": "source_inputs"
+  },
+  "status": "PASS_GOVERNED_RUNTIME_BINDING_RECOVERED"
+}

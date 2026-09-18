@@ -1,0 +1,55 @@
+{
+  "bootstrap": {
+    "first_three_sampled_seed_tuples": [
+      [
+        43,
+        43,
+        46,
+        44,
+        42
+      ],
+      [
+        42,
+        42,
+        44,
+        43,
+        42
+      ],
+      [
+        42,
+        42,
+        46,
+        46,
+        45
+      ]
+    ],
+    "mean_regret_ci_95": [
+      0.008014953247580189,
+      0.050377289603523834
+    ],
+    "paired_across_candidates_and_positions": true,
+    "random_seed": 20260804,
+    "replicates": 10000,
+    "resampling_unit": "seed",
+    "row_pseudoreplication": false
+  },
+  "p4_inputs": [],
+  "prediction_bundle_count": 60,
+  "prediction_bundle_set_sha256": "f364935510f62c71eeaf83743e52d8d9b0927cca5b7232e892b0de4fb0498e91",
+  "schema_version": 1,
+  "source_only_input_hashes": {
+    "Failure_Mechanism_Physical_Analysis_Final/evidence/source_only_diagnostics/CHECKPOINT_INFERENCE_AUDIT.csv": "559669266b6e3e706d1f954681690b9de722ada4d2b4ac810e84ec199186f762",
+    "Failure_Mechanism_Physical_Analysis_Final/evidence/source_selection/60_UNIT_INDEX.csv": "ea7a4b323821bc875b7049b5a5c135797c68fe9d58444d2aa8fc7f2f5cb353c6",
+    "configs/strict_dg/canonical.yaml": "2338bbe1f7ec501546512d286b3d2b3d3067f9f8e458a547e2a237c15a1b835e",
+    "outputs/strict_dg/source_selection/candidate_aggregate_metrics.csv": "8c5dad77f87de80626551d1b5dd7caeda6bfd5f5139fbfae63482e5165f05bd5",
+    "outputs/strict_dg/source_selection/candidate_registry.json": "c650b3ae65f64ac4bcc3ab5b912e04ec05167c595c536bfd5788808f8486250b",
+    "outputs/strict_dg/source_selection/per_fold_metrics.csv": "f51dfed773536c6cc9538776a4e5641c650266d57533e9290def35082bdc0d24",
+    "outputs/strict_dg/source_selection/per_run_metrics.csv": "1fcbedafb9813f96f13e47929b029e1e40d8d8f36815af5391ee271d4d63d35d",
+    "outputs/strict_dg/source_selection/selected_recipe.json": "4805f8040f3609dbf4a02553b15c64471f64e3d2a9bc7a6c1068a6342c29d1b6",
+    "outputs/strict_dg/source_selection/source_fold_manifest.csv": "41a275a6f499ee3d3105e09a420ceb92bb8272d879a89a6bb6623ae6f9bc82ca",
+    "outputs/strict_dg/source_selection/source_selection_decision.json": "e5479dd552f32e81ae5a4a3e3b8295891e02fbe2a67b84095cc67d8e1a10fc45",
+    "scripts/reproduce_strict_dg_source_selection.py": "ed3aca30a4189f02959f6079e52c79042521e30b843b7b0dde3227fe094e1b8e",
+    "src/crfid/strict_runtime/phase3b_execution.py": "ddc65b7fa4bb8287140cd2837f7a392df968f9dcabd0dfabc5df3b479cf9b010",
+    "src/crfid/strict_runtime/phase3b_summary.py": "dd76cca10f32982d161cd04b1746cd74287d73440b4684ace7ada1dc23409bf3"
+  }
+}

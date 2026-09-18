@@ -1,0 +1,182 @@
+{
+  "schema_version": 1,
+  "experiment_id": "p4_trainable_linear_readout_v1",
+  "scientific_question": "Did the larger P4 calibration curve fail because the target-only cosine prototype was too restrictive or because frozen C1 embeddings do not transfer linearly across unseen P4 physical-condition blocks?",
+  "claim_type": "TARGET_ASSISTED_LABELLED_TARGET_DIAGNOSTIC",
+  "hypotheses": {
+    "H1": "A trainable linear softmax head reliably and practically outperforms the matched cosine-prototype curve as P4 support grows.",
+    "H2": "A trainable linear softmax head remains near chance and does not reliably outperform matched cosine prototypes."
+  },
+  "parent_experiment": {
+    "id": "p4_large_calibration_curve_v1",
+    "branch": "codex/p4-large-calibration-curve-v1",
+    "final_result_commit": "5af4b691d92a8949d78883d8e468cd008cc1aae1",
+    "scientific_execution_commit": "b4c83f35e5777b9691509ce588c8188233ac54f1",
+    "preregistration_sha256": "30e65854c09773f3ff64054cf04fabc215a9e9fa27919ffc9de448d1f48bb99d",
+    "final_manifest_sha256": "61b65ffa6e9e7c81364a88bda2a95d3599735d675c766e9095037b103b43086d",
+    "classification": "WEAK_OR_UNRELIABLE_TARGET_CALIBRATION_GAIN"
+  },
+  "immutable_inherited_artifacts": {
+    "fold_manifest": {
+      "relative_path": "results/canonical_metrics/p4_large_calibration_curve/06_OUTER_QUERY_FOLD_MANIFEST.csv",
+      "sha256": "81b86e65bce6ff35e04b0b6a3fe2310fa5a65173e9d86c6693d40ec9e22c0482"
+    },
+    "support_manifest": {
+      "relative_path": "results/canonical_metrics/p4_large_calibration_curve/07_SUPPORT_SELECTION_MANIFEST.csv",
+      "sha256": "47eacce86bbe1426e780beb9949125130c8348430d4711039f9c6099aaf6eae3"
+    },
+    "prototype_predictions": {
+      "relative_path": "results/canonical_metrics/p4_large_calibration_curve/per_run_predictions.npz",
+      "sha256": "c707f86962d5b0aa6eb98b8250bad595bebab8e6500063dc7d86d5e3e636a086",
+      "array_sha256": "0b2fc9552aa7b5b679118ff2cf046c6b51360acba3730cd52b33d67ee702fa8a"
+    },
+    "query_truth": {
+      "relative_path": "results/canonical_metrics/p4_large_calibration_curve/query_truth_int64.npy",
+      "sha256": "fa333e10fe43b7382eba4248417a4533ce88643fb5f7161282c0152e4f505b54",
+      "array_sha256": "22de53114e72333858823ba37986889191186642f9283d3cfaaa97c5e231270a"
+    },
+    "bootstrap_draws": {
+      "relative_path": "results/canonical_metrics/p4_large_calibration_curve/bootstrap_samples.npz",
+      "sha256": "d8ee6b00a2c2173f318a3d618c709401aabb722c09aede4b5ee9d7a3cc449cd8"
+    }
+  },
+  "data": {
+    "p4_file_hashes": {
+      "A1_P4.csv": "8f63f8bee3deb7747a88ac0fe1f47eabe8c0feedfe5a65cb503e25fdcf1377ee",
+      "A2_P4.csv": "6b20fb815d6df40ff9ad4c0ecbf3bc7a82762ac96b8fd7df7170504715d75a00",
+      "A3_P4.csv": "6c3bffcca0e81664398423c5c4828c3d7d4698a69e804fe69368e53bb8a9f6e3"
+    },
+    "row_count": 3150,
+    "class_count": 7,
+    "independent_unit": "TagID x ER x surface x P4 physical-condition block",
+    "block_count": 63,
+    "rows_per_block": 50,
+    "budgets": [0, 7, 10, 20, 21, 35, 50, 100, 200, 500],
+    "shot_mapping": {"7": "1-shot", "21": "3-shot", "35": "5-shot"}
+  },
+  "frozen_model": {
+    "source_seeds": [42, 43, 44, 45, 46],
+    "raw_signal_dimension": 281,
+    "first_difference_dimension": 280,
+    "embedding_dimension": 256,
+    "class_count": 7,
+    "encoder_gradient_permitted": false,
+    "preprocessing_refit_permitted": false,
+    "checkpoint_hash_policy": "must match parent exact configuration before and after fitting"
+  },
+  "support_and_query": {
+    "folds": 3,
+    "query_blocks_per_fold": 21,
+    "query_rows_per_fold": 1050,
+    "support_candidate_blocks_per_fold": 42,
+    "support_seeds": [104729, 130363, 155921, 181081, 205439, 230003, 254959, 280001, 305093, 330017, 355031, 380041, 405019, 430007, 455003, 480017, 505027, 530017, 555029, 580031],
+    "support_source": "consume exact parent support-manifest prefixes; resampling forbidden",
+    "fixed_query_across_budgets": true,
+    "row_disjoint": true,
+    "physical_block_disjoint": true,
+    "exact_signal_disjoint": true
+  },
+  "methods": {
+    "zero": "FS0_FROZEN_SOURCE_HEAD",
+    "comparator": "TARGET_ONLY_COSINE_PROTOTYPE_FROM_PARENT_PREDICTION_BUNDLE",
+    "primary": "FROZEN_C1_SOURCE_ANCHORED_LINEAR_SOFTMAX"
+  },
+  "primary_readout": {
+    "architecture": "Linear(256,7)",
+    "hidden_layers": 0,
+    "initialization": "corresponding frozen source-trained network.13 weight and bias",
+    "optimization_dtype": "float64",
+    "inference_dtype": "float32",
+    "objective": "mean support cross-entropy + lambda * (squared weight displacement + squared bias displacement) / 1799",
+    "optimizer": {
+      "name": "torch.optim.LBFGS",
+      "full_batch": true,
+      "max_iter": 100,
+      "history_size": 20,
+      "line_search_fn": "strong_wolfe",
+      "tolerance_grad": 1e-9,
+      "tolerance_change": 1e-12
+    },
+    "regularization": {
+      "candidate_grid": [0.01, 0.1, 1.0, 10.0, 100.0],
+      "source_candidate_summary_sha256": "ac1589d8522a731211f76787914c840bff663b7a29443f64336ff7ba7ed64673",
+      "selection_population": "frozen P1-P3 FS4 pseudo-target summaries for 1/3/5 shots only",
+      "selection_rule": [
+        "maximize the minimum worst-held-position mean Macro-F1 across 1/3/5 shots",
+        "then maximize the equal-shot mean overall Macro-F1",
+        "then maximize the minimum worst-class mean recall",
+        "then minimize the maximum zero-recall-class frequency",
+        "then select the strongest regularization"
+      ],
+      "selected_lambda": 100.0,
+      "same_value_all_positive_budgets": true,
+      "p4_query_selection_permitted": false,
+      "support_inner_cv_primary_permitted": false
+    },
+    "support_class_weighting": "ordinary mean CE; no class weights",
+    "label_smoothing": 0.0,
+    "early_stopping": false,
+    "deterministic_refit_required": true
+  },
+  "query_label_barrier": {
+    "training_access": false,
+    "hyperparameter_access": false,
+    "normalization_access": false,
+    "epoch_or_stopping_access": false,
+    "prediction_freeze_before_open": true,
+    "query_truth_must_match_parent_after_open": true
+  },
+  "metrics": {
+    "primary": "sample-level Macro-F1 over all 3150 out-of-fold query rows",
+    "secondary": ["Accuracy", "balanced accuracy", "per-class F1", "worst-class F1", "support Macro-F1", "support Accuracy", "confusion matrices", "ER metrics", "surface metrics", "condition-block metrics", "convergence diagnostics"],
+    "equal_weight_source_support_point_estimate": true,
+    "representative_confusion_budgets": [7, 35, 100, 500]
+  },
+  "comparisons": {
+    "primary": "MacroF1_linear(b) - MacroF1_prototype(b)",
+    "secondary": ["Accuracy_linear(b) - Accuracy_prototype(b)", "MacroF1_linear(b) - MacroF1_zero", "MacroF1_linear(b) - MacroF1_linear(7)"],
+    "paired": true,
+    "practical_macro_f1_delta": 0.05,
+    "reliable_if_ci_lower_gt": 0.0
+  },
+  "uncertainty": {
+    "replicates": 10000,
+    "seed": 20260809,
+    "block_resampling": "TagID-stratified resampling of nine physical blocks per TagID",
+    "crossed_resampling": ["five source seeds", "twenty support seeds"],
+    "paired_difference": "subtract methods within each identical bootstrap replicate",
+    "ci": "2.5th and 97.5th percentiles",
+    "individual_row_bootstrap_forbidden": true
+  },
+  "classification_precedence": [
+    {
+      "class": "LINEAR_READOUT_UNSTABLE_OR_NON_IDENTIFIABLE",
+      "rule": "any critical validity/freeze/determinism/prediction-completeness gate fails, or any fit is nonfinite or increases its objective"
+    },
+    {
+      "class": "LINEAR_READOUT_RESCUES_TARGET_CALIBRATION",
+      "rule": "at some budget >=35, linear-minus-prototype Macro-F1 point delta >=0.05 with paired CI lower>0 AND linear-minus-zero point delta >=0.05 with paired CI lower>0"
+    },
+    {
+      "class": "PARTIAL_LINEAR_READOUT_BENEFIT",
+      "rule": "rescue rule not met, but any positive budget has paired linear-minus-prototype Macro-F1 CI lower>0 OR a linear-minus-zero point delta >=0.05 with paired CI lower>0"
+    },
+    {
+      "class": "REPRESENTATION_BOTTLENECK_SUPPORTED",
+      "rule": "validity passes and none of the preceding evidence rules is met"
+    }
+  ],
+  "next_experiment_decision": {
+    "LINEAR_READOUT_RESCUES_TARGET_CALIBRATION": "NO_ENCODER_FINETUNING_JUSTIFIED",
+    "REPRESENTATION_BOTTLENECK_SUPPORTED": "ENCODER_FINETUNING_DIAGNOSTIC_JUSTIFIED",
+    "LINEAR_READOUT_UNSTABLE_OR_NON_IDENTIFIABLE": "NO_ENCODER_FINETUNING_JUSTIFIED",
+    "PARTIAL_LINEAR_READOUT_BENEFIT": "ENCODER_FINETUNING_DIAGNOSTIC_JUSTIFIED only if no linear query Macro-F1 reaches 0.30 and the 500-label support-minus-query Macro-F1 gap is at least 0.20; otherwise NO_ENCODER_FINETUNING_JUSTIFIED"
+  },
+  "stopping_rules": {
+    "performance_based_stopping": false,
+    "stop_on_gate_failure": true,
+    "stop_on_nonfinite_fit": true,
+    "do_not_change_rules_after_results": true,
+    "do_not_execute_encoder_finetuning": true
+  }
+}

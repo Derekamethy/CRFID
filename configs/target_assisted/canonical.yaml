@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "workflow": "target_assisted",
+  "status": "FROZEN_RETROSPECTIVE_REPRODUCTION",
+  "public_name": "P4 Target-Assisted Adaptation",
+  "output_path": "outputs/target_assisted_p4",
+  "source_release_path": "outputs/strict_dg/frozen_release",
+  "target_access_path": "configs/target_assisted/target_access.yaml",
+  "target_data_path": "${CRFID_TYNDALL_P4_CSV}",
+  "historical_embedding_path": "${CRFID_P4_EMBEDDING_BUNDLE}",
+  "strict_recipe_sha256": "4805f8040f3609dbf4a02553b15c64471f64e3d2a9bc7a6c1068a6342c29d1b6",
+  "historical_embedding_sha256": "320a02e08f5a3c638e8f934dae0026909fc828f5c96e05b3935c00353e7aa81d",
+  "class_order": [0, 1, 2, 3, 4, 5, 6],
+  "random_seeds": [42],
+  "retained_method": "source_cosine_ncm",
+  "macro_f1_tolerance": 1e-15,
+  "authoritative_reference": {
+    "accuracy": 0.5771428571428572,
+    "macro_f1": 0.5835693346352661,
+    "per_class_recall": [0.5577777777777778, 0.8333333333333334, 0.6688888888888889, 0.6666666666666666, 0.43333333333333335, 0.43555555555555553, 0.4444444444444444],
+    "confusion_matrix": [
+      [251, 0, 0, 100, 99, 0, 0],
+      [0, 375, 25, 0, 50, 0, 0],
+      [0, 50, 301, 0, 0, 0, 99],
+      [47, 0, 0, 300, 54, 49, 0],
+      [101, 0, 0, 154, 195, 0, 0],
+      [50, 0, 0, 56, 1, 196, 147],
+      [1, 50, 0, 150, 49, 0, 200]
+    ]
+  }
+}

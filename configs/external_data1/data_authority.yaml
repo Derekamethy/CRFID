@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "dataset_id": "external_data1_four_class",
+  "authority_verdict": "CONFIRMED_FODOP_DATA1_VERSION_NAME_VARIANT",
+  "acquisition_status": "CONFIRMED_EXTERNAL_INDEPENDENT_ACQUISITION",
+  "eligibility": "PIPELINE_PORTABILITY_ONLY",
+  "raw_aggregate_sha256": "8ca2f55b35ce774d58371faf387fba1a1e14aa2497635db8b895231aa5a40ff8",
+  "expected_file_sha256": {
+    "set_1.csv": "43a09751248820cfd4fc664b56acc25317e99930321c6ced63596a272ec56396",
+    "set_2.csv": "8c5c47549e3a3ce3a47cdd7acf8e690a5dbe4db61c7a0795acb6c94aad3bfbbe",
+    "set_3.csv": "0652992f722976066b770cb61fce25ffda55f4318f8c7dd8800b32ada59217b8",
+    "set_4.csv": "e70ab5a278cbde9129a91f9c4099a71537e550d9f60cc29323e8f54f9424d118",
+    "set_5.csv": "1e3db4767630ec73cc9f9f159fc7dcf6391dfdf29f8e25205cf8fdd837c0aaf9",
+    "set_6.csv": "0b2157bb6ef78ae0745cfffea76d0a718e4d43c77e7998c770584cf8a7a3b570",
+    "set_7.csv": "883c20dacc508498b555e585a3b658b702ce3937a49fa281bd43bf17eea32964",
+    "set_8.csv": "791c11b1b23d54ce055e9b557395595d450f864b2f0a2dab74ea9c0c588f477d",
+    "set_9.csv": "87db5dd2f509130be67f540ceea024d1381f0cb99a3010ae4e32b9d703e4315a"
+  },
+  "file_count": 9,
+  "sample_count": 12250,
+  "class_order": [0, 1, 2, 3],
+  "class_counts": [3150, 3150, 3150, 2800],
+  "signal_length": 1601,
+  "documented_frequency_range_ghz": [2.1, 10.6],
+  "frequency_axis_status": "AXIS_IDENTITY_UNRESOLVED",
+  "class_mapping_status": "NO_DOCUMENTED_CANONICAL_CLASS_MAPPING"
+}

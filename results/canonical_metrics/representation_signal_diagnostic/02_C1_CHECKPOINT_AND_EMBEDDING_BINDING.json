@@ -1,0 +1,97 @@
+{
+  "architecture": {
+    "classifier_input_dimension": 256,
+    "classifier_module_path": "network.13",
+    "classifier_output_dimension": 7,
+    "classifier_type": "Linear",
+    "embedding_dimension": 256,
+    "embedding_module_path": "network.12",
+    "embedding_module_type": "Flatten",
+    "embedding_tensor_shape": [
+      "batch",
+      256
+    ],
+    "module_types": [
+      "Conv1d",
+      "GroupNorm",
+      "ReLU",
+      "MaxPool1d",
+      "Conv1d",
+      "GroupNorm",
+      "ReLU",
+      "MaxPool1d",
+      "Conv1d",
+      "GroupNorm",
+      "ReLU",
+      "AdaptiveAvgPool1d",
+      "Flatten",
+      "Linear"
+    ],
+    "network_module_count": 14,
+    "parameter_count": 142855,
+    "penultimate_definition": "output passed directly into the frozen final linear classifier",
+    "unique_structural_selection": true
+  },
+  "checkpoints": [
+    {
+      "checkpoint_file_sha256": "cc507dcf895b2197d4a98c7c2eeb4c6520911944464da637b5002e1b7f8f9437",
+      "checkpoint_path_token": "FORENSIC_ARCHIVE/frozen_c1/seed_42/FINAL_CHECKPOINT.pt",
+      "frozen": true,
+      "method_id": "C1_FIRST_DIFFERENCE_ERM_1DCNN",
+      "model_state_sha256": "5b5b8d778d1467c8d751676b316d9ac9e6c1605f634c4e85cde1d827ec8275d3",
+      "p4_used": false,
+      "seed": 42
+    },
+    {
+      "checkpoint_file_sha256": "3db0c7d3c3678d0d0b4f78714a86b49759e6526bbbac89a1bb78cd9c1266a6a3",
+      "checkpoint_path_token": "FORENSIC_ARCHIVE/frozen_c1/seed_43/FINAL_CHECKPOINT.pt",
+      "frozen": true,
+      "method_id": "C1_FIRST_DIFFERENCE_ERM_1DCNN",
+      "model_state_sha256": "5f3f0360e559a6522a1af03e57b98c917096f3889afac5a0bfa65b70d9fa1210",
+      "p4_used": false,
+      "seed": 43
+    },
+    {
+      "checkpoint_file_sha256": "4acc015a59aed08faab2492c0cd2639d5c7de711c19c3bf1dcbb9cdda85453ce",
+      "checkpoint_path_token": "FORENSIC_ARCHIVE/frozen_c1/seed_44/FINAL_CHECKPOINT.pt",
+      "frozen": true,
+      "method_id": "C1_FIRST_DIFFERENCE_ERM_1DCNN",
+      "model_state_sha256": "a39e7a2c9ddc9593d812322d95b18129810cee24ba5a66c24f014d3bb4a53e96",
+      "p4_used": false,
+      "seed": 44
+    },
+    {
+      "checkpoint_file_sha256": "8a091de402a9750f5bd0443741afbf694b0155d2c008e6c0aa68123b62b71896",
+      "checkpoint_path_token": "FORENSIC_ARCHIVE/frozen_c1/seed_45/FINAL_CHECKPOINT.pt",
+      "frozen": true,
+      "method_id": "C1_FIRST_DIFFERENCE_ERM_1DCNN",
+      "model_state_sha256": "468c6f1a94ee4ddc16678bc2cc572eccae7f2485220ace919004504da336c776",
+      "p4_used": false,
+      "seed": 45
+    },
+    {
+      "checkpoint_file_sha256": "1cdb5c787ba674e3b5a73fdf03ba0d378f5b46055792408ac4b4ea33a389c879",
+      "checkpoint_path_token": "FORENSIC_ARCHIVE/frozen_c1/seed_46/FINAL_CHECKPOINT.pt",
+      "frozen": true,
+      "method_id": "C1_FIRST_DIFFERENCE_ERM_1DCNN",
+      "model_state_sha256": "a3734a84be6d03e4376772aba8b32ae2d7a46d95f731cc326f616aa94619700a",
+      "p4_used": false,
+      "seed": 46
+    }
+  ],
+  "method_id": "C1_FIRST_DIFFERENCE_ERM_1DCNN",
+  "source_preprocessing": {
+    "mean_file_sha256": "a8054ebeb3ab6559d49220e530f7ef03996bd1598b070a3907cf390658baca52",
+    "mean_path_token": "FORENSIC_ARCHIVE/frozen_c1/FINAL_SOURCE_PREPROCESSING_MEAN_FLOAT64.npy",
+    "mean_shape": [
+      280
+    ],
+    "role": "checkpoint-bound encoder input preprocessing; probe scaling remains training-only",
+    "scale_file_sha256": "8709fd10263b60d3384e6b5b198e27314d8aefa85eb49b9c4c3ae0ccd1e9cecb",
+    "scale_min": 0.4223155320580847,
+    "scale_path_token": "FORENSIC_ARCHIVE/frozen_c1/FINAL_SOURCE_PREPROCESSING_SCALE_FLOAT64.npy",
+    "scale_shape": [
+      280
+    ]
+  }
+}

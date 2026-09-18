@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "workflow": "baseline",
+  "status": "DEPRECATED_COMPATIBILITY_POINTER",
+  "output_path": "outputs/pre_dg",
+  "random_seeds": [42, 43, 44],
+  "canonical_config_path": "configs/pre_dg/canonical.yaml",
+  "message": "Use the canonical two-dataset Stage1-5 Pre-DG configuration."
+}

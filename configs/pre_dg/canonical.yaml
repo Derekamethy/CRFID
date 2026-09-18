@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "workflow": "baseline",
+  "status": "EXECUTED_NUMERICAL_MISMATCH_REMAINS",
+  "scientific_name": "Stage1-5 Structured Pre-DG Single-Dataset Grouped-Random and Leave-Domain Baselines",
+  "historical_verdict": "STAGE1_5_FREEZE_READY",
+  "random_seeds": [42, 43, 44],
+  "output_path": "outputs/pre_dg",
+  "config_directory": "configs/pre_dg",
+  "data_locations": {
+    "paper3_processed_root": "${CRFID_PRE_DG_PAPER3_PROCESSED_ROOT}",
+    "paper4_processed_root": "${CRFID_PRE_DG_PAPER4_PROCESSED_ROOT}",
+    "paper3_manifest_path": "${CRFID_PRE_DG_PAPER3_MANIFEST}",
+    "paper4_manifest_path": "${CRFID_PRE_DG_PAPER4_MANIFEST}",
+    "paper3_split_root": "${CRFID_PRE_DG_PAPER3_SPLIT_ROOT}",
+    "paper4_split_root": "${CRFID_PRE_DG_PAPER4_SPLIT_ROOT}"
+  },
+  "required_environment_verdict": "PASS_CRFID_LOCKED_ENVIRONMENT",
+  "claim_boundary": "NON_STRICT_SINGLE_DATASET_LEARNABILITY_AND_POSITION_OR_SURFACE_HELD_DIAGNOSTICS_NOT_FAIR_ZERO_SHOT_DG"
+}

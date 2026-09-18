@@ -1,0 +1,19 @@
+{
+  "adapted_embedding_array_sha256": "9c692b96fa25defe866c7b14a2e6e6e539badb1bd35d8a4487404a557de820b3",
+  "all_predictions_frozen_before_any_query_label_open": true,
+  "prediction_array_sha256": "476035da7aea8b786971abb4398a6c20164716d742deba53bf046156e4b0c057",
+  "prediction_dtype": "int8",
+  "prediction_file_sha256": "ff456dc2b453f54fa026cf1cc65f948a9df07571734cb0590f9f9a7701d12b9c",
+  "prediction_relative_path": "finetuned_predictions.npz",
+  "prediction_shape": [
+    2,
+    4,
+    5,
+    20,
+    3150
+  ],
+  "registered_prediction_units": 2400,
+  "representation_file_sha256": "1f6a093c790ff997ad483d497504be14d9ba470195e2b341a4d588ee541fae55",
+  "representation_relative_path": "representative_query_embeddings_float16.npz",
+  "source_embedding_array_sha256": "e427857465b000cb98f88c626ca337c595d3ab94ee0af7a77ec5f98b17b30132"
+}

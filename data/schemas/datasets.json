@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "publication_boundary": {
+    "raw_or_processed_measurements_in_repository": false,
+    "sample_level_manifests_in_repository": false,
+    "external_data_required": true
+  },
+  "datasets": {
+    "tyndall_paper4_ordered_281": {
+      "role": "strict_dg_and_physical_followups",
+      "total_rows": 12600,
+      "source_rows_p1_p3": 9450,
+      "target_rows_p4": 3150,
+      "class_count": 7,
+      "raw_class_order": [1, 2, 3, 4, 5, 6, 7],
+      "public_zero_based_class_order": [0, 1, 2, 3, 4, 5, 6],
+      "positions": ["P1", "P2", "P3", "P4"],
+      "source_positions": ["P1", "P2", "P3"],
+      "target_position": "P4",
+      "surface_order": ["A1", "A2", "A3"],
+      "encoding_state_order": [0, 1, 2],
+      "repeats_per_condition": 50,
+      "ordered_signal_length": 281,
+      "required_metadata": [
+        "sample_id",
+        "class_index",
+        "domain_id",
+        "surface_id",
+        "material_id",
+        "condition_id",
+        "repeat_id"
+      ],
+      "frequency": {
+        "range_ghz": [5.0, 8.0],
+        "point_count": 281,
+        "status": "CONDITIONAL_LINEAR_ENDPOINT_MAPPING",
+        "limitation": "The 5-8 GHz crop is supported, but the original 700-point vector, crop indices, and historical model-side 281-to-700 upsampling are unresolved."
+      },
+      "known_processed_fingerprints": {
+        "signals_sha256": "f2ebf450e2f436659f8328e8e12d78efb49eb8e183c8c2e14b8b436acf8532b0",
+        "metadata_sha256": "3a3fb2e27c9f52798bea2f9a70c22d625ddb1b566496d929a715463a0472fcd8",
+        "split_manifest_sha256": "9cb5d45f4f1bf7233c0594957520510c3c7563a98912c270d550328f973bfba6"
+      }
+    },
+    "tyndall_paper3_pre_dg": {
+      "role": "historical_reference_only",
+      "row_count": 9600,
+      "class_count": 8,
+      "class_order": [0, 1, 2, 3, 4, 5, 6, 7],
+      "input_channels": 2,
+      "input_length": 512,
+      "condition_columns": ["domain__position", "domain__surface"],
+      "group_column": "raw_sample_group_id",
+      "known_processed_fingerprints": {
+        "signals_sha256": "548b61c8b4e26f32783a29e4146190185f4c727486ac9a409e59ae257bc79a8d",
+        "metadata_sha256": "dd435eee579845e7fc7f806df14d1a70a2c12a75bbdfe01c5516159bf831317f",
+        "manifest_sha256": "93c7904b80b9be46eda569241792bbf8780ccc33d9c53f354ba1b7ae5dc99974"
+      }
+    },
+    "external_data1_four_class": {
+      "role": "within_data1_portability_and_unlabelled_ssl_corpus",
+      "file_count": 9,
+      "filenames": [
+        "set_1.csv",
+        "set_2.csv",
+        "set_3.csv",
+        "set_4.csv",
+        "set_5.csv",
+        "set_6.csv",
+        "set_7.csv",
+        "set_8.csv",
+        "set_9.csv"
+      ],
+      "row_count": 12250,
+      "class_count": 4,
+      "class_order": [0, 1, 2, 3],
+      "class_counts": [3150, 3150, 3150, 2800],
+      "ordered_signal_length": 1601,
+      "label_columns": 1,
+      "documented_frequency_range_ghz": [2.1, 10.6],
+      "frequency_axis_status": "AXIS_IDENTITY_UNRESOLVED",
+      "cross_dataset_class_mapping": "NONE_ASSUMED",
+      "raw_aggregate_sha256": "8ca2f55b35ce774d58371faf387fba1a1e14aa2497635db8b895231aa5a40ff8"
+    }
+  },
+  "expected_external_layout": {
+    "CRFID_DATA_ROOT": {
+      "tyndall": ["A1_P1.csv ... A3_P4.csv"],
+      "data1": ["set_1.csv ... set_9.csv"]
+    }
+  }
+}
+

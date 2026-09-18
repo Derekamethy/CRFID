@@ -1,0 +1,50 @@
+{
+  "c1_checkpoint_embedding_binding_sha256": "b69cb5c7ec969fc64d8cb743806cca1fb86080b80fe7cd9529fba0e948af64d9",
+  "checkpoint_count": 5,
+  "positions": {
+    "P1": {
+      "condition_block_count": 63,
+      "row_count": 3150,
+      "source_file_hashes": {
+        "A1_P1.csv": "a04ed9f328b53c082c030c33329b86bc371422242503b22c4cdae0efab5c0c37",
+        "A2_P1.csv": "45882d32db65008bb72b23a687bd1cd1047d955cc8943b786ecd89f91e1acc0a",
+        "A3_P1.csv": "cc0f0a89fab284bc8d25b4e61f1a83bcdb5955b9a68467ed4268f3437abbb583"
+      }
+    },
+    "P2": {
+      "condition_block_count": 63,
+      "row_count": 3150,
+      "source_file_hashes": {
+        "A1_P2.csv": "b32521ff12400e7f0c4ba40ca10a3bc6fc943a1bcd66945c5f7c5735ec3adcee",
+        "A2_P2.csv": "22d99ea5c0a65c0ebfeacc19534b2c54f6e0bc6d63a260d13ef949399da21573",
+        "A3_P2.csv": "92c3685471826758cfaa51451c8c6ccea4493ce75d400b5cfc5df08fd3a937a9"
+      }
+    },
+    "P3": {
+      "condition_block_count": 63,
+      "row_count": 3150,
+      "source_file_hashes": {
+        "A1_P3.csv": "9badca3dedc7e83efe5b1b5bd252b459eab0235c8a3eeb65440e2186984e90d3",
+        "A2_P3.csv": "dce696aec16b294a0efc08331c64dfb92251bf516ad6b62f715d9afd11c5cf93",
+        "A3_P3.csv": "aad82252aff01b6d3736b4d386b61d886ee6a6079d7d14ba1d728a4d389bf255"
+      }
+    },
+    "P4": {
+      "condition_block_count": 63,
+      "row_count": 3150,
+      "source_file_hashes": {
+        "A1_P4.csv": "8f63f8bee3deb7747a88ac0fe1f47eabe8c0feedfe5a65cb503e25fdcf1377ee",
+        "A2_P4.csv": "6b20fb815d6df40ff9ad4c0ecbf3bc7a82762ac96b8fd7df7170504715d75a00",
+        "A3_P4.csv": "6c3bffcca0e81664398423c5c4828c3d7d4698a69e804fe69368e53bb8a9f6e3"
+      }
+    }
+  },
+  "raw_measurements_distributed": false,
+  "representation_inputs": [
+    "RAW_SIGNAL_281",
+    "FIRST_DIFFERENCE_280",
+    "C1_ENCODER_EMBEDDING"
+  ],
+  "schema_version": 1,
+  "status": "PASS_GOVERNED_INPUT_BINDING"
+}

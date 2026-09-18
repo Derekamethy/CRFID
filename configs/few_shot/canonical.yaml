@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "workflow": "few_shot",
+  "status": "MIGRATED_FROZEN_BRANCH_COMPLETE_VERIFIABLE_EXECUTION_PERMANENTLY_CLOSED",
+  "scientific_label": "CONDITION_DISJOINT_FEW_SHOT_TARGET_DOMAIN_ADAPTATION_FROM_FROZEN_SOURCE_MODELS",
+  "input_path": "${CRFID_OUTPUT_ROOT:-outputs}/few_shot/episode.npz",
+  "output_path": "${CRFID_OUTPUT_ROOT:-outputs}/few_shot",
+  "frozen_branch_root": "${CRFID_OUTPUT_ROOT:-outputs}/few_shot/frozen_branch",
+  "verification_entry_point": "workflows/05_few_shot_p4_adaptation/verify_frozen_few_shot_branch.py",
+
+  "class_order": [0, 1, 2, 3, 4, 5, 6],
+  "class_names": ["Tag-1", "Tag-2", "Tag-3", "Tag-4", "Tag-5", "Tag-6", "Tag-7"],
+  "domain_order": ["P4"],
+  "source_domains": ["P1", "P2", "P3"],
+
+  "shot_counts": [1, 3, 5],
+  "shot_count": 1,
+  "evaluated_shot_conditions": [0, 1, 3, 5],
+  "support_sizes": {"0": 0, "1": 7, "3": 21, "5": 35},
+  "episode_count": 18,
+  "query_samples_per_episode": 1400,
+  "random_seeds": [42, 43, 44, 45, 46],
+  "formal_units_per_method_line": 360,
+  "zero_shot_units_per_method_line": 90,
+  "adaptation_units_per_method_line": 270,
+
+  "support_query_condition_overlap": false,
+  "nested_support_sets": true,
+  "constant_query_identity_across_shots": true,
+  "query_labels_during_adaptation": false,
+  "query_labels_during_model_selection": false,
+  "query_labels_during_hyperparameter_selection": false,
+  "transductive_operations": [],
+
+  "representation": "frozen_source_encoder_embedding",
+  "input_length": 280,
+  "normalization": "frozen_source_only_state",
+  "model": {"architecture": "strict_groupnorm_cnn", "embedding_dimension": 256, "weights_frozen": true},
+  "penultimate_module_path": "network.12",
+  "source_head_module_path": "network.13",
+
+  "adaptation_methods": ["target_only_squared_euclidean_prototypes", "proximal_linear_head"],
+  "head_regularization_grid": [0.01, 0.1, 1.0, 10.0, 100.0],
+  "selection_metric": "source_validation_transfer_only",
+  "tie_breaking_rule": "lowest_class_index",
+  "aggregation_rule": "five_seed_mean_within_episode_then_equal_weight_over_18_episodes",
+  "dispersion_rule": "population_standard_deviation_over_18_episode_means",
+  "bootstrap": {"resamples": 10000, "seed": 20260720, "interval": "percentile_95_percent", "paired_episode_count": 18},
+
+  "checkpoint_path": "${CRFID_OUTPUT_ROOT:-outputs}/strict_dg/checkpoints",
+
+  "execution_closed": true,
+  "prediction_regeneration_prohibited": true,
+  "mandatory_test_count": 26,
+
+  "canonical_lineage_aggregates": {
+    "FS0": "b018fb8440fe62c5f4b01927e8376ddb6907950eb44dd8ed98464041ed7bb855",
+    "FS1": "6183130203d0f95139508dd69acff20b0ee944889610cf45bb367ddf08f84d73",
+    "FS2": "3fdee6283f6fd1711a2db6020610d1f29016835078202b4674672271fb167564",
+    "FS2_HISTORICAL_FAILURE": "77421769fa931077ee15f6b2cb17b05442ab67c72610578e53f0ef08dcd99b1c",
+    "FS3": "916a773ff2740bf5f42b9ca18b99dce8e894cf2c652cdb86229a77fcba0823f0",
+    "FS3_PREDICTIONS": "215a20a8af2cb4b093be55b1058240e791c87cbfc8c70ced46400864858a31e9",
+    "FS4": "5e19b6f7680a79734214a9faffb683fa8eee378c508a330474d3079aca50c1bb",
+    "FS5": "47b301d3903cf664b0c56982f76fc117ccbd7d7a5bd2e97a9aeca6b93546f1c0",
+    "FS5R": "0fb31f9128cbb27b8e4208cf840f4da35f777d63ea44d0857f2647767fe3e05d",
+    "FS5_PREDICTIONS": "78d3adca1fe6652ca2c36026a2ae659795ced17651d57f7f023ddc0dc09a2cc4"
+  },
+  "final_artifact_aggregate_sha256": "38ebdc3c7e1f5d39ad286fe6c14f79a8ef6fe4c486d94cb3d9a5956960f04336",
+  "final_line_seal_sha256": "887afb78fec01e4f3b374447907165ddbf006ad9471e938568be217bf8692386",
+  "preaudit_inventory_aggregate_sha256": "96ffed975a146e71fc3630a61558ea5b91c99b0393f323235b8a14100c082f9a",
+  "frozen_payload_inventory": {
+    "path": "configs/few_shot/frozen_payload_manifest.csv",
+    "file_count": 5807,
+    "total_bytes": 268302053,
+    "aggregate_sha256": "ab17eeda5eebeac518a4cf2eb0998fb77686acbb162c1ed736b71bfef9627d23",
+    "manifest_sha256": "d5645c8840504a60d3126ecea585ceeff9f3bd1909fd297fd899c4f51e68d249"
+  }
+}

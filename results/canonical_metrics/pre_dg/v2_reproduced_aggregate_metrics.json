@@ -1,0 +1,186 @@
+{
+  "grouped_random_headline": {
+    "paper3_tyndall": {
+      "accuracy_mean": 0.9645833333333333,
+      "accuracy_population_std": 0.002126293179499256,
+      "dataset_id": "paper3_tyndall",
+      "macro_f1_mean": 0.9645101552690832,
+      "macro_f1_population_std": 0.0021259043698500504,
+      "seed_count": 3,
+      "split_name": "paper3_grouped_random_raw_condition"
+    },
+    "paper4_depolarizing": {
+      "accuracy_mean": 0.7413095238095239,
+      "accuracy_population_std": 0.05080502724781079,
+      "dataset_id": "paper4_depolarizing",
+      "macro_f1_mean": 0.7410125620644128,
+      "macro_f1_population_std": 0.048054911036197946,
+      "seed_count": 3,
+      "split_name": "paper4_grouped_random_raw_condition"
+    }
+  },
+  "split_results": [
+    {
+      "accuracy_mean": 0.9645833333333333,
+      "accuracy_population_std": 0.002126293179499256,
+      "dataset_id": "paper3_tyndall",
+      "macro_f1_mean": 0.9645101552690832,
+      "macro_f1_population_std": 0.0021259043698500504,
+      "seed_count": 3,
+      "split_name": "paper3_grouped_random_raw_condition"
+    },
+    {
+      "accuracy_mean": 0.94625,
+      "accuracy_population_std": 0.006481812160876652,
+      "dataset_id": "paper3_tyndall",
+      "macro_f1_mean": 0.9459494420454092,
+      "macro_f1_population_std": 0.006448073072454948,
+      "seed_count": 3,
+      "split_name": "paper3_leave_position_P1_raw_condition_val"
+    },
+    {
+      "accuracy_mean": 0.7263888888888889,
+      "accuracy_population_std": 0.021996246874028524,
+      "dataset_id": "paper3_tyndall",
+      "macro_f1_mean": 0.7219623915981742,
+      "macro_f1_population_std": 0.023944547807009938,
+      "seed_count": 3,
+      "split_name": "paper3_leave_position_P2_raw_condition_val"
+    },
+    {
+      "accuracy_mean": 0.8586111111111111,
+      "accuracy_population_std": 0.026030460551884432,
+      "dataset_id": "paper3_tyndall",
+      "macro_f1_mean": 0.8514195416913509,
+      "macro_f1_population_std": 0.029537591709925943,
+      "seed_count": 3,
+      "split_name": "paper3_leave_position_P3_raw_condition_val"
+    },
+    {
+      "accuracy_mean": 0.7426388888888888,
+      "accuracy_population_std": 0.0113362605152288,
+      "dataset_id": "paper3_tyndall",
+      "macro_f1_mean": 0.7375903304829242,
+      "macro_f1_population_std": 0.011834848886327664,
+      "seed_count": 3,
+      "split_name": "paper3_leave_position_P4_raw_condition_val"
+    },
+    {
+      "accuracy_mean": 0.9618055555555556,
+      "accuracy_population_std": 0.002894675694537015,
+      "dataset_id": "paper3_tyndall",
+      "macro_f1_mean": 0.96159277285475,
+      "macro_f1_population_std": 0.0030704080665424453,
+      "seed_count": 3,
+      "split_name": "paper3_leave_surface_BEND1_raw_condition_val"
+    },
+    {
+      "accuracy_mean": 0.5454861111111111,
+      "accuracy_population_std": 0.04103764198164387,
+      "dataset_id": "paper3_tyndall",
+      "macro_f1_mean": 0.5183406346655938,
+      "macro_f1_population_std": 0.0280826872193539,
+      "seed_count": 3,
+      "split_name": "paper3_leave_surface_BEND2_raw_condition_val"
+    },
+    {
+      "accuracy_mean": 0.9446180555555556,
+      "accuracy_population_std": 0.009848510141446406,
+      "dataset_id": "paper3_tyndall",
+      "macro_f1_mean": 0.9443611553275448,
+      "macro_f1_population_std": 0.010000695489174967,
+      "seed_count": 3,
+      "split_name": "paper3_leave_surface_CYLINDER_BIG_raw_condition_val"
+    },
+    {
+      "accuracy_mean": 0.6875,
+      "accuracy_population_std": 0.01105672453339629,
+      "dataset_id": "paper3_tyndall",
+      "macro_f1_mean": 0.6588769385012913,
+      "macro_f1_population_std": 0.010520160251497003,
+      "seed_count": 3,
+      "split_name": "paper3_leave_surface_CYLINDER_SMALL_raw_condition_val"
+    },
+    {
+      "accuracy_mean": 0.9208333333333334,
+      "accuracy_population_std": 0.018956234621319682,
+      "dataset_id": "paper3_tyndall",
+      "macro_f1_mean": 0.919915963117717,
+      "macro_f1_population_std": 0.019596468327635237,
+      "seed_count": 3,
+      "split_name": "paper3_leave_surface_PLANAR_raw_condition_val"
+    },
+    {
+      "accuracy_mean": 0.7413095238095239,
+      "accuracy_population_std": 0.05080502724781079,
+      "dataset_id": "paper4_depolarizing",
+      "macro_f1_mean": 0.7410125620644128,
+      "macro_f1_population_std": 0.048054911036197946,
+      "seed_count": 3,
+      "split_name": "paper4_grouped_random_raw_condition"
+    },
+    {
+      "accuracy_mean": 0.8465608465608465,
+      "accuracy_population_std": 0.01962841736726507,
+      "dataset_id": "paper4_depolarizing",
+      "macro_f1_mean": 0.8445476838285448,
+      "macro_f1_population_std": 0.02072566892145978,
+      "seed_count": 3,
+      "split_name": "paper4_leave_position_P1_raw_condition_val"
+    },
+    {
+      "accuracy_mean": 0.7822222222222223,
+      "accuracy_population_std": 0.027082919061893515,
+      "dataset_id": "paper4_depolarizing",
+      "macro_f1_mean": 0.7770053835851043,
+      "macro_f1_population_std": 0.030338908122708574,
+      "seed_count": 3,
+      "split_name": "paper4_leave_position_P2_raw_condition_val"
+    },
+    {
+      "accuracy_mean": 0.7377777777777778,
+      "accuracy_population_std": 0.024795798266178278,
+      "dataset_id": "paper4_depolarizing",
+      "macro_f1_mean": 0.7367489442587128,
+      "macro_f1_population_std": 0.02654076653189941,
+      "seed_count": 3,
+      "split_name": "paper4_leave_position_P3_raw_condition_val"
+    },
+    {
+      "accuracy_mean": 0.3388359788359788,
+      "accuracy_population_std": 0.014723071943608706,
+      "dataset_id": "paper4_depolarizing",
+      "macro_f1_mean": 0.22451264816801642,
+      "macro_f1_population_std": 0.02288036918102846,
+      "seed_count": 3,
+      "split_name": "paper4_leave_position_P4_raw_condition_val"
+    },
+    {
+      "accuracy_mean": 0.7516666666666667,
+      "accuracy_population_std": 0.024949684817383407,
+      "dataset_id": "paper4_depolarizing",
+      "macro_f1_mean": 0.7486072557684187,
+      "macro_f1_population_std": 0.025551676970942905,
+      "seed_count": 3,
+      "split_name": "paper4_leave_surface_case_BEND1_raw_condition_val"
+    },
+    {
+      "accuracy_mean": 0.6718253968253968,
+      "accuracy_population_std": 0.015772299518420452,
+      "dataset_id": "paper4_depolarizing",
+      "macro_f1_mean": 0.6732456334061214,
+      "macro_f1_population_std": 0.016141148607109482,
+      "seed_count": 3,
+      "split_name": "paper4_leave_surface_case_BEND2_raw_condition_val"
+    },
+    {
+      "accuracy_mean": 0.7860317460317461,
+      "accuracy_population_std": 0.008672972878649625,
+      "dataset_id": "paper4_depolarizing",
+      "macro_f1_mean": 0.7830296872412275,
+      "macro_f1_population_std": 0.008523360835058327,
+      "seed_count": 3,
+      "split_name": "paper4_leave_surface_case_PLANAR_raw_condition_val"
+    }
+  ]
+}

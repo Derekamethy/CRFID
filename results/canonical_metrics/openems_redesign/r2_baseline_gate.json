@@ -1,0 +1,20 @@
+{
+  "baseline_convergence_assessable": false,
+  "baseline_reproduced": false,
+  "classification": "BLOCKED_BY_SIMULATION_OR_PROVENANCE_FAILURE",
+  "compatibility_failure": "No CPython 3.12 openEMS or CSXCAD wheel is present.",
+  "environment_change_attempted": false,
+  "governed_python": "<LOCAL_USER_HOME>\\Envs\\crfid-strict-dg\\Scripts\\python.exe",
+  "governed_python_version": "3.12.13 (main, Mar  3 2026, 15:01:35) [MSC v.1944 64 bit (AMD64)]",
+  "installed_binding_wheels": [
+    "CSXCAD-0.6.3-cp310-cp310-win_amd64.whl",
+    "CSXCAD-0.6.3-cp311-cp311-win_amd64.whl",
+    "openEMS-0.0.36-cp310-cp310-win_amd64.whl",
+    "openEMS-0.0.36-cp311-cp311-win_amd64.whl"
+  ],
+  "new_openems_simulation_count": 0,
+  "openems_executable_exists": true,
+  "openems_importable": false,
+  "optimisation_permitted": false,
+  "stop_rule": "Baseline cannot be reproduced under the governed environment."
+}

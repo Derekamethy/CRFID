@@ -1,0 +1,108 @@
+{
+  "candidate_id": "C1_FIRST_DIFFERENCE_ERM_1DCNN",
+  "input_length": 281,
+  "operation_order": [
+    "calibrated_gaussian_noise_addition_on_source_only",
+    "first_difference_without_padding",
+    "featurewise_population_standardization",
+    "float32_model_conversion"
+  ],
+  "output_length": 280,
+  "per_seed_states": [
+    {
+      "augmented_signal_array_sha256": "128647fcf16a8b1f597f3e5841906800200a523d7cebf8ec70394275bc926f34",
+      "ddof": 0,
+      "degenerate_scale_mode": "replace_with_one",
+      "fit_domains": [
+        "P1",
+        "P2",
+        "P3"
+      ],
+      "fit_on_augmented_source_only": true,
+      "fit_sample_count": 9450,
+      "mean_array_sha256": "68823e63965a67d3b716a4f67109f0021b074ef436d284975cd5dc9bafedd3db",
+      "noise_generator_seed": 42000007,
+      "scale_array_sha256": "abcc19da5bc5ecc691544159a7236b6fe1118a2b5ec3155cdabef3c803dcdaaf",
+      "seed": 42,
+      "target_used_for_fit": false,
+      "zero_scale_replacement_count": 0
+    },
+    {
+      "augmented_signal_array_sha256": "8d93854384e05d84c6153d533c0670719c3087870a8ccac07c045a0f68cfc2cd",
+      "ddof": 0,
+      "degenerate_scale_mode": "replace_with_one",
+      "fit_domains": [
+        "P1",
+        "P2",
+        "P3"
+      ],
+      "fit_on_augmented_source_only": true,
+      "fit_sample_count": 9450,
+      "mean_array_sha256": "8ce9b93f61db5c2ade2992516e0bee0924998d785efaeccb6ec7ca24f03e0408",
+      "noise_generator_seed": 43000007,
+      "scale_array_sha256": "1d71f1f0daa3a604dc80b072f45d3996dc337d2b64e6ab5384839b162b69c2e1",
+      "seed": 43,
+      "target_used_for_fit": false,
+      "zero_scale_replacement_count": 0
+    },
+    {
+      "augmented_signal_array_sha256": "ba3fff56b259f18d4d15eeff25f657aa9e161eacfc7cb658b51345cedd063fb3",
+      "ddof": 0,
+      "degenerate_scale_mode": "replace_with_one",
+      "fit_domains": [
+        "P1",
+        "P2",
+        "P3"
+      ],
+      "fit_on_augmented_source_only": true,
+      "fit_sample_count": 9450,
+      "mean_array_sha256": "58408c0e08b75b4ebb27448233725a5423a115c2ca0d9adfedb17a0e2e3cac30",
+      "noise_generator_seed": 44000007,
+      "scale_array_sha256": "627a5c3be4145968d798c4bdfccff7dc766e1102f332f79142ca448899c3c76c",
+      "seed": 44,
+      "target_used_for_fit": false,
+      "zero_scale_replacement_count": 0
+    },
+    {
+      "augmented_signal_array_sha256": "6a9ac1d892bd99aaa04105198fad4dc1f37e3d2c7393d7e904c7b031178f5ca5",
+      "ddof": 0,
+      "degenerate_scale_mode": "replace_with_one",
+      "fit_domains": [
+        "P1",
+        "P2",
+        "P3"
+      ],
+      "fit_on_augmented_source_only": true,
+      "fit_sample_count": 9450,
+      "mean_array_sha256": "edf702e8ecd11a7faaab1a0d100dadcab6a3b4956d0a35f2776011c65271633d",
+      "noise_generator_seed": 45000007,
+      "scale_array_sha256": "1b4ff76be8d8348a577194555a3be87d7589d1c63cfcd0e13515c216a3f09180",
+      "seed": 45,
+      "target_used_for_fit": false,
+      "zero_scale_replacement_count": 0
+    },
+    {
+      "augmented_signal_array_sha256": "ce3705dc2b06736b7c86332e8fd70a834052c5d1166ed2efb3b1ec51984be254",
+      "ddof": 0,
+      "degenerate_scale_mode": "replace_with_one",
+      "fit_domains": [
+        "P1",
+        "P2",
+        "P3"
+      ],
+      "fit_on_augmented_source_only": true,
+      "fit_sample_count": 9450,
+      "mean_array_sha256": "f83c9dd10b8e77e9f99f93029709f5aa27778be9651851e02c8e8c1b4c6146b3",
+      "noise_generator_seed": 46000007,
+      "scale_array_sha256": "396c935d229752a3ab366c63d2430ebbe95179d31125b6147ab249d55e46d220",
+      "seed": 46,
+      "target_used_for_fit": false,
+      "zero_scale_replacement_count": 0
+    }
+  ],
+  "protocol": "composition_warp_noise_augmented_source_only",
+  "schema_version": 1,
+  "state_sha256": "b9c8af175e9501b2073a73957ca472f856fdb8068803c4d8e3d7934c2cf63407",
+  "target_refit_permitted": false,
+  "target_used_for_fit": false
+}

@@ -1,0 +1,14 @@
+{
+  "all_predictions_frozen_before_any_query_label_open": true,
+  "dtype": "int8",
+  "prediction_array_sha256": "0b2fc9552aa7b5b679118ff2cf046c6b51360acba3730cd52b33d67ee702fa8a",
+  "registered_prediction_units": 2715,
+  "relative_path": "per_run_predictions.npz",
+  "sha256": "c707f86962d5b0aa6eb98b8250bad595bebab8e6500063dc7d86d5e3e636a086",
+  "shape": [
+    10,
+    5,
+    20,
+    3150
+  ]
+}

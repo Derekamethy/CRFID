@@ -1,0 +1,46 @@
+{
+  "binding_sha256": "6d7ee8ad1b1bffaa421d767bb490d9b6e219cdfc1f3c1dad0aea2b1c42299714",
+  "candidate": "C1_FIRST_DIFFERENCE_ERM_1DCNN",
+  "checkpoint_rule": "maximum 50 epochs; validation row Macro-F1; patience 8; minimum improvement 1e-12",
+  "embedding_dimension": 256,
+  "encoder": "NeutralSourceOnlyCNN1D layers through AdaptiveAvgPool1d/Flatten",
+  "files": {
+    "configs/strict_dg/canonical.yaml": "2338bbe1f7ec501546512d286b3d2b3d3067f9f8e458a547e2a237c15a1b835e",
+    "src/crfid/protocols/strict_dg.py": "1714dd8ad6a1fa62619a2b16e601f84954a9fc2d2e3c2d2d1675364b71de4aa3",
+    "src/crfid/strict_runtime/neutral_data.py": "09a3d7e4579b63b4257f82bd4711183428e4d4675fcdad9cafd8a263d2dc6cac",
+    "src/crfid/strict_runtime/neutral_metrics.py": "ccb26eecc31993c3f339f174411902539b4599b34fdc018732a63b3c9e2d6471",
+    "src/crfid/strict_runtime/neutral_model.py": "eecf7a5a274d471892590b51e0d79b65e0fe7e13739afbe08cd51828493c6227",
+    "src/crfid/strict_runtime/phase3b_execution.py": "ddc65b7fa4bb8287140cd2837f7a392df968f9dcabd0dfabc5df3b479cf9b010",
+    "src/crfid/strict_runtime/scale_policy.py": "bee7fa226c45eab2480242f9ab246eb08c22bad4df776a98637299d63b6034b1",
+    "src/crfid/strict_runtime/target_evaluation.py": "82413d4b44ab3eef283722738da91ca41e0061eac33c358719d5ff12b9e43b88"
+  },
+  "first_difference_length": 280,
+  "folds": [
+    "S1",
+    "S2",
+    "S3"
+  ],
+  "optimizer": {
+    "amsgrad": false,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "epsilon": 1e-08,
+    "foreach": false,
+    "fused": false,
+    "learning_rate": 0.001,
+    "name": "AdamW",
+    "weight_decay": 0.0001
+  },
+  "ordered_input_length": 281,
+  "scheduler": null,
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "tagid_head": "Linear(256, 7)"
+}

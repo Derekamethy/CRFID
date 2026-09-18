@@ -1,0 +1,4 @@
+event_id,held_position,spearman_rho,kendall_tau_b,top1_recovered,selected_in_held_top2,held_oracle_in_selector_top2,selector_top1_top2_margin,selector_top1_top2_relative_margin,held_top1_top2_margin,held_top1_top2_relative_margin
+HOLD_P1,P1,1,1,True,True,True,0.07097081588964145,0.57299015617507187,0.040661988363807328,0.24248032668904207
+HOLD_P2,P2,-1,-1,False,False,False,0.07097081588964145,0.57299015617507187,0.0023490957632214537,0.013654320183292842
+HOLD_P3,P3,1,1,True,True,True,0.0046922954261030825,0.035622658362655026,0.07097081588964145,0.57299015617507187

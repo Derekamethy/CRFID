@@ -1,0 +1,13 @@
+fold_id,partition,method,training_parent_count,eligible_partner_count,missing_pair_count,pair_coverage,threshold,status
+S1,inner_train,cross_position_mixup,4200,2100,2100,0.5,0.99,FAIL_DOMAIN_AWARE_PAIRING_COVERAGE
+S1,inner_train,within_position_mixup,4200,4200,0,1.0,0.99,PASS
+S1,outer_development,cross_position_mixup,6300,6300,0,1.0,0.99,PASS
+S1,outer_development,within_position_mixup,6300,6300,0,1.0,0.99,PASS
+S2,inner_train,cross_position_mixup,4200,2100,2100,0.5,0.99,FAIL_DOMAIN_AWARE_PAIRING_COVERAGE
+S2,inner_train,within_position_mixup,4200,4200,0,1.0,0.99,PASS
+S2,outer_development,cross_position_mixup,6300,6300,0,1.0,0.99,PASS
+S2,outer_development,within_position_mixup,6300,6300,0,1.0,0.99,PASS
+S3,inner_train,cross_position_mixup,4200,2100,2100,0.5,0.99,FAIL_DOMAIN_AWARE_PAIRING_COVERAGE
+S3,inner_train,within_position_mixup,4200,4200,0,1.0,0.99,PASS
+S3,outer_development,cross_position_mixup,6300,6300,0,1.0,0.99,PASS
+S3,outer_development,within_position_mixup,6300,6300,0,1.0,0.99,PASS

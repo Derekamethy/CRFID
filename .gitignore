@@ -1,0 +1,65 @@
+# Python and test state
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Local environments and editors
+.venv/
+venv/
+.vscode/
+.idea/
+.claude/
+.env
+.env.*
+!.env.example
+
+# External data, training state, and newly generated artifacts
+data/tyndall/
+data/data1/
+/outputs/
+/checkpoints/
+*.npy
+*.npz
+*.pt
+*.pth
+*.ckpt
+*.pkl
+*.pickle
+*.h5
+*.hdf5
+*.parquet
+
+# Retain selected compact scientific binaries only under canonical results.
+# Binary artifacts elsewhere remain ignored by default.
+!results/canonical_metrics/**/*.npy
+!results/canonical_metrics/**/*.npz
+!results/canonical_metrics/**/*.pt
+!results/canonical_metrics/**/*.pth
+
+# Archives and release bundles remain outside the source tree
+*.zip
+*.7z
+*.tar
+*.tar.gz
+*.bundle
+
+# Credentials and machine-local material
+*.pem
+*.key
+credentials.json
+secrets.json
+*_credentials.json
+*_secrets.json
+
+# OS and temporary files
+.DS_Store
+Thumbs.db
+*.tmp
+*.temp
+*.bak
+*.swp
+*.lock

@@ -1,0 +1,25 @@
+{
+  "analysis_recovery_code_identity": {
+    "commit": "f3b4f70f767375e3ea7e90bf511d27dfc760c37f",
+    "tree": "63fc46bc4349a29c9850f2366460cdb272c73533",
+    "worktree": "<ORIGINAL_WORKSPACE>\\CRFID_research_code_v2_patch_p4_encoder_finetuning_diagnostic_v1"
+  },
+  "correction": "values[budget_index][..., indices]",
+  "execution_code_identity": {
+    "branch": "codex/p4-encoder-finetuning-diagnostic-v1",
+    "code_and_config_clean_before_execution": true,
+    "commit": "c0b8209df148a2e3c1f5d3c68fe5e7eecfd69cb6",
+    "preexisting_output_artifacts_ignored_for_cleanliness": true,
+    "tree": "0a00ab4bb95622e7c74b7128383a2ca343f9ffdc",
+    "worktree": "<ORIGINAL_WORKSPACE>\\CRFID_research_code_v2_patch_p4_encoder_finetuning_diagnostic_v1"
+  },
+  "failure": "NumPy advanced indexing moved the selected row axis before source/support axes in block diagnostics",
+  "fit_units_reused": 2400,
+  "freeze_and_query_access_rows_exactly_bound": true,
+  "new_fits": 0,
+  "new_predictions": 0,
+  "prediction_array_sha256": "476035da7aea8b786971abb4398a6c20164716d742deba53bf046156e4b0c057",
+  "prediction_file_sha256": "ff456dc2b453f54fa026cf1cc65f948a9df07571734cb0590f9f9a7701d12b9c",
+  "prediction_units_reused": 2400,
+  "status": "POST_SEAL_ANALYSIS_RECOVERED_WITHOUT_REFITTING_OR_REPREDICTION"
+}

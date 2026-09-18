@@ -1,0 +1,20 @@
+gate,status,evidence
+source_condition_blocks_disjoint,PASS,adapter and frozen protocol
+held_source_position_isolated,PASS,adapter and frozen protocol
+p4_excluded_from_eta_selection,PASS,adapter and frozen protocol
+erm_groupdro_identical_source_samples,PASS,adapter and frozen protocol
+erm_groupdro_identical_labels,PASS,adapter and frozen protocol
+erm_groupdro_identical_seeds,PASS,adapter and frozen protocol
+erm_groupdro_identical_checkpoint_rule,PASS,adapter and frozen protocol
+sampler_batch_composition_matched,PASS,adapter and frozen protocol
+only_risk_aggregation_differs,PASS,adapter and frozen protocol
+group_labels_source_positions_only,PASS,adapter and frozen protocol
+q_updates_use_detached_losses,PASS,adapter and frozen protocol
+eta_frozen_before_p4_access,PASS,adapter and frozen protocol
+p4_predictions_frozen_before_label_access,PASS,adapter and frozen protocol
+position_probe_is_independent,PASS,adapter and frozen protocol
+condition_blocks_remain_grouped,PASS,adapter and frozen protocol
+no_row_level_pseudoreplication,PASS,adapter and frozen protocol
+no_earlier_patch_primary_evidence,PASS,adapter and frozen protocol
+authoritative_and_earlier_patches_preserved,PASS,adapter and frozen protocol
+post_freeze_p4_reporting_persistence,FAIL_PROTOCOL_OR_LABEL_BOUNDARY_DEFECT,Unexpected source fold: S1 after post-freeze label scoring completed in memory

@@ -1,0 +1,7 @@
+{
+  "preregistration_commit": "73a05ed89279e16cf6b4c6c889d082a20e85167c",
+  "relative_path": "configs/p4_large_calibration_curve/preregistration.json",
+  "sealed_before_new_results": true,
+  "sha256": "30e65854c09773f3ff64054cf04fabc215a9e9fa27919ffc9de448d1f48bb99d",
+  "status": "SEALED_BEFORE_NEW_CALIBRATION_RESULTS"
+}

@@ -1,0 +1,9 @@
+dimension,expected,observed,status
+TagID,7,7,PASS
+ER,3,3,PASS
+surface,3,3,PASS
+source_position,3,3,PASS
+source_rows,9450,9450,PASS
+source_condition_blocks,189,189,PASS
+ordered_points,281,281,PASS
+first_difference_points,280,280,PASS

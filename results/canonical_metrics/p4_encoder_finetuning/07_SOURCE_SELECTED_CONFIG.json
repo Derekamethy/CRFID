@@ -1,0 +1,30 @@
+{
+  "experiment_id": "p4_encoder_finetuning_diagnostic_v1",
+  "p4_query_used": false,
+  "p4_support_used": false,
+  "phase": "SOURCE_ONLY_HYPERPARAMETERS_FROZEN_FOR_ALL_P4_BUDGETS",
+  "same_selected_configuration_every_p4_budget": true,
+  "selected": {
+    "FULL_FT": {
+      "encoder_weight_decay": 0.0001,
+      "epochs": 20,
+      "learning_rate": 0.0001,
+      "mean_support_minus_query_macro_f1": 0.3722232211079188,
+      "minimum_class_mean_recall": 0.08744444444444445,
+      "minimum_held_position_mean_query_macro_f1": 0.21414487104276514,
+      "overall_mean_query_macro_f1": 0.22215732779643968
+    },
+    "PARTIAL_FT": {
+      "encoder_weight_decay": 0.0,
+      "epochs": 10,
+      "learning_rate": 0.0003,
+      "mean_support_minus_query_macro_f1": 0.26245355002712145,
+      "minimum_class_mean_recall": 0.09166666666666666,
+      "minimum_held_position_mean_query_macro_f1": 0.21934767682644865,
+      "overall_mean_query_macro_f1": 0.224833140354807
+    }
+  },
+  "selection_population": "45 grouped pseudo-target units per candidate and arm: 3 held positions x 3 layouts x 5 source seeds",
+  "summary_sha256": "ce9d30305eef6bb85232590faed3879ddba364e882de85cba6bc3ea103424046",
+  "unit_results_sha256": "453a846da13394be9db78ca887bd6c4b0eda4557f491209c1e9815df2a0a05a5"
+}

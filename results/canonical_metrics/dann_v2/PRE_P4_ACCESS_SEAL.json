@@ -1,0 +1,217 @@
+{
+  "acknowledgement_p4_historically_known_from_prior_work": true,
+  "all_frozen_code_and_test_hashes": {
+    "configs/dann_v2/preregistered.json": "87d2bb74d0e333e89a6d603751bb58c5c057e21007de80adb70f3344074e5d00",
+    "tests/test_dann_v2_evaluation.py": "91da6b0a6ac8c769439a878a9b4353d09d3f4a589cde3539696fa88cdfb5cf73",
+    "tests/test_dann_v2_model.py": "81eb925e497484527afd857816dcb735d189c55cdfe8143e987b9125b187267f",
+    "tests/test_dann_v2_protocol.py": "69fd2802d8d9bc7d28accbf7a2cc1ba636eb45c19e41db3a6fd658a8460762af",
+    "workflows/19_dann_v2/__init__.py": "52d158999d38f17a599fea03a4b3ad9c15e6a1680fa4eb08bab420e40fdb45df",
+    "workflows/19_dann_v2/audit_repositories.py": "99c6a1a164e597794a09d2ff4a3f0448510db91a0d349fc1a9535b04247cbb8b",
+    "workflows/19_dann_v2/data.py": "5c4c541d96cb5ea513c767cd92d591b23d2d9eeb1c5df46bf377add0795afcb9",
+    "workflows/19_dann_v2/metrics.py": "a61a73a8395191b7fe5e116c6d91d3280030bf885926efcb1b9eb9a7afee2512",
+    "workflows/19_dann_v2/model.py": "159ee4bff3efdf69b797d566ee36eb43d4648b6b3aca61b848afb01b74d1bd52",
+    "workflows/19_dann_v2/protocol.py": "ea4c3448d63ec1ef997e66df4ffc514cb210abbc4e585bd2842c41bee38f78f9",
+    "workflows/19_dann_v2/run.py": "827350b1ff3ce169ae8bf7e9e9d4d1b550238b821c973147fb12555fea8bab11",
+    "workflows/19_dann_v2/target.py": "ab012e1f32457f0a592f3cfc18831b08fc697ab92a121be7a05ae358aca83113",
+    "workflows/19_dann_v2/training.py": "c89db0b91f799bc3fa6470f287e4b0215ba3006e235baccb2f883b00a8c06cf6"
+  },
+  "analysis_definitions_frozen": true,
+  "arms": {
+    "ARM_A0_ERM_MATCHED": "encoder domain coefficient 0",
+    "ARM_A1_DOMAIN_POSITIVE_MATCHED": "encoder domain coefficient +lambda(p)",
+    "ARM_A2_DANN_NEGATIVE_MATCHED": "encoder domain coefficient -lambda(p)"
+  },
+  "chance_reference_procedure": {
+    "analytic_accuracy": 0.14285714285714285,
+    "class_count": 7,
+    "seed": 20260810,
+    "uniform_random_block_replicates": 10000
+  },
+  "claim_boundary": "POST_HOC_SOURCE_ONLY_FOLLOWUP_DANN_V2",
+  "development_bootstrap_seed": 20260809,
+  "final_checkpoints_expected": [
+    {
+      "arm": "ARM_A0_ERM_MATCHED",
+      "checkpoint_path": "outputs/dann_v2/final_models/a0/seed_42.pt",
+      "checkpoint_sha256": "0fb0e49f960aebfe57da5d81e4da9c31ee8f2fdeba6d9739610cabb27fd1b6b6",
+      "epochs": 11,
+      "lambda_max": 0.0,
+      "seed": 42
+    },
+    {
+      "arm": "ARM_A0_ERM_MATCHED",
+      "checkpoint_path": "outputs/dann_v2/final_models/a0/seed_43.pt",
+      "checkpoint_sha256": "603a82281eb6dfc2d75a9f97f4531341c4f9730e89615ce74cacf56d5e94a130",
+      "epochs": 14,
+      "lambda_max": 0.0,
+      "seed": 43
+    },
+    {
+      "arm": "ARM_A0_ERM_MATCHED",
+      "checkpoint_path": "outputs/dann_v2/final_models/a0/seed_44.pt",
+      "checkpoint_sha256": "d5ccab62a8d847471213efe53cd001228ef89ee3235427297854f7466e71f9cd",
+      "epochs": 8,
+      "lambda_max": 0.0,
+      "seed": 44
+    },
+    {
+      "arm": "ARM_A0_ERM_MATCHED",
+      "checkpoint_path": "outputs/dann_v2/final_models/a0/seed_45.pt",
+      "checkpoint_sha256": "11dde7f132515caba58ee01342bf94094a42aa12b8d09ce77dbde4b34a009747",
+      "epochs": 8,
+      "lambda_max": 0.0,
+      "seed": 45
+    },
+    {
+      "arm": "ARM_A0_ERM_MATCHED",
+      "checkpoint_path": "outputs/dann_v2/final_models/a0/seed_46.pt",
+      "checkpoint_sha256": "432fc54959d531821aa0d1c4d0c9f42ec24bca31bf4758fb970a7eb1e75d0e24",
+      "epochs": 6,
+      "lambda_max": 0.0,
+      "seed": 46
+    },
+    {
+      "arm": "ARM_A1_DOMAIN_POSITIVE_MATCHED",
+      "checkpoint_path": "outputs/dann_v2/final_models/a1/seed_42.pt",
+      "checkpoint_sha256": "0758302c05e633e3f2a5e1d40e3f554298b69ada35299b8fd63719a15b035127",
+      "epochs": 11,
+      "lambda_max": 0.1,
+      "seed": 42
+    },
+    {
+      "arm": "ARM_A1_DOMAIN_POSITIVE_MATCHED",
+      "checkpoint_path": "outputs/dann_v2/final_models/a1/seed_43.pt",
+      "checkpoint_sha256": "11756cea6b18ab9fe3ecc205d7d1932aca02e7264deff174647b5c225f405098",
+      "epochs": 14,
+      "lambda_max": 0.1,
+      "seed": 43
+    },
+    {
+      "arm": "ARM_A1_DOMAIN_POSITIVE_MATCHED",
+      "checkpoint_path": "outputs/dann_v2/final_models/a1/seed_44.pt",
+      "checkpoint_sha256": "c86b8031e623d5c2da8f52553f6d33c8ad3b1bab545918ae430e9f21f050a73e",
+      "epochs": 8,
+      "lambda_max": 0.1,
+      "seed": 44
+    },
+    {
+      "arm": "ARM_A1_DOMAIN_POSITIVE_MATCHED",
+      "checkpoint_path": "outputs/dann_v2/final_models/a1/seed_45.pt",
+      "checkpoint_sha256": "3278eec7956879e81041f047eb983af5e31c0ed7e7fff0d339dd723838a7f266",
+      "epochs": 8,
+      "lambda_max": 0.1,
+      "seed": 45
+    },
+    {
+      "arm": "ARM_A1_DOMAIN_POSITIVE_MATCHED",
+      "checkpoint_path": "outputs/dann_v2/final_models/a1/seed_46.pt",
+      "checkpoint_sha256": "3fd8f72ed6629cc1139ffd538c770e6c99a62d422d69ef64e7de4020432eb21e",
+      "epochs": 6,
+      "lambda_max": 0.1,
+      "seed": 46
+    },
+    {
+      "arm": "ARM_A2_DANN_NEGATIVE_MATCHED",
+      "checkpoint_path": "outputs/dann_v2/final_models/a2/seed_42.pt",
+      "checkpoint_sha256": "daa842223a66aab2d2de1b17dc24dabc8f93dab1f2fe3a9bc670ff66c24d000a",
+      "epochs": 11,
+      "lambda_max": 0.1,
+      "seed": 42
+    },
+    {
+      "arm": "ARM_A2_DANN_NEGATIVE_MATCHED",
+      "checkpoint_path": "outputs/dann_v2/final_models/a2/seed_43.pt",
+      "checkpoint_sha256": "93cd2a5c25ece5fccfe03dad36c74b1df9818ec54492a85a0a5dbe137f975c9b",
+      "epochs": 14,
+      "lambda_max": 0.1,
+      "seed": 43
+    },
+    {
+      "arm": "ARM_A2_DANN_NEGATIVE_MATCHED",
+      "checkpoint_path": "outputs/dann_v2/final_models/a2/seed_44.pt",
+      "checkpoint_sha256": "523fc426855951680c7f3bafed5a1f9aff1f85ea3b2e0efca67a96de5db50ec4",
+      "epochs": 8,
+      "lambda_max": 0.1,
+      "seed": 44
+    },
+    {
+      "arm": "ARM_A2_DANN_NEGATIVE_MATCHED",
+      "checkpoint_path": "outputs/dann_v2/final_models/a2/seed_45.pt",
+      "checkpoint_sha256": "aefb0a12f19453b8a8a1834e44ca2c7f0d5c9130b18fc99464429f5e8dee9833",
+      "epochs": 8,
+      "lambda_max": 0.1,
+      "seed": 45
+    },
+    {
+      "arm": "ARM_A2_DANN_NEGATIVE_MATCHED",
+      "checkpoint_path": "outputs/dann_v2/final_models/a2/seed_46.pt",
+      "checkpoint_sha256": "da865a81293a5421184cbf2dd35d153b199e4e19449a59b744bd58c772277eac",
+      "epochs": 6,
+      "lambda_max": 0.1,
+      "seed": 46
+    }
+  ],
+  "final_epochs_by_seed": {
+    "42": 11,
+    "43": 14,
+    "44": 8,
+    "45": 8,
+    "46": 6
+  },
+  "hash_normalization": "canonical JSON with sorted keys and compact separators",
+  "mechanism_gate_evidence": {
+    "development_runs_completed": 165,
+    "development_runs_expected": 165,
+    "implementation_validity": "PASS",
+    "mechanism_candidate_class": "WEAK_POSITION_REDUCTION_CANDIDATES",
+    "p4_permitted_after_final_training_and_seal": true,
+    "p4_used": false,
+    "position_reduction_interval_95": [
+      -0.019896462379827777,
+      0.00678803695464454
+    ],
+    "position_reduction_mean": -0.006806690769456503,
+    "schema_version": 1,
+    "selected_lambda": 0.1,
+    "status": "PASS_SELECTIVE_INVARIANCE_GATE",
+    "tagid_representation_retention_gate": {
+      "difference": -0.007685505134863796,
+      "passed": true,
+      "threshold": -0.05
+    },
+    "task_retention_gate": {
+      "difference": 0.0007052333863633575,
+      "passed": true,
+      "threshold": -0.02
+    }
+  },
+  "metric_hashes": {
+    "metrics.py": "a61a73a8395191b7fe5e116c6d91d3280030bf885926efcb1b9eb9a7afee2512",
+    "target.py": "ab012e1f32457f0a592f3cfc18831b08fc697ab92a121be7a05ae358aca83113"
+  },
+  "p4_bootstrap_seed": 20260809,
+  "p4_evaluation_plan": "Freeze 15 A0/A1/A2 prediction bundles before labels; score once; no retraining or result-driven reruns.",
+  "p4_previously_opened_by_dann_v2": false,
+  "retention_gate_evidence": {
+    "tagid_probe": {
+      "difference": -0.007685505134863796,
+      "passed": true,
+      "threshold": -0.05
+    },
+    "task": {
+      "difference": 0.0007052333863633575,
+      "passed": true,
+      "threshold": -0.02
+    }
+  },
+  "schedule_implementation_hash": "ea4c3448d63ec1ef997e66df4ffc514cb210abbc4e585bd2842c41bee38f78f9",
+  "schema_version": 2,
+  "seal_canonical_json_sha256": "f9ff365e390b14efd35821942562767a70e52ce2a97af8c6df83ff1f4cf4fa02",
+  "selected_lambda": 0.1,
+  "statement": "DANN v2 source-only development did not access P4; P4 is a historically known target being re-accessed only after this seal.",
+  "status": "PASS_PRE_P4_ACCESS_SEAL",
+  "uncertainty_code_hashes": {
+    "metrics.py": "a61a73a8395191b7fe5e116c6d91d3280030bf885926efcb1b9eb9a7afee2512",
+    "target.py": "ab012e1f32457f0a592f3cfc18831b08fc697ab92a121be7a05ae358aca83113"
+  }
+}

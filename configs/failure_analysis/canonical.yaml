@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "workflow": "failure_analysis",
+  "status": "PARTIALLY_MIGRATED",
+  "input_path": "${CRFID_OUTPUT_ROOT:-outputs}/analysis/declared_artifacts.npz",
+  "output_path": "${CRFID_OUTPUT_ROOT:-outputs}/analysis/failure_mechanisms",
+  "class_count": 7,
+  "class_order": [0, 1, 2, 3, 4, 5, 6],
+  "domain_order": ["P1", "P2", "P3", "P4"],
+  "analyses": ["embedding_separability", "position_encoding", "class_domain_entanglement", "class_collapse", "confusion", "reference_peaks", "physical_features"],
+  "representation": "declared_saved_embedding_or_signal",
+  "selection_metric": "none_analysis_only",
+  "random_seeds": [42]
+}

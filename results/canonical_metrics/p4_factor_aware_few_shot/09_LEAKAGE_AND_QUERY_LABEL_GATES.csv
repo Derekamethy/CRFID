@@ -1,0 +1,17 @@
+gate_id,passed,phase,evidence
+G01_SUPPORT_QUERY_BLOCK_DISJOINT,True,POST_EXECUTION,every selected support cell is outside its Latin-square query fold
+G02_ALL_50_QUERY_REPETITIONS_GROUPED,True,POST_EXECUTION,each governed query block has exactly 50 rows
+G03_ONE_LABELLED_ROW_PER_SUPPORT_BLOCK,True,POST_EXECUTION,one deterministic row per selected class x factor block
+G04_SUPPORT_BLOCKS_DISTINCT_WITHIN_CLASS,True,POST_EXECUTION,selected factor cells are unique within every class
+G05_COMPLETE_63_BLOCK_OOF_COVERAGE,True,POST_EXECUTION,all physical P4 blocks enter query exactly once
+G06_EVERY_QUERY_FOLD_HAS_SEVEN_CLASSES,True,POST_EXECUTION,governed structure contains seven classes in every factor cell
+G07_EVERY_QUERY_FOLD_HAS_THREE_ER_LEVELS,True,POST_EXECUTION,Latin-square fold ER coverage
+G08_EVERY_QUERY_FOLD_HAS_THREE_SURFACES,True,POST_EXECUTION,Latin-square fold surface coverage
+G09_CANONICAL_LABEL_MAPPING,True,POST_EXECUTION,TagID 1..7 maps monotonically to class_index 0..6
+G10_FIRST_DIFFERENCE_DIMENSION,True,POST_EXECUTION,281 governed values produce 280 ordered first differences
+G11_FROZEN_CHECKPOINT_HASHES,True,POST_EXECUTION,all five source checkpoints match released SHA-256 values
+G12_IDENTICAL_LABEL_BUDGETS,True,POST_EXECUTION,every strategy receives exactly budget x seven labels
+G13_DETERMINISTIC_SUPPORT_SEEDS,True,POST_EXECUTION,all selections reproduced byte-for-byte on immediate repeat
+G14_QUERY_LABELS_SEALED,True,POST_EXECUTION,1125 episode access logs followed the required freeze/open sequence
+G15_NO_QUERY_INFORMED_TUNING,True,POST_EXECUTION,selection API accepts no query outcome and fixed settings are bound before execution
+G16_NO_ROW_LEVEL_PSEUDOREPLICATION,True,POST_EXECUTION,condition block is the declared inferential unit

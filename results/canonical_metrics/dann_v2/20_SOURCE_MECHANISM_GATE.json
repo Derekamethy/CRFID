@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "PASS_SOURCE_MECHANISM_CONTINUATION_GATE",
+  "historical_status_label": "PASS_SELECTIVE_INVARIANCE_GATE",
+  "implementation_validity": "PASS",
+  "development_runs_completed": 165,
+  "development_runs_expected": 165,
+  "selected_lambda": 0.1,
+  "mechanism_candidate_class": "WEAK_POSITION_REDUCTION_CANDIDATES",
+  "task_retention_gate": {
+    "difference": 0.0007052333863633575,
+    "passed": true,
+    "threshold": -0.02
+  },
+  "tagid_representation_retention_gate": {
+    "difference": -0.007685505134863796,
+    "passed": true,
+    "threshold": -0.05
+  },
+  "position_reduction_mean": -0.006806690769456503,
+  "position_reduction_interval_95": [-0.019896462379827777, 0.00678803695464454],
+  "position_reduction_reliable": false,
+  "p4_permitted_after_final_training_and_seal": true,
+  "p4_used": false,
+  "public_interpretation": "This is a source-only continuation gate. Passing it does not establish statistically reliable position suppression."
+}

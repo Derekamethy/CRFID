@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "protocol_id": "FIXED_POSITION_CONDITION_GROUPED_VALIDITY_V1",
+  "method_id": "C1_FIRST_DIFFERENCE_ERM_1DCNN",
+  "positions": ["P1", "P2", "P3", "P4"],
+  "seeds": [42, 43, 44, 45, 46],
+  "data": {
+    "governed_raw_root_environment_variable": "CRFID_FIXED_POSITION_DATA_ROOT",
+    "strict_dg_artifact_root_environment_variable": "CRFID_STRICT_DG_ARTIFACT_ROOT",
+    "runtime_root_environment_variable": "CRFID_FIXED_POSITION_RUN_ROOT",
+    "surface_order": ["A1", "A2", "A3"],
+    "er_order": [0, 1, 2],
+    "tag_ids": [1, 2, 3, 4, 5, 6, 7],
+    "signal_point_count": 281,
+    "rows_per_condition_block": 50
+  },
+  "split": {
+    "group_key": ["tag_id", "er", "surface", "position"],
+    "outer_fold_count": 3,
+    "outer_fold_formula": "(er + surface_index_A1_0_A2_1_A3_2) modulo 3",
+    "test_blocks_per_tag_per_fold": 3,
+    "validation_blocks_per_tag": 2,
+    "training_blocks_per_tag": 4,
+    "validation_selection": "SHA256-seeded permutation of the six non-test blocks, scoped by protocol, position, fold, seed, and TagID; first two blocks are validation",
+    "outer_test_assignment_depends_on_seed": false
+  },
+  "preprocessing": {
+    "operation_order": [
+      "first_difference_x[i+1]-x[i]_without_padding",
+      "featurewise_population_mean_and_std_fit_on_the_permitted_training_partition",
+      "canonical_replace_with_one_scale_policy",
+      "float32_model_conversion"
+    ],
+    "input_feature_count": 281,
+    "output_feature_count": 280,
+    "ddof": 0,
+    "minimum_scale": 1e-12,
+    "minimum_scale_replacement": 1.0,
+    "fit_dtype": "float64",
+    "model_dtype": "float32"
+  },
+  "model": {
+    "implementation": "crfid.strict_runtime.neutral_model.NeutralSourceOnlyCNN1D",
+    "parameter_count": 142855,
+    "class_count": 7
+  },
+  "optimizer": {
+    "name": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "betas": [0.9, 0.999],
+    "epsilon": 1e-8,
+    "amsgrad": false,
+    "foreach": false,
+    "fused": false
+  },
+  "loss": {
+    "name": "unweighted_cross_entropy",
+    "weight": null,
+    "label_smoothing": 0.0
+  },
+  "training": {
+    "batch_size": 256,
+    "maximum_inner_epochs": 50,
+    "early_stopping_patience": 8,
+    "minimum_improvement": 1e-12,
+    "inner_stage_offset": 0,
+    "outer_stage_offset": 100000,
+    "scheduler": null,
+    "checkpoint_rule": "earliest epoch attaining a validation Macro-F1 improvement greater than 1e-12",
+    "outer_refit_rule": "reinitialize with the same seed and train on train plus validation for the selected epoch count"
+  },
+  "learning_validity": {
+    "diagnostic_fold": 0,
+    "diagnostic_seed": 42,
+    "rows_per_class": 8,
+    "maximum_full_batch_steps": 250,
+    "pass_accuracy": 0.95,
+    "pass_macro_f1": 0.95
+  },
+  "confidence_intervals": {
+    "method": "TagID-stratified condition-block cluster percentile bootstrap, preserving each block's 50 rows and pairing its five seed predictions",
+    "resamples": 10000,
+    "seed": 20260803,
+    "confidence_level": 0.95
+  }
+}

@@ -1,0 +1,16 @@
+gate,requirement,pass,status,evidence
+1,"no condition block crosses train, validation, and test",True,PASS,manifest key has exactly one split
+2,all 50 repeats remain grouped,True,PASS,all manifest blocks contain 50 repeats
+3,all representations use identical test blocks,True,PASS,180 of 180 synchronized runs
+4,all representations use identical labels,True,PASS,single governed PositionData label vector per position
+5,all representations use identical fold assignments,True,PASS,single sealed split-manifest SHA used by every run
+6,feature scaling uses training data only,True,PASS,"all primary scalers fit 1,050 training rows"
+7,peak extraction uses no test labels,True,PASS,"canonical extractor signature accepts signal, ordered axis, windows, mode only"
+8,encoder checkpoints remain frozen,True,PASS,checkpoint loader and post-extraction frozen-state assertions passed
+9,no target-informed encoder selection occurs,True,PASS,five released source-only checkpoints are all used with no selection
+10,probe checkpoint selection uses validation only,True,PASS,highest validation row Macro-F1; exact ties retain earliest epoch
+11,all five probe seeds are present,True,PASS,"[42,43,44,45,46]"
+12,each condition block is evaluated exactly once out of fold,True,PASS,63 pooled OOF blocks per position/representation/seed summary
+13,test predictions are frozen before labels open,True,PASS,instrumented event order passed for every held fold
+14,repeated rows are not independent inferential units,True,PASS,bootstrap samples 63 condition blocks within TagID; never rows
+15,no source or result file from an authority is modified,True,PASS,PASS

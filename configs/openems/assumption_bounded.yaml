@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "workflow": "openems_redesign",
+  "status": "BLOCKED_HISTORICAL_NOT_CONFIRMED",
+  "input_path": "${CRFID_OUTPUT_ROOT:-outputs}/openems/source_frequency_weights.csv",
+  "output_path": "${CRFID_OUTPUT_ROOT:-outputs}/openems",
+  "solver_root": "${CRFID_OPENEMS_ROOT:-external/openems}",
+  "execute_solver_by_default": false,
+  "evidence_boundary": "ASSUMPTION_BOUNDED_NOT_FABRICATION_AUTHORITY",
+  "geometry_authority": "assumption_bounded",
+  "calibration_status": "WAITING_FOR_REAL_VNA_CSV",
+  "existing_conclusion": "NOT_CONFIRMED",
+  "geometry": {"substrate_material": "Rogers 5880", "substrate_diameter_mm": 25.0, "substrate_thickness_mm": 0.79, "relative_permittivity": 2.2, "loss_tangent": 0.0009, "strip_angle_deg": 0.0, "nominal_strip_width_mm": 1.0, "nominal_center_spacing_mm": 2.0, "resonator_lengths_mm": {"Lc": 20.0, "L3": 18.0, "L2": 16.0, "L1": 14.0}, "code_bit_order": ["L3", "L2", "L1"]},
+  "frequency": {"start_ghz": 5.0, "stop_ghz": 8.0, "points": 121},
+  "analysis": {"codes": ["001", "010", "011", "100", "101", "110", "111"], "uniform_weight_fraction": 0.1, "minimum_practical_improvement_fraction": 0.05, "convergence_rms_db_max": 2.0, "peak_shift_mhz_max": 150.0, "selection_metric": "global_minimum_source_weighted_pair_distance", "tie_breaking_rule": "candidate_identifier_ascending"},
+  "candidates": [{"name": "baseline", "overrides": {}}, {"name": "l1_shorter_3_percent", "overrides": {"length_scale": {"L1": 0.97}}}],
+  "random_seeds": [42]
+}

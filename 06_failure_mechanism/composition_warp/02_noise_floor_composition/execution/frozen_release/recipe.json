@@ -1,0 +1,102 @@
+{
+  "architecture": {
+    "channels": [
+      64,
+      128,
+      256
+    ],
+    "embedding_dimension": 256,
+    "group_norm_groups": 8,
+    "kernels": [
+      7,
+      5,
+      3
+    ],
+    "name": "NeutralSourceOnlyCNN1D",
+    "parameter_count": 142855
+  },
+  "augmentation": {
+    "added_variance": "max(0, sigmahat2_P4[c](f) - sigma2[c,p](f))",
+    "applied_to": "P1/P2/P3 training data only",
+    "distribution": "independent zero-mean Gaussian per sample and signal position",
+    "generator": "numpy.random.default_rng",
+    "generator_seed_formula": "1000000 * training_seed + 7",
+    "target_augmented": false
+  },
+  "batch_size": 256,
+  "class_order": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "derived_from_frozen_strict_dg_recipe_sha256": "4805f8040f3609dbf4a02553b15c64471f64e3d2a9bc7a6c1068a6342c29d1b6",
+  "final_epochs_by_seed": {
+    "42": 13,
+    "43": 13,
+    "44": 9,
+    "45": 10,
+    "46": 9
+  },
+  "initialization": {
+    "conv_linear_bias": "uniform_inverse_sqrt_fan_in",
+    "conv_linear_weight": "kaiming_uniform_a_0_fan_in_relu",
+    "group_norm_bias": "zeros",
+    "group_norm_weight": "ones"
+  },
+  "loss": "unweighted_cross_entropy",
+  "noise_floor_semantic_sha256": "450314ffaae84ffd85f5930af33bdfe0bcfe6706709abf8ed5305f77939cc46d",
+  "normalization": {
+    "ddof": 0,
+    "dtype_fit": "float64",
+    "dtype_model": "float32",
+    "fit": "source_training_partition_only",
+    "minimum_scale": 1e-12,
+    "minimum_scale_replacement": 1.0,
+    "target_refit": false
+  },
+  "optimizer": {
+    "amsgrad": false,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "epsilon": 1e-08,
+    "foreach": false,
+    "fused": false,
+    "learning_rate": 0.001,
+    "name": "AdamW",
+    "weight_decay": 0.0001
+  },
+  "ordered_input_length": 281,
+  "prediction": {
+    "logit_dtype": "float32",
+    "rule": "int64_argmax_lowest_index_tie"
+  },
+  "protocol": "composition_warp_noise_augmented_source_only",
+  "representation": "first_difference",
+  "schema_version": 1,
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "selected_candidate": "C1_FIRST_DIFFERENCE_ERM_1DCNN",
+  "source_domains": [
+    "P1",
+    "P2",
+    "P3"
+  ],
+  "target_domain": "P4",
+  "target_policy": {
+    "access_before_freeze": false,
+    "normalization_refit": false,
+    "training_or_update_on_target": false
+  },
+  "transformed_input_length": 280
+}

@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "protocol_id": "CONDITION_MATCHED_CROSS_POSITION_MANIFOLD_MIXUP_V1",
+  "canonical_candidate": "C1_FIRST_DIFFERENCE_ERM_1DCNN",
+  "source_positions": ["P1", "P2", "P3"],
+  "target_position": "P4",
+  "seeds": [42, 43, 44, 45, 46],
+  "source_folds": {
+    "S1": {"held_position": "P1", "training_positions": ["P2", "P3"]},
+    "S2": {"held_position": "P2", "training_positions": ["P1", "P3"]},
+    "S3": {"held_position": "P3", "training_positions": ["P1", "P2"]}
+  },
+  "input": {
+    "ordered_signal_points": 281,
+    "first_difference_points": 280,
+    "representation": "first_difference_x_i_plus_1_minus_x_i_without_padding",
+    "standardization": "featurewise_population_training_partition_only",
+    "ddof": 0,
+    "minimum_scale": 1e-12,
+    "fit_dtype": "float64",
+    "model_dtype": "float32"
+  },
+  "model": {
+    "implementation": "crfid.strict_runtime.neutral_model.NeutralSourceOnlyCNN1D",
+    "class_count": 7,
+    "embedding_dimension": 256,
+    "parameter_count": 142855,
+    "mixup_location": "penultimate_encoder_embedding_before_network_final_linear"
+  },
+  "optimizer": {
+    "name": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "betas": [0.9, 0.999],
+    "epsilon": 1e-8,
+    "amsgrad": false,
+    "foreach": false,
+    "fused": false
+  },
+  "loss": {"name": "unweighted_cross_entropy", "label_smoothing": 0.0},
+  "training": {
+    "batch_size": 256,
+    "maximum_inner_epochs": 50,
+    "early_stopping_patience": 8,
+    "minimum_improvement": 1e-12,
+    "inner_stage_offset": 0,
+    "outer_stage_offset": 100000,
+    "scheduler": null,
+    "checkpoint_rule": "source_validation_TagID_Macro_F1_earliest_strict_improvement",
+    "outer_refit_rule": "reinitialize_same_seed_and_train_source_development_for_selected_epoch_count",
+    "final_epochs_by_seed": {"42": 13, "43": 13, "44": 9, "45": 10, "46": 9}
+  },
+  "sampler": {
+    "name": "deterministic_source_position_balanced_class_interleaved",
+    "replacement_policy": "repeat_only_after_all_original_position_rows_consumed",
+    "incomplete_final_batch": "retain_with_every_active_source_position_represented",
+    "shared_by_all_models": true
+  },
+  "mixup": {
+    "alpha_grid": [0.20, 0.50, 1.00],
+    "within_position_alpha": 0.50,
+    "beta": 1.0,
+    "location": "penultimate_encoder_embedding",
+    "pairing_fields": ["tag_id", "er", "surface"],
+    "coefficient_distribution": "Beta_alpha_alpha",
+    "coefficient_stabilization": "max_m_1_minus_m",
+    "probability": 1.0,
+    "training_only": true,
+    "label_interpolation": false,
+    "input_space_mixup": false,
+    "missing_pair_stop_fraction": 0.01,
+    "pair_selection": "deterministic_seed_controlled_permutation_with_balanced_alternative_positions"
+  },
+  "alpha_selector": {
+    "mean_eligibility_tolerance": 0.01,
+    "minimum_position_tolerance": 0.005,
+    "population_sd_tolerance": 0.001,
+    "final_tie_break": "smaller_alpha"
+  },
+  "p4_label_seal": {
+    "prediction_freeze_required_before_label_open": true,
+    "primary_unit": "TagID_x_ER_x_surface_condition_block",
+    "rows_per_block": 50,
+    "vote_tie_rule": "lowest_frozen_global_class_order"
+  },
+  "uncertainty": {
+    "p4_primary": "paired_TagID_stratified_condition_block_bootstrap",
+    "source_primary": "paired_held_position_seed_bootstrap",
+    "resamples": 10000,
+    "seed": 20260806
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "coverage_rows": [
+    {
+      "eligible_partner_count": 2100,
+      "fold_id": "S1",
+      "method": "cross_position_mixup",
+      "missing_pair_count": 2100,
+      "pair_coverage": 0.5,
+      "partition": "inner_train",
+      "status": "FAIL_DOMAIN_AWARE_PAIRING_COVERAGE",
+      "threshold": 0.99,
+      "training_parent_count": 4200
+    },
+    {
+      "eligible_partner_count": 4200,
+      "fold_id": "S1",
+      "method": "within_position_mixup",
+      "missing_pair_count": 0,
+      "pair_coverage": 1.0,
+      "partition": "inner_train",
+      "status": "PASS",
+      "threshold": 0.99,
+      "training_parent_count": 4200
+    },
+    {
+      "eligible_partner_count": 6300,
+      "fold_id": "S1",
+      "method": "cross_position_mixup",
+      "missing_pair_count": 0,
+      "pair_coverage": 1.0,
+      "partition": "outer_development",
+      "status": "PASS",
+      "threshold": 0.99,
+      "training_parent_count": 6300
+    },
+    {
+      "eligible_partner_count": 6300,
+      "fold_id": "S1",
+      "method": "within_position_mixup",
+      "missing_pair_count": 0,
+      "pair_coverage": 1.0,
+      "partition": "outer_development",
+      "status": "PASS",
+      "threshold": 0.99,
+      "training_parent_count": 6300
+    },
+    {
+      "eligible_partner_count": 2100,
+      "fold_id": "S2",
+      "method": "cross_position_mixup",
+      "missing_pair_count": 2100,
+      "pair_coverage": 0.5,
+      "partition": "inner_train",
+      "status": "FAIL_DOMAIN_AWARE_PAIRING_COVERAGE",
+      "threshold": 0.99,
+      "training_parent_count": 4200
+    },
+    {
+      "eligible_partner_count": 4200,
+      "fold_id": "S2",
+      "method": "within_position_mixup",
+      "missing_pair_count": 0,
+      "pair_coverage": 1.0,
+      "partition": "inner_train",
+      "status": "PASS",
+      "threshold": 0.99,
+      "training_parent_count": 4200
+    },
+    {
+      "eligible_partner_count": 6300,
+      "fold_id": "S2",
+      "method": "cross_position_mixup",
+      "missing_pair_count": 0,
+      "pair_coverage": 1.0,
+      "partition": "outer_development",
+      "status": "PASS",
+      "threshold": 0.99,
+      "training_parent_count": 6300
+    },
+    {
+      "eligible_partner_count": 6300,
+      "fold_id": "S2",
+      "method": "within_position_mixup",
+      "missing_pair_count": 0,
+      "pair_coverage": 1.0,
+      "partition": "outer_development",
+      "status": "PASS",
+      "threshold": 0.99,
+      "training_parent_count": 6300
+    },
+    {
+      "eligible_partner_count": 2100,
+      "fold_id": "S3",
+      "method": "cross_position_mixup",
+      "missing_pair_count": 2100,
+      "pair_coverage": 0.5,
+      "partition": "inner_train",
+      "status": "FAIL_DOMAIN_AWARE_PAIRING_COVERAGE",
+      "threshold": 0.99,
+      "training_parent_count": 4200
+    },
+    {
+      "eligible_partner_count": 4200,
+      "fold_id": "S3",
+      "method": "within_position_mixup",
+      "missing_pair_count": 0,
+      "pair_coverage": 1.0,
+      "partition": "inner_train",
+      "status": "PASS",
+      "threshold": 0.99,
+      "training_parent_count": 4200
+    },
+    {
+      "eligible_partner_count": 6300,
+      "fold_id": "S3",
+      "method": "cross_position_mixup",
+      "missing_pair_count": 0,
+      "pair_coverage": 1.0,
+      "partition": "outer_development",
+      "status": "PASS",
+      "threshold": 0.99,
+      "training_parent_count": 6300
+    },
+    {
+      "eligible_partner_count": 6300,
+      "fold_id": "S3",
+      "method": "within_position_mixup",
+      "missing_pair_count": 0,
+      "pair_coverage": 1.0,
+      "partition": "outer_development",
+      "status": "PASS",
+      "threshold": 0.99,
+      "training_parent_count": 6300
+    }
+  ],
+  "development_runs_completed": 0,
+  "final_runs_completed": 0,
+  "p4_artifacts_opened": false,
+  "p4_labels_opened": false,
+  "reason": "canonical_inner_training_partitions_have_50_percent_lawful_cross_position_partner_coverage",
+  "scientific_metrics_available": false,
+  "selected_alpha": null,
+  "status": "FAIL_DOMAIN_AWARE_PAIRING_COVERAGE"
+}

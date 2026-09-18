@@ -1,0 +1,4 @@
+fold,held_position,training_domains,domain_label_mapping,domain_head_output_dimension,tagid_used_as_domain_label,p4_present,status
+S1,P1,P2|P3,"{""P2"":0,""P3"":1}",2,False,False,PASS
+S2,P2,P1|P3,"{""P1"":0,""P3"":1}",2,False,False,PASS
+S3,P3,P1|P2,"{""P1"":0,""P2"":1}",2,False,False,PASS

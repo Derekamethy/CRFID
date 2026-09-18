@@ -1,0 +1,8 @@
+{
+  "occlusion_vmean_vs_integrated_gradients_average_rank_spearman": 0.8226534112091219,
+  "stable_source_vs_retrospective_p4_average_rank_spearman": 0.6456865792891601,
+  "saved_report_values": {
+    "occlusion_vs_ig": 0.8222,
+    "source_vs_p4": 0.6454
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "criterion_priority": 1,
+  "deciding_criterion": "worst_outer_held_position_macro_f1",
+  "margin_to_runner_up": 0.07097081588964145,
+  "p4_used": false,
+  "selected_candidate": "C1_FIRST_DIFFERENCE_ERM_1DCNN",
+  "selection_reconstructed": true,
+  "unit_count": 60
+}

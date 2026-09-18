@@ -1,0 +1,13 @@
+check,passed
+tagid_encoder_gradient_nonzero,True
+tagid_head_gradient_nonzero,True
+domain_head_gradient_nonzero,True
+domain_head_parameters_update,True
+encoder_domain_gradient_nonzero,True
+gradient_reversal_exact_sign,True
+no_double_reversal,True
+lambda_zero_initial_tag_logits_equal,True
+domain_loss_can_access_p4,False
+all_validity_checks,True
+true_label_tagid_training_completed_for_all_85_models,True
+source_position_domain_training_completed_for_all_65_dann_models,True

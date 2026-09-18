@@ -1,0 +1,3 @@
+metric,groupdro_minus_erm,interval_lower,interval_upper,status
+worst_held_position_macro_f1,0.024356565279882586,-0.011581484112456089,0.0542347358602237,COMPLETE
+mean_held_source_macro_f1,0.01249292475218633,-0.004623783083437801,0.028667968558547894,COMPLETE_RETAINED

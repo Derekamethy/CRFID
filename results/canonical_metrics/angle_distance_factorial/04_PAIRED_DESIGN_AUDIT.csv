@@ -1,0 +1,21 @@
+design,check_id,check,status,details
+inherited_60_runs,1,physical_cell_coverage,PASS,physical_cells=63; manifest_rows=3780
+inherited_60_runs,2,label_identity_across_positions,PASS,labels are the canonical TagID mapping shared by all positions
+inherited_60_runs,3,fold_assignment_synchronization,PASS,failures=0
+inherited_60_runs,4,train_validation_test_synchronization,FAIL,failures=492
+inherited_60_runs,5,seed_correspondence,PASS,seeds=42|43|44|45|46
+inherited_60_runs,6,prediction_unit_alignment,PASS,failures=0
+inherited_60_runs,7,missing_or_duplicated_cells,PASS,missing_groups=0; duplicate_rows=0
+inherited_60_runs,8,fifty_repetitions_within_block,PASS,failures=0
+inherited_60_runs,9,no_row_level_independence,PASS,inferential resampling unit is the physical condition block
+inherited_60_runs,10,p4_not_used_for_tuning_or_split,PASS,run_boundary_failures=0; split rule is position-independent
+case_b_synchronized_60_run_rerun,1,physical_cell_coverage,PASS,physical_cells=63; manifest_rows=3780
+case_b_synchronized_60_run_rerun,2,label_identity_across_positions,PASS,labels are the canonical TagID mapping shared by all positions
+case_b_synchronized_60_run_rerun,3,fold_assignment_synchronization,PASS,failures=0
+case_b_synchronized_60_run_rerun,4,train_validation_test_synchronization,PASS,failures=0
+case_b_synchronized_60_run_rerun,5,seed_correspondence,PASS,seeds=42|43|44|45|46
+case_b_synchronized_60_run_rerun,6,prediction_unit_alignment,PASS,failures=0
+case_b_synchronized_60_run_rerun,7,missing_or_duplicated_cells,PASS,missing_groups=0; duplicate_rows=0
+case_b_synchronized_60_run_rerun,8,fifty_repetitions_within_block,PASS,failures=0
+case_b_synchronized_60_run_rerun,9,no_row_level_independence,PASS,inferential resampling unit is the physical condition block
+case_b_synchronized_60_run_rerun,10,p4_not_used_for_tuning_or_split,PASS,run_boundary_failures=0; split rule is position-independent

@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "protocol_id": "external_data1_ev2r_a1",
+  "scientific_claim_type": "INDEPENDENT_EXTERNAL_DATASET_PIPELINE_VALIDATION",
+  "purpose": "INDEPENDENT_FOUR_CLASS_WITHIN_DATA1_PIPELINE_VALIDATION",
+  "class_order": [0, 1, 2, 3],
+  "train_sets": ["set_3"],
+  "test_sets": ["set_4", "set_5", "set_6", "set_7", "set_8", "set_9"],
+  "excluded_sets": ["set_1", "set_2"],
+  "excluded_set_reason": "Sets 1, 2, and 3 are documented for different applications; the next six sets test models trained with the third set.",
+  "validation_sets": [],
+  "candidate_methods": [
+    "majority_class_baseline",
+    "pca_logistic_regression",
+    "raw_signal_cnn",
+    "first_difference_cnn"
+  ],
+  "pca_logistic": {
+    "scaler": "StandardScaler fitted on set_3 only",
+    "pca_n_components": 0.95,
+    "pca_svd_solver": "full",
+    "C": 1.0,
+    "solver": "lbfgs",
+    "max_iter": 5000,
+    "class_weight": null,
+    "random_state": 42
+  },
+  "cnn": {
+    "architecture": "canonical_groupnorm_1dcnn",
+    "output_head": "Linear(256,4)",
+    "parameter_count": 142084,
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "betas": [0.9, 0.999],
+    "epsilon": 1e-8,
+    "weight_decay": 0.0001,
+    "batch_size": 256,
+    "loss": "unweighted unsmoothed CrossEntropyLoss",
+    "device": "cpu",
+    "random_initialization": true,
+    "early_stopping": false,
+    "checkpoint_selection": "fixed final epoch only"
+  },
+  "preprocessing": {
+    "fit_partition": "set_3",
+    "raw_length": 1601,
+    "first_difference": "x[j+1]-x[j], j=0..1599",
+    "first_difference_length": 1600,
+    "featurewise_population_standardization": true,
+    "population_std_ddof": 0,
+    "minimum_scale": 1e-12,
+    "model_input_dtype": "float32",
+    "test_refit": false
+  },
+  "cnn_seeds": [42, 43, 44, 45, 46],
+  "cnn_epochs": {"42": 13, "43": 13, "44": 9, "45": 10, "46": 9},
+  "majority_tie_rule": {
+    "training_class_counts": [1400, 1400, 1400, 1400],
+    "global_class_order": [0, 1, 2, 3],
+    "selected_class": 0,
+    "selection_reason": "FIRST_TIED_CLASS_IN_FROZEN_GLOBAL_CLASS_ORDER"
+  },
+  "metrics": {
+    "primary": "Macro-F1",
+    "secondary": ["Accuracy", "balanced_accuracy", "class_recall", "confusion_matrix"],
+    "zero_division": 0,
+    "seed_standard_deviation": "sample_ddof_1",
+    "ev4_standard_deviation": "population_ddof_0"
+  },
+  "test_selection": false,
+  "source_weights_used": false,
+  "resampling": false,
+  "physical_axis_reconstruction": false
+}

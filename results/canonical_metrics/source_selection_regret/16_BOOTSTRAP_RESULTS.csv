@@ -1,0 +1,57 @@
+record_type,scope,candidate_id,quantile,value,count,probability_or_frequency,notes
+regret_distribution_quantile,HOLD_P1,,0,0,10000,,seed-paired bootstrap
+regret_distribution_quantile,HOLD_P1,,0.025000000000000001,0,10000,,seed-paired bootstrap
+regret_distribution_quantile,HOLD_P1,,0.050000000000000003,0,10000,,seed-paired bootstrap
+regret_distribution_quantile,HOLD_P1,,0.25,0,10000,,seed-paired bootstrap
+regret_distribution_quantile,HOLD_P1,,0.5,0,10000,,seed-paired bootstrap
+regret_distribution_quantile,HOLD_P1,,0.75,0,10000,,seed-paired bootstrap
+regret_distribution_quantile,HOLD_P1,,0.94999999999999996,0,10000,,seed-paired bootstrap
+regret_distribution_quantile,HOLD_P1,,0.97499999999999998,0,10000,,seed-paired bootstrap
+regret_distribution_quantile,HOLD_P1,,1,0.019849540143344557,10000,,seed-paired bootstrap
+zero_regret_probability,HOLD_P1,,,,9795,0.97950000000000004,bootstrap probability
+regret_distribution_quantile,HOLD_P2,,0,0.015595661695781582,10000,,seed-paired bootstrap
+regret_distribution_quantile,HOLD_P2,,0.025000000000000001,0.024037054797216989,10000,,seed-paired bootstrap
+regret_distribution_quantile,HOLD_P2,,0.050000000000000003,0.026732269472830139,10000,,seed-paired bootstrap
+regret_distribution_quantile,HOLD_P2,,0.25,0.039413863612171113,10000,,seed-paired bootstrap
+regret_distribution_quantile,HOLD_P2,,0.5,0.046331198595127659,10000,,seed-paired bootstrap
+regret_distribution_quantile,HOLD_P2,,0.75,0.05526562551508013,10000,,seed-paired bootstrap
+regret_distribution_quantile,HOLD_P2,,0.94999999999999996,0.06622055054329648,10000,,seed-paired bootstrap
+regret_distribution_quantile,HOLD_P2,,0.97499999999999998,0.074726361211120626,10000,,seed-paired bootstrap
+regret_distribution_quantile,HOLD_P2,,1,0.10878834003085401,10000,,seed-paired bootstrap
+zero_regret_probability,HOLD_P2,,,,0,0,bootstrap probability
+regret_distribution_quantile,HOLD_P3,,0,0,10000,,seed-paired bootstrap
+regret_distribution_quantile,HOLD_P3,,0.025000000000000001,0,10000,,seed-paired bootstrap
+regret_distribution_quantile,HOLD_P3,,0.050000000000000003,0,10000,,seed-paired bootstrap
+regret_distribution_quantile,HOLD_P3,,0.25,0,10000,,seed-paired bootstrap
+regret_distribution_quantile,HOLD_P3,,0.5,0.032033068476452375,10000,,seed-paired bootstrap
+regret_distribution_quantile,HOLD_P3,,0.75,0.072110919575197885,10000,,seed-paired bootstrap
+regret_distribution_quantile,HOLD_P3,,0.94999999999999996,0.083277405703787805,10000,,seed-paired bootstrap
+regret_distribution_quantile,HOLD_P3,,0.97499999999999998,0.084468112379651225,10000,,seed-paired bootstrap
+regret_distribution_quantile,HOLD_P3,,1,0.095403277252330193,10000,,seed-paired bootstrap
+zero_regret_probability,HOLD_P3,,,,4963,0.49630000000000002,bootstrap probability
+regret_distribution_quantile,MEAN_THREE_EVENT_REGRET,,0,0.0051985538985938606,10000,,seed-paired bootstrap
+regret_distribution_quantile,MEAN_THREE_EVENT_REGRET,,0.025000000000000001,0.008014953247580189,10000,,seed-paired bootstrap
+regret_distribution_quantile,MEAN_THREE_EVENT_REGRET,,0.050000000000000003,0.0092194457050464671,10000,,seed-paired bootstrap
+regret_distribution_quantile,MEAN_THREE_EVENT_REGRET,,0.25,0.01360085860588143,10000,,seed-paired bootstrap
+regret_distribution_quantile,MEAN_THREE_EVENT_REGRET,,0.5,0.027482946862586621,10000,,seed-paired bootstrap
+regret_distribution_quantile,MEAN_THREE_EVENT_REGRET,,0.75,0.040338847235605775,10000,,seed-paired bootstrap
+regret_distribution_quantile,MEAN_THREE_EVENT_REGRET,,0.94999999999999996,0.048785312717520311,10000,,seed-paired bootstrap
+regret_distribution_quantile,MEAN_THREE_EVENT_REGRET,,0.97499999999999998,0.050377289603523834,10000,,seed-paired bootstrap
+regret_distribution_quantile,MEAN_THREE_EVENT_REGRET,,1,0.065042669805377526,10000,,seed-paired bootstrap
+zero_regret_probability,MEAN_THREE_EVENT_REGRET,,,,0,0,bootstrap probability
+selector_winner_frequency,HOLD_P1,C0_NEUTRAL_ERM_1DCNN,,,0,0,candidate selection probability under paired seed bootstrap
+selector_winner_frequency,HOLD_P1,C1_FIRST_DIFFERENCE_ERM_1DCNN,,,10000,1,candidate selection probability under paired seed bootstrap
+selector_winner_frequency,HOLD_P1,C2_SOURCE_EUCLIDEAN_NCM_READOUT,,,0,0,candidate selection probability under paired seed bootstrap
+selector_winner_frequency,HOLD_P1,C3_SOURCE_CORAL_ERM_1DCNN,,,0,0,candidate selection probability under paired seed bootstrap
+selector_winner_frequency,HOLD_P2,C0_NEUTRAL_ERM_1DCNN,,,0,0,candidate selection probability under paired seed bootstrap
+selector_winner_frequency,HOLD_P2,C1_FIRST_DIFFERENCE_ERM_1DCNN,,,10000,1,candidate selection probability under paired seed bootstrap
+selector_winner_frequency,HOLD_P2,C2_SOURCE_EUCLIDEAN_NCM_READOUT,,,0,0,candidate selection probability under paired seed bootstrap
+selector_winner_frequency,HOLD_P2,C3_SOURCE_CORAL_ERM_1DCNN,,,0,0,candidate selection probability under paired seed bootstrap
+selector_winner_frequency,HOLD_P3,C0_NEUTRAL_ERM_1DCNN,,,1985,0.19850000000000001,candidate selection probability under paired seed bootstrap
+selector_winner_frequency,HOLD_P3,C1_FIRST_DIFFERENCE_ERM_1DCNN,,,4963,0.49630000000000002,candidate selection probability under paired seed bootstrap
+selector_winner_frequency,HOLD_P3,C2_SOURCE_EUCLIDEAN_NCM_READOUT,,,2583,0.25829999999999997,candidate selection probability under paired seed bootstrap
+selector_winner_frequency,HOLD_P3,C3_SOURCE_CORAL_ERM_1DCNN,,,469,0.046899999999999997,candidate selection probability under paired seed bootstrap
+candidate_selection_probability_over_events,ALL_EVENTS,C0_NEUTRAL_ERM_1DCNN,,,1985,0.066166666666666665,pooled event-replicate selection fraction; three events are not treated as independent samples
+candidate_selection_probability_over_events,ALL_EVENTS,C1_FIRST_DIFFERENCE_ERM_1DCNN,,,24963,0.83209999999999995,pooled event-replicate selection fraction; three events are not treated as independent samples
+candidate_selection_probability_over_events,ALL_EVENTS,C2_SOURCE_EUCLIDEAN_NCM_READOUT,,,2583,0.086099999999999996,pooled event-replicate selection fraction; three events are not treated as independent samples
+candidate_selection_probability_over_events,ALL_EVENTS,C3_SOURCE_CORAL_ERM_1DCNN,,,469,0.015633333333333332,pooled event-replicate selection fraction; three events are not treated as independent samples

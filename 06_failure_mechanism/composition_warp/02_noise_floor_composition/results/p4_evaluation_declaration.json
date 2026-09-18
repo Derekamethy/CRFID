@@ -1,0 +1,8 @@
+{
+  "declared_before_p4_numerical_load": true,
+  "evaluation_count": 1,
+  "note": "Diagnostic sub-module. No authoritative reproduction target exists for these models.",
+  "schema_version": 1,
+  "target_preprocessing_refit_count": 0,
+  "target_training_steps": 0
+}

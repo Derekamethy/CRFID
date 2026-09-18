@@ -1,0 +1,34 @@
+{
+  "all_per_seed_predictions_and_metrics_exactly_match_authoritative": true,
+  "ddof": 0,
+  "equal_seed_weight": true,
+  "metrics": {
+    "accuracy": {
+      "mean": 0.15663492063492063,
+      "population_sd": 0.030516243521601576
+    },
+    "condition_accuracy": {
+      "mean": 0.15238095238095237,
+      "population_sd": 0.029440058715859377
+    },
+    "condition_macro_f1": {
+      "mean": 0.10679989947226236,
+      "population_sd": 0.020114548244429903
+    },
+    "macro_f1": {
+      "mean": 0.11223088363457531,
+      "population_sd": 0.01895556992674854
+    },
+    "unique_signal_weighted_accuracy": {
+      "mean": 0.1561338289962824,
+      "population_sd": 0.030581716094682212
+    },
+    "unique_signal_weighted_macro_f1": {
+      "mean": 0.11134923630694749,
+      "population_sd": 0.01891743352422797
+    }
+  },
+  "recipe_sha256": "4805f8040f3609dbf4a02553b15c64471f64e3d2a9bc7a6c1068a6342c29d1b6",
+  "schema_version": 1,
+  "seed_count": 5
+}

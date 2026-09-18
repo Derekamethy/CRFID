@@ -1,0 +1,10 @@
+fold,partition,row_count,condition_block_count,positions,condition_blocks_disjoint
+S1,inner_train,4200,84,P2|P3,True
+S1,inner_validation,2100,42,P2|P3,True
+S1,outer_held,3150,63,P1,True
+S2,inner_train,4200,84,P1|P3,True
+S2,inner_validation,2100,42,P1|P3,True
+S2,outer_held,3150,63,P2,True
+S3,inner_train,4200,84,P1|P2,True
+S3,inner_validation,2100,42,P1|P2,True
+S3,outer_held,3150,63,P3,True

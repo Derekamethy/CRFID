@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "contract_id": "external_data1_prediction_first_metric_access",
+  "training_label_sets": ["set_3"],
+  "held_out_label_sets": ["set_4", "set_5", "set_6", "set_7", "set_8", "set_9"],
+  "identity_audit_may_read_aggregate_label_counts": true,
+  "historical_disclosure": "The frozen historical split manifest encoded raw labels; no fitting or selection influence was recorded. The public reproduction additionally enforces prediction-first scoring.",
+  "requirements_before_held_out_scoring": [
+    "candidate_registry_frozen",
+    "preprocessing_fitted_on_set_3_only",
+    "model_or_deterministic_rule_frozen",
+    "prediction_artifact_serialized",
+    "prediction_artifact_hashed"
+  ],
+  "forbidden_uses": [
+    "pca_dimension_selection",
+    "scaler_fitting",
+    "logistic_regression_selection",
+    "cnn_architecture_selection",
+    "cnn_epoch_selection",
+    "seed_selection",
+    "representation_selection",
+    "threshold_selection",
+    "protocol_changing_debugging"
+  ],
+  "single_final_metric_access_per_run": true
+}

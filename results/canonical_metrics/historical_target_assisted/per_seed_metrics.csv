@@ -1,0 +1,2 @@
+seed,method,accuracy,macro_f1
+42,source_cosine_ncm,0.5771428571428572,0.5835693346352661

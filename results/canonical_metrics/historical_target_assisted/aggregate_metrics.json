@@ -1,0 +1,7 @@
+{
+  "accuracy_mean": 0.5771428571428572,
+  "accuracy_std_population": 0.0,
+  "macro_f1_mean": 0.5835693346352661,
+  "macro_f1_std_population": 0.0,
+  "run_count": 1
+}

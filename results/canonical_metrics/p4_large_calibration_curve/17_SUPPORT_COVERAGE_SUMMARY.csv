@@ -1,0 +1,11 @@
+total_labelled_measurements,unique_condition_blocks_mean,unique_condition_blocks_min,unique_condition_blocks_max,unique_exact_signals_mean,unique_exact_signals_min,unique_exact_signals_max,unique_ER_levels_mean,unique_surfaces_mean,repeated_measurements_beyond_first_per_block,support_plan_count
+0,0.0,0,0,0.0,0,0,0.0,0.0,0,0
+7,7.0,7,7,7.0,7,7,1.0,1.0,0,60
+10,10.0,10,10,10.0,10,10,1.7,1.85,0,60
+20,20.0,20,20,20.0,20,20,2.3833333333333333,2.4,0,60
+21,21.0,21,21,21.0,21,21,2.3833333333333333,2.4,0,60
+35,35.0,35,35,35.0,35,35,3.0,3.0,0,60
+50,42.0,42,42,49.68333333333333,47,50,3.0,3.0,8,60
+100,42.0,42,42,97.15,92,100,3.0,3.0,58,60
+200,42.0,42,42,183.6,176,190,3.0,3.0,158,60
+500,42.0,42,42,390.95,379,404,3.0,3.0,458,60

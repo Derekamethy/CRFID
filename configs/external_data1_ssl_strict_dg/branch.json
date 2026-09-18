@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "branch": "external_data1_ssl_strict_dg",
+  "claim_type": "EXTERNAL_UNLABELLED_DATA_ASSISTED_STRICT_SOURCE_ONLY_DG",
+  "status": "PROTOCOL_DECLARED_BEFORE_EXECUTION",
+  "seeds": [42, 43, 44, 45, 46],
+  "folds": ["S1", "S2", "S3"],
+  "training_domains": ["P1", "P2", "P3"],
+  "selection_domains": ["P1", "P2", "P3"],
+  "ssl_domains": ["P1", "P2", "P3", "DATA1_EXTERNAL"],
+  "target_domain": "P4",
+  "class_order": [0, 1, 2, 3, 4, 5, 6],
+  "primary_metric": "macro_f1",
+  "primary_readout": "LEARNED_CLASSIFIER_HEAD",
+  "secondary_readout": "SOURCE_EUCLIDEAN_NEAREST_CLASS_MEAN",
+  "source_selection_metric": "worst_fold_macro_f1",
+  "carrier": {
+    "type": "ORDERED_POSITION_VARIABLE_LENGTH",
+    "representation": "first_difference_without_padding",
+    "physical_frequency_grid_asserted": false,
+    "normalized_index_resampling_used": false,
+    "padding_used": false,
+    "ssl_common_window_length": 256,
+    "supervised_paper4_length": 280
+  },
+  "supervised": {
+    "architecture": "NeutralSourceOnlyCNN1D",
+    "parameter_count": 142855,
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "batch_size": 256,
+    "loss": "unweighted_cross_entropy",
+    "maximum_epochs": 50,
+    "early_stopping_patience": 8,
+    "minimum_improvement": 1e-12,
+    "inner_stage_offset": 0,
+    "outer_stage_offset": 100000,
+    "final_epoch_rule": "per_seed_median_of_three_fold_selected_inner_epochs",
+    "flooding_level": null
+  },
+  "self_supervision": {
+    "steps_per_epoch": 32,
+    "epochs": 10,
+    "total_optimizer_steps": 320,
+    "batch_size": 256,
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "window_length": 256,
+    "seed_offset": 200000,
+    "paper4_fold_corpus": "inner_train_partition_only",
+    "paper4_final_corpus": "all_source_P1_P2_P3",
+    "data1_corpus": "all_nine_sets_labels_stripped"
+  },
+  "objective_screen": {
+    "candidates": [
+      "O1_MASKED_SPAN",
+      "O2_MULTI_VIEW_CONTRASTIVE",
+      "O3_RAW_DIFFERENCE_DUAL_VIEW",
+      "O4_HYBRID_MASKED_CONTRASTIVE"
+    ],
+    "screen_corpus": "PAPER4_SOURCE_ONLY",
+    "screen_seeds": [42, 43],
+    "screen_folds": ["S1", "S2", "S3"],
+    "selection_metric": "worst_fold_macro_f1",
+    "select_one_generic_and_one_physics_aware": true
+  },
+  "treatments": [
+    {"treatment_id": "T0_MATCHED_SUPERVISED_ONLY", "corpus_fractions": {}, "objective_id": null},
+    {"treatment_id": "T1_PAPER4_SOURCE_ONLY_SSL", "corpus_fractions": {"paper4_source": 1.0}, "objective_id": null},
+    {"treatment_id": "T2_DATA1_ONLY_SSL", "corpus_fractions": {"data1_external": 1.0}, "objective_id": null},
+    {"treatment_id": "T3_JOINT_BALANCED_SSL", "corpus_fractions": {"paper4_source": 0.5, "data1_external": 0.5}, "objective_id": null},
+    {"treatment_id": "T4_JOINT_PHYSICS_AWARE_SSL", "corpus_fractions": {"paper4_source": 0.5, "data1_external": 0.5}, "objective_id": null},
+    {"treatment_id": "T5_JOINT_DOMAIN_INVARIANT_SSL", "corpus_fractions": {"paper4_source": 0.5, "data1_external": 0.5}, "objective_id": null}
+  ],
+  "target_policy": {
+    "target_training": false,
+    "target_selection": false,
+    "target_adaptation": false,
+    "target_labels_for_selection": false,
+    "target_batch_norm_statistics": false,
+    "target_pseudo_labels": false,
+    "target_entropy_minimization": false,
+    "target_calibration": false,
+    "target_early_stopping": false,
+    "target_prototypes": false,
+    "evaluation_only_after_preregistration": true
+  },
+  "data1_policy": {
+    "labels_for_supervised_pretraining": false,
+    "labels_for_objective_selection": false,
+    "labels_for_hyperparameter_selection": false,
+    "labels_for_checkpoint_selection": false,
+    "labels_for_class_balancing": false,
+    "labels_for_example_filtering": false,
+    "labels_for_method_ranking": false,
+    "labels_for_representation_evaluation": false,
+    "label_read_scope": "PROVENANCE_CONFORMANCE_CHECK_AT_READ_BOUNDARY_ONLY"
+  },
+  "hypotheses": {
+    "H1_external_data1_contribution": "T3_JOINT_BALANCED_SSL minus T1_PAPER4_SOURCE_ONLY_SSL",
+    "H2_data1_only_transfer": "T2_DATA1_ONLY_SSL minus T0_MATCHED_SUPERVISED_ONLY",
+    "H3_ssl_without_external_data": "T1_PAPER4_SOURCE_ONLY_SSL minus T0_MATCHED_SUPERVISED_ONLY",
+    "H4_physics_aware_objective": "T4_JOINT_PHYSICS_AWARE_SSL minus T3_JOINT_BALANCED_SSL",
+    "H5_historical_anchor_relevance": "T0_MATCHED_SUPERVISED_ONLY versus canonical Strict-DG anchor"
+  },
+  "h1_success_criteria": {
+    "mean_paired_macro_f1_difference_greater_than_zero": true,
+    "minimum_improved_seed_count": 4,
+    "total_seed_count": 5,
+    "no_catastrophic_accuracy_degradation": true,
+    "catastrophic_accuracy_degradation_threshold": 0.05,
+    "not_confined_to_one_class_while_others_collapse": true,
+    "single_class_gain_threshold": 0.02,
+    "collapsed_class_count_threshold": 2,
+    "practical_significance_flag_threshold": 0.02,
+    "threshold_is_not_a_significance_test": true
+  },
+  "flooding_policy": "REFERENCE_ONLY_NOT_PROMOTED_TO_FINAL_TREATMENT_UNLESS_SOURCE_SELECTED",
+  "ncm_policy": "PREREGISTERED_SECONDARY_DIAGNOSTIC_ONLY"
+}

@@ -1,0 +1,11 @@
+{
+  "accuracy_samples_sha256": "3f7a851a381d6511bb347b63891eafd9edcd31b4d1073bac17e551bf45b9e2cb",
+  "block_weights_sha256": "0ee6f4538a31f295a8029fe85bcbae7c1b93b34d1e8788aaebb52265e9cea7c8",
+  "macro_f1_samples_sha256": "5d3d56ff450182c8ccbb3d1bab2ad92b1fa3da4b0bb6b29db18139b585d76660",
+  "relative_path": "bootstrap_samples.npz",
+  "replicates": 10000,
+  "seed": 20260809,
+  "sha256": "d8ee6b00a2c2173f318a3d618c709401aabb722c09aede4b5ee9d7a3cc449cd8",
+  "source_resample_counts_sha256": "0578922091f1a20ccfb1cf78b610d28e3e3a6e260fad63f74d43bd3baffc524e",
+  "support_resample_counts_sha256": "43d5846d7dfac8fa4f887bb8b99048e795d1d66918b97cfb05254a1bcbd381bd"
+}

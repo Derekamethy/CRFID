@@ -1,0 +1,151 @@
+{
+  "checkpoints": [
+    {
+      "epochs": 13,
+      "model_state_sha256": "33d7ba84d42f233818b0b70cb06382d14a93093f1ffbe70e52bfbe14bea5ebad",
+      "relative_path": "06_failure_mechanism/composition_warp/02_noise_floor_composition/execution/frozen_release/checkpoints/seed_42.pt",
+      "reload_verified": true,
+      "seed": 42,
+      "sha256": "8efa61fd1eada71ee2598ebe66f15fd52d392298246beab5a37cc40bf2a8e5be",
+      "size_bytes": 576505
+    },
+    {
+      "epochs": 13,
+      "model_state_sha256": "ae1bc24be9663f1119f9c9d0d41c0c3edcbb53df8a0e18246331cecb373ffeef",
+      "relative_path": "06_failure_mechanism/composition_warp/02_noise_floor_composition/execution/frozen_release/checkpoints/seed_43.pt",
+      "reload_verified": true,
+      "seed": 43,
+      "sha256": "2b6a7d1b26467951d86a78d600d237b7ec01baa5fdfdc30e85a0596b94d0e881",
+      "size_bytes": 576505
+    },
+    {
+      "epochs": 9,
+      "model_state_sha256": "ab989d5786272bc6a44ff25869897c6557350edee49b39de21e14fc99dab60bd",
+      "relative_path": "06_failure_mechanism/composition_warp/02_noise_floor_composition/execution/frozen_release/checkpoints/seed_44.pt",
+      "reload_verified": true,
+      "seed": 44,
+      "sha256": "1ec20499c39efe88e94796715dc9f2db1cb065c3b9435d889deedecfadda7eaa",
+      "size_bytes": 576505
+    },
+    {
+      "epochs": 10,
+      "model_state_sha256": "fbf7f11c8890d402e370c5978967fd4ef36347b74b6d1194f751b7c8f62caf7f",
+      "relative_path": "06_failure_mechanism/composition_warp/02_noise_floor_composition/execution/frozen_release/checkpoints/seed_45.pt",
+      "reload_verified": true,
+      "seed": 45,
+      "sha256": "cfd87279a04f6c58561d9caabd9537c1a28f2fd7c996eb1b367ec99bb33d7de6",
+      "size_bytes": 576505
+    },
+    {
+      "epochs": 9,
+      "model_state_sha256": "74ff37e3b7b301ca72af2b1fd7acfa0d16888cac13b5d2641c76ac0a61221afb",
+      "relative_path": "06_failure_mechanism/composition_warp/02_noise_floor_composition/execution/frozen_release/checkpoints/seed_46.pt",
+      "reload_verified": true,
+      "seed": 46,
+      "sha256": "0fcfe3eb09d33e9d0c99b404d047d670e5ddb6362d533d0cbbd2a1577974c416",
+      "size_bytes": 576505
+    }
+  ],
+  "manifest_semantic_sha256": "78d55f9de98d7bee83f5035b0c9ec0a727ad1d04c905f9b8391bb80bb2c49933",
+  "protocol": "composition_warp_noise_augmented_source_only",
+  "recipe_sha256": "2bb6f07bcb64e6d3aa08ea293076085d66e1829d79727cd33ca714036dc62ff0",
+  "schema_version": 1,
+  "status": "FROZEN_AND_TARGET_AUTHORIZED",
+  "target_accessed": false,
+  "training_records": [
+    {
+      "epoch_losses": [
+        1.9561611331707587,
+        1.8890861173660036,
+        1.8186715335442276,
+        1.7066864239475714,
+        1.5594477939605713,
+        1.437678102690076,
+        1.3264183795515192,
+        1.1949421115400929,
+        1.091127453960439,
+        1.0510363251317745,
+        0.8775121573544054,
+        0.8420012153014935,
+        0.7563473912143203
+      ],
+      "epochs": 13,
+      "final_epoch_loss": 0.7563473912143203,
+      "initial_model_state_sha256": "a2c032e03be4c9fe862f6de742e5d3b390d1fd9fc7d0bd6eefec4f05127212d9",
+      "seed": 42
+    },
+    {
+      "epoch_losses": [
+        1.9782469204241637,
+        1.8929091780526297,
+        1.8479997249885842,
+        1.7519556903082227,
+        1.6513552010248578,
+        1.5204099497467123,
+        1.3915013874397075,
+        1.3324790729290594,
+        1.2054899691273926,
+        1.1089482928583863,
+        0.9943730216556125,
+        0.9256986390093647,
+        0.8118473768612695
+      ],
+      "epochs": 13,
+      "final_epoch_loss": 0.8118473768612695,
+      "initial_model_state_sha256": "326db4dd92dcc7ad7d97ce9ed3b985b3396a23e4eac95e5de6082405378acec2",
+      "seed": 43
+    },
+    {
+      "epoch_losses": [
+        1.9681632838930403,
+        1.9118697780780691,
+        1.8469123632693416,
+        1.731211777237988,
+        1.591673642996127,
+        1.4609272235789628,
+        1.3647758315858387,
+        1.2133750091784845,
+        1.1422899510873057
+      ],
+      "epochs": 9,
+      "final_epoch_loss": 1.1422899510873057,
+      "initial_model_state_sha256": "f121d7a378104b63ab20d52245ab3d86f2811abeec03846fc97f5fa581e43ea1",
+      "seed": 44
+    },
+    {
+      "epoch_losses": [
+        1.9570201951486093,
+        1.8849607736345322,
+        1.8081853786851994,
+        1.6945913926381913,
+        1.5940329364746335,
+        1.467269623166039,
+        1.3444494970261105,
+        1.2352308755955368,
+        1.1496731034283916,
+        1.0283456268260087
+      ],
+      "epochs": 10,
+      "final_epoch_loss": 1.0283456268260087,
+      "initial_model_state_sha256": "84c6ce7d5d045f53d28fd2c6dcca22aa567a75ace110cf0192c5d205e4386e40",
+      "seed": 45
+    },
+    {
+      "epoch_losses": [
+        1.9449798849650792,
+        1.8751935932119057,
+        1.7652265510861835,
+        1.6336866143140842,
+        1.514781324371459,
+        1.4090150932029442,
+        1.2968600741896048,
+        1.188386838322594,
+        1.109839255418727
+      ],
+      "epochs": 9,
+      "final_epoch_loss": 1.109839255418727,
+      "initial_model_state_sha256": "aa4aa5086de66f98534273955f334d652a392d0433f1f15f3b6f6788680f11f4",
+      "seed": 46
+    }
+  ]
+}

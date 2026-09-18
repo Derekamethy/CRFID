@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "workflow": "external_data1",
+  "status": "FROZEN_BRANCH_MIGRATED_VERIFICATION_ONLY",
+  "mode": "artifact_verification",
+  "class_order": [0, 1, 2, 3],
+  "random_seeds": [42, 43, 44, 45, 46],
+  "output_path": "${CRFID_OUTPUT_ROOT:-outputs}/external_data1",
+  "frozen_branch_path": "${CRFID_OUTPUT_ROOT:-outputs}/external_data1/frozen_branch",
+  "provenance_path": "${CRFID_OUTPUT_ROOT:-outputs}/external_data1/MIGRATION_PROVENANCE.json",
+
+  "anchor_provenance": {
+    "stage_aggregates": "historical per-stage artifact manifests, each self-verifying over its own rows",
+    "file_count_and_bytes": "physical enumeration of the authoritative source before the copy",
+    "raw_bundle": "configs/external_data1/data_authority.yaml, which predates this migration",
+    "majority_tie_rule": "recomputed from the 12250-record frozen split manifest, independently of the amendment file",
+    "metrics": "recomputed from the frozen per-run prediction tables in exact rational arithmetic",
+    "circularity_note": "The stage aggregates are declared inside the frozen tree and are duplicated here from the pre-copy source enumeration, so a corrupted copy cannot satisfy both. The file count, byte total, tie rule and metric anchors below are derived from sources outside any single manifest."
+  },
+
+  "frozen_branch": {
+    "source_branch_name": "external_validation_code",
+    "file_count": 293,
+    "total_bytes": 41971877,
+    "stage_count": 7,
+    "files_claimed_by_no_stage_manifest": 0,
+    "stage_aggregate_recipe": "SHA-256 over manifest-order 'relative_path<TAB>size_bytes<TAB>sha256' lines joined by LF with no trailing LF",
+    "stage_aggregates": {
+      "EV0": "32371d5ca1370cb3ec91d26d66dbc12de7d4b4e3032dde9053c266708daf44a8",
+      "EV1": "a4d5ce4b8ffa74097e115bf90668069e3ef08a70b66c445b630361b5d31bf434",
+      "EV2_ABORTED": "e13bc74cd879a1164787517eeed8b3bd32600ca73d28aa8df7366052167021c5",
+      "EV2R": "d9052fe37f282cd0ab202419d8bea2fec1f1e4504984657afe7fa1fe8a4b6427",
+      "EV2R_A1": "1b0b9bacea7bc9bc388f6fd8e6a05911947841346aec476e6f320d7928488f7d",
+      "EV3R": "eeb2a88b68e464d7a34c92542047daef289956c72b8ab09021270b15827e1ffc",
+      "EV3R_R1": "886698bfbc5fca7d440842ee4e2778f6ae5549db6563233c6e232ad2ff3a3cd7"
+    },
+    "stage_entry_counts": {
+      "EV0": 51, "EV1": 42, "EV2_ABORTED": 9, "EV2R": 41,
+      "EV2R_A1": 15, "EV3R": 19, "EV3R_R1": 109
+    }
+  },
+
+  "split_anchors": {
+    "train_sets": ["set_3"],
+    "test_sets": ["set_4", "set_5", "set_6", "set_7", "set_8", "set_9"],
+    "excluded_sets": ["set_1", "set_2"],
+    "train_sample_count": 5600,
+    "test_sample_count": 1850,
+    "excluded_sample_count": 4800,
+    "train_class_counts": [1400, 1400, 1400, 1400],
+    "test_class_counts": [550, 550, 550, 200],
+    "excluded_class_counts": [1200, 1200, 1200, 1200],
+    "held_out_sets_missing_class_3": ["set_4", "set_5", "set_6", "set_7"],
+    "exact_train_test_signal_overlap": 0,
+    "duplicate_components_spanning_train_and_test": 0
+  },
+
+  "majority_tie_rule": {
+    "training_class_counts": [1400, 1400, 1400, 1400],
+    "global_class_order": [0, 1, 2, 3],
+    "maximum_training_count": 1400,
+    "tied_candidate_classes": [0, 1, 2, 3],
+    "selected_class": 0,
+    "selection_reason": "FIRST_TIED_CLASS_IN_FROZEN_GLOBAL_CLASS_ORDER",
+    "counterfactual_constant_baseline_accuracy": {
+      "0": 0.2972972972972973,
+      "1": 0.2972972972972973,
+      "2": 0.2972972972972973,
+      "3": 0.1081081081081081
+    },
+    "counterfactual_note": "Classes 0, 1 and 2 are indistinguishable by held-out performance and class 3 is strictly worse, so the frozen order selects the strongest available constant baseline. The rule is therefore conservative with respect to the branch's own learned-method claims."
+  },
+
+  "blocked_stage_anchors": {
+    "stage": "EV3R",
+    "classification": "BLOCKED_EV3R_MAJORITY_TIE_RULE_UNRESOLVED",
+    "learned_runs_started": 0,
+    "learned_runs_completed": 0,
+    "created_file_count": 20,
+    "performance_bearing_files_created": 0,
+    "model_framework_imported": false,
+    "prediction_calculated": false,
+    "performance_metric_calculated": false,
+    "driver_import_closure": "stdlib only; the frozen driver imports no modelling or estimator framework at any depth"
+  },
+
+  "execution_anchors": {
+    "stage": "EV3R-R1",
+    "run_count": 12,
+    "learned_runs": 11,
+    "samples_per_run": 1850,
+    "held_out_scoring_accesses": 12,
+    "single_final_metric_access_per_run": true,
+    "source_checkpoint_used": false,
+    "few_shot_checkpoint_used": false,
+    "classification": "PASS_EV3R_R1_EXECUTED_WITH_PREREGISTERED_NEGATIVE_OR_MIXED_RESULT"
+  },
+
+  "metric_anchors": {
+    "note": "Recomputed by whole-number counting from the frozen prediction tables; Macro-F1 and balanced accuracy use zero_division=0 over the frozen class order.",
+    "EV3R_R1_MAJORITY_BASELINE": {"accuracy": 0.2972972972972973, "macro_f1": 0.11458333333333333},
+    "EV3R_R1_REF_SPLIT00": {"accuracy": 0.9962162162162163, "macro_f1": 0.9948227424886364},
+    "EV3R_R1_RAW_SPLIT00_SEED42": {"accuracy": 0.7329729729729729, "macro_f1": 0.6768250145477206},
+    "EV3R_R1_RAW_SPLIT00_SEED43": {"accuracy": 0.7545945945945945, "macro_f1": 0.6860060161108795},
+    "EV3R_R1_RAW_SPLIT00_SEED44": {"accuracy": 0.7508108108108108, "macro_f1": 0.6650202849511015},
+    "EV3R_R1_RAW_SPLIT00_SEED45": {"accuracy": 0.7616216216216216, "macro_f1": 0.6901579811795731},
+    "EV3R_R1_RAW_SPLIT00_SEED46": {"accuracy": 0.7443243243243243, "macro_f1": 0.6761884800975618},
+    "EV3R_R1_DIFF_SPLIT00_SEED42": {"accuracy": 0.7183783783783784, "macro_f1": 0.6197069456603685},
+    "EV3R_R1_DIFF_SPLIT00_SEED43": {"accuracy": 0.7005405405405405, "macro_f1": 0.60359087702645},
+    "EV3R_R1_DIFF_SPLIT00_SEED44": {"accuracy": 0.6686486486486487, "macro_f1": 0.5823203430059267},
+    "EV3R_R1_DIFF_SPLIT00_SEED45": {"accuracy": 0.707027027027027, "macro_f1": 0.6038051884110793},
+    "EV3R_R1_DIFF_SPLIT00_SEED46": {"accuracy": 0.6708108108108108, "macro_f1": 0.6273742840630068}
+  },
+
+  "conclusion_anchors": {
+    "Data1_learnability": "DATA1_LEARNABILITY_CLEAR",
+    "CNN_pipeline_portability": "CNN_PIPELINE_PORTABILITY_SUPPORTED",
+    "first_difference_portability": "FIRST_DIFFERENCE_PORTABILITY_NOT_SUPPORTED"
+  },
+
+  "verification_policy": {
+    "loads_model": false,
+    "fits_estimator": false,
+    "runs_inference": false,
+    "regenerates_predictions": false,
+    "reads_raw_external_signal_data": false,
+    "entry_point": "workflows/05_external_data1_validation/verify_frozen_external_data1_branch.py"
+  }
+}

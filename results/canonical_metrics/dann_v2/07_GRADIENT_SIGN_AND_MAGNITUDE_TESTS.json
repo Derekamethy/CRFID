@@ -1,0 +1,22 @@
+{
+  "a1_a2_domain_head_gradients_identical": true,
+  "a1_a2_encoder_domain_gradient_magnitude_match": true,
+  "a1_a2_encoder_domain_gradient_sign_match": true,
+  "a1_a2_tagid_gradient_contribution_identical": true,
+  "configured_magnitude": 0.3,
+  "development_final_schedule_trajectory_identical": true,
+  "domain_loss_can_access_p4": false,
+  "fold_local_domain_labels_correct": true,
+  "grl_forward_identity": true,
+  "lambda_zero_a1_domain_head_legitimately_updated": true,
+  "lambda_zero_a1_encoder_update_matches_a0": true,
+  "lambda_zero_a2_domain_head_legitimately_updated": true,
+  "lambda_zero_a2_encoder_update_matches_a0": true,
+  "lambda_zero_encoder_domain_gradient_zero": true,
+  "lambda_zero_tagid_head_updates_match_a0": true,
+  "maximum_domain_head_gradient_residual": 0.0,
+  "maximum_encoder_magnitude_residual": 0.0,
+  "maximum_encoder_sign_residual": 0.0,
+  "passed": true,
+  "schedule_regression_update_count": 119
+}

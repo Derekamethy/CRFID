@@ -1,0 +1,1173 @@
+{
+  "collision_semantic_sha256": "8e7861ee16b388a182e909920cc5c4897f11f570fd0dac49391548bca6211aa6",
+  "comparison_against_existing_class_collapse_conclusion": {
+    "few_shot_tracked_collapse_triple": {
+      "counts": {
+        "correct_rejection": 0,
+        "false_alarm": 18,
+        "hit": 3,
+        "miss": 0
+      },
+      "observed_collapse_pair_count": 3,
+      "per_pair": [
+        {
+          "in_observed_collapse_set": false,
+          "minimum_predicted_separation_ghz": 0.0071428571428571175,
+          "outcome": "false_alarm",
+          "predicted_collision": true,
+          "tag_a": 1,
+          "tag_b": 2
+        },
+        {
+          "in_observed_collapse_set": false,
+          "minimum_predicted_separation_ghz": 0.0011904761904757422,
+          "outcome": "false_alarm",
+          "predicted_collision": true,
+          "tag_a": 1,
+          "tag_b": 3
+        },
+        {
+          "in_observed_collapse_set": false,
+          "minimum_predicted_separation_ghz": 0.06904761904761969,
+          "outcome": "false_alarm",
+          "predicted_collision": true,
+          "tag_a": 1,
+          "tag_b": 4
+        },
+        {
+          "in_observed_collapse_set": false,
+          "minimum_predicted_separation_ghz": 0.0035714285714281147,
+          "outcome": "false_alarm",
+          "predicted_collision": true,
+          "tag_a": 1,
+          "tag_b": 5
+        },
+        {
+          "in_observed_collapse_set": false,
+          "minimum_predicted_separation_ghz": 0.05238095238095042,
+          "outcome": "false_alarm",
+          "predicted_collision": true,
+          "tag_a": 1,
+          "tag_b": 6
+        },
+        {
+          "in_observed_collapse_set": false,
+          "minimum_predicted_separation_ghz": 0.053571428571428825,
+          "outcome": "false_alarm",
+          "predicted_collision": true,
+          "tag_a": 1,
+          "tag_b": 7
+        },
+        {
+          "in_observed_collapse_set": false,
+          "minimum_predicted_separation_ghz": 0.06904761904761969,
+          "outcome": "false_alarm",
+          "predicted_collision": true,
+          "tag_a": 2,
+          "tag_b": 3
+        },
+        {
+          "in_observed_collapse_set": false,
+          "minimum_predicted_separation_ghz": 0.06190476190476257,
+          "outcome": "false_alarm",
+          "predicted_collision": true,
+          "tag_a": 2,
+          "tag_b": 4
+        },
+        {
+          "in_observed_collapse_set": false,
+          "minimum_predicted_separation_ghz": 0.003571428571429003,
+          "outcome": "false_alarm",
+          "predicted_collision": true,
+          "tag_a": 2,
+          "tag_b": 5
+        },
+        {
+          "in_observed_collapse_set": false,
+          "minimum_predicted_separation_ghz": 0.028571428571427582,
+          "outcome": "false_alarm",
+          "predicted_collision": true,
+          "tag_a": 2,
+          "tag_b": 6
+        },
+        {
+          "in_observed_collapse_set": false,
+          "minimum_predicted_separation_ghz": 0.01071428571428612,
+          "outcome": "false_alarm",
+          "predicted_collision": true,
+          "tag_a": 2,
+          "tag_b": 7
+        },
+        {
+          "in_observed_collapse_set": false,
+          "minimum_predicted_separation_ghz": 0.0071428571428571175,
+          "outcome": "false_alarm",
+          "predicted_collision": true,
+          "tag_a": 3,
+          "tag_b": 4
+        },
+        {
+          "in_observed_collapse_set": false,
+          "minimum_predicted_separation_ghz": 0.053571428571428825,
+          "outcome": "false_alarm",
+          "predicted_collision": true,
+          "tag_a": 3,
+          "tag_b": 5
+        },
+        {
+          "in_observed_collapse_set": false,
+          "minimum_predicted_separation_ghz": 0.07499999999999929,
+          "outcome": "false_alarm",
+          "predicted_collision": true,
+          "tag_a": 3,
+          "tag_b": 6
+        },
+        {
+          "in_observed_collapse_set": false,
+          "minimum_predicted_separation_ghz": 0.022619047619047983,
+          "outcome": "false_alarm",
+          "predicted_collision": true,
+          "tag_a": 3,
+          "tag_b": 7
+        },
+        {
+          "in_observed_collapse_set": false,
+          "minimum_predicted_separation_ghz": 0.024999999999999467,
+          "outcome": "false_alarm",
+          "predicted_collision": true,
+          "tag_a": 4,
+          "tag_b": 5
+        },
+        {
+          "in_observed_collapse_set": false,
+          "minimum_predicted_separation_ghz": 0.003571428571429003,
+          "outcome": "false_alarm",
+          "predicted_collision": true,
+          "tag_a": 4,
+          "tag_b": 6
+        },
+        {
+          "in_observed_collapse_set": false,
+          "minimum_predicted_separation_ghz": 0.015476190476190865,
+          "outcome": "false_alarm",
+          "predicted_collision": true,
+          "tag_a": 4,
+          "tag_b": 7
+        },
+        {
+          "in_observed_collapse_set": true,
+          "minimum_predicted_separation_ghz": 0.014285714285713347,
+          "outcome": "hit",
+          "predicted_collision": true,
+          "tag_a": 5,
+          "tag_b": 6
+        },
+        {
+          "in_observed_collapse_set": true,
+          "minimum_predicted_separation_ghz": 0.02857142857142847,
+          "outcome": "hit",
+          "predicted_collision": true,
+          "tag_a": 5,
+          "tag_b": 7
+        },
+        {
+          "in_observed_collapse_set": true,
+          "minimum_predicted_separation_ghz": 0.014285714285715123,
+          "outcome": "hit",
+          "predicted_collision": true,
+          "tag_a": 6,
+          "tag_b": 7
+        }
+      ],
+      "precision_of_predicted_collisions": 0.14285714285714285,
+      "predicted_collision_pair_count": 21,
+      "recall_of_observed_collapse_pairs": 1.0,
+      "role": "primary",
+      "source": "historical few-shot P4 collapse summary retained in this diagnostic",
+      "statement": "The few-shot branch tracks Tags 5, 6 and 7 as the collapse set under P4 adaptation. This is the set named by the task specification.",
+      "tag_ids": [
+        5,
+        6,
+        7
+      ]
+    },
+    "strict_dg_zero_recall_set": {
+      "counts": {
+        "correct_rejection": 0,
+        "false_alarm": 15,
+        "hit": 6,
+        "miss": 0
+      },
+      "observed_collapse_pair_count": 6,
+      "per_pair": [
+        {
+          "in_observed_collapse_set": false,
+          "minimum_predicted_separation_ghz": 0.0071428571428571175,
+          "outcome": "false_alarm",
+          "predicted_collision": true,
+          "tag_a": 1,
+          "tag_b": 2
+        },
+        {
+          "in_observed_collapse_set": false,
+          "minimum_predicted_separation_ghz": 0.0011904761904757422,
+          "outcome": "false_alarm",
+          "predicted_collision": true,
+          "tag_a": 1,
+          "tag_b": 3
+        },
+        {
+          "in_observed_collapse_set": false,
+          "minimum_predicted_separation_ghz": 0.06904761904761969,
+          "outcome": "false_alarm",
+          "predicted_collision": true,
+          "tag_a": 1,
+          "tag_b": 4
+        },
+        {
+          "in_observed_collapse_set": false,
+          "minimum_predicted_separation_ghz": 0.0035714285714281147,
+          "outcome": "false_alarm",
+          "predicted_collision": true,
+          "tag_a": 1,
+          "tag_b": 5
+        },
+        {
+          "in_observed_collapse_set": false,
+          "minimum_predicted_separation_ghz": 0.05238095238095042,
+          "outcome": "false_alarm",
+          "predicted_collision": true,
+          "tag_a": 1,
+          "tag_b": 6
+        },
+        {
+          "in_observed_collapse_set": false,
+          "minimum_predicted_separation_ghz": 0.053571428571428825,
+          "outcome": "false_alarm",
+          "predicted_collision": true,
+          "tag_a": 1,
+          "tag_b": 7
+        },
+        {
+          "in_observed_collapse_set": false,
+          "minimum_predicted_separation_ghz": 0.06904761904761969,
+          "outcome": "false_alarm",
+          "predicted_collision": true,
+          "tag_a": 2,
+          "tag_b": 3
+        },
+        {
+          "in_observed_collapse_set": false,
+          "minimum_predicted_separation_ghz": 0.06190476190476257,
+          "outcome": "false_alarm",
+          "predicted_collision": true,
+          "tag_a": 2,
+          "tag_b": 4
+        },
+        {
+          "in_observed_collapse_set": false,
+          "minimum_predicted_separation_ghz": 0.003571428571429003,
+          "outcome": "false_alarm",
+          "predicted_collision": true,
+          "tag_a": 2,
+          "tag_b": 5
+        },
+        {
+          "in_observed_collapse_set": false,
+          "minimum_predicted_separation_ghz": 0.028571428571427582,
+          "outcome": "false_alarm",
+          "predicted_collision": true,
+          "tag_a": 2,
+          "tag_b": 6
+        },
+        {
+          "in_observed_collapse_set": false,
+          "minimum_predicted_separation_ghz": 0.01071428571428612,
+          "outcome": "false_alarm",
+          "predicted_collision": true,
+          "tag_a": 2,
+          "tag_b": 7
+        },
+        {
+          "in_observed_collapse_set": false,
+          "minimum_predicted_separation_ghz": 0.0071428571428571175,
+          "outcome": "false_alarm",
+          "predicted_collision": true,
+          "tag_a": 3,
+          "tag_b": 4
+        },
+        {
+          "in_observed_collapse_set": true,
+          "minimum_predicted_separation_ghz": 0.053571428571428825,
+          "outcome": "hit",
+          "predicted_collision": true,
+          "tag_a": 3,
+          "tag_b": 5
+        },
+        {
+          "in_observed_collapse_set": true,
+          "minimum_predicted_separation_ghz": 0.07499999999999929,
+          "outcome": "hit",
+          "predicted_collision": true,
+          "tag_a": 3,
+          "tag_b": 6
+        },
+        {
+          "in_observed_collapse_set": true,
+          "minimum_predicted_separation_ghz": 0.022619047619047983,
+          "outcome": "hit",
+          "predicted_collision": true,
+          "tag_a": 3,
+          "tag_b": 7
+        },
+        {
+          "in_observed_collapse_set": false,
+          "minimum_predicted_separation_ghz": 0.024999999999999467,
+          "outcome": "false_alarm",
+          "predicted_collision": true,
+          "tag_a": 4,
+          "tag_b": 5
+        },
+        {
+          "in_observed_collapse_set": false,
+          "minimum_predicted_separation_ghz": 0.003571428571429003,
+          "outcome": "false_alarm",
+          "predicted_collision": true,
+          "tag_a": 4,
+          "tag_b": 6
+        },
+        {
+          "in_observed_collapse_set": false,
+          "minimum_predicted_separation_ghz": 0.015476190476190865,
+          "outcome": "false_alarm",
+          "predicted_collision": true,
+          "tag_a": 4,
+          "tag_b": 7
+        },
+        {
+          "in_observed_collapse_set": true,
+          "minimum_predicted_separation_ghz": 0.014285714285713347,
+          "outcome": "hit",
+          "predicted_collision": true,
+          "tag_a": 5,
+          "tag_b": 6
+        },
+        {
+          "in_observed_collapse_set": true,
+          "minimum_predicted_separation_ghz": 0.02857142857142847,
+          "outcome": "hit",
+          "predicted_collision": true,
+          "tag_a": 5,
+          "tag_b": 7
+        },
+        {
+          "in_observed_collapse_set": true,
+          "minimum_predicted_separation_ghz": 0.014285714285715123,
+          "outcome": "hit",
+          "predicted_collision": true,
+          "tag_a": 6,
+          "tag_b": 7
+        }
+      ],
+      "precision_of_predicted_collisions": 0.2857142857142857,
+      "predicted_collision_pair_count": 21,
+      "recall_of_observed_collapse_pairs": 1.0,
+      "role": "secondary",
+      "source": "historical Strict-DG zero-recall summary retained in this diagnostic",
+      "statement": "Tags 3, 5, 6, and 7 exhibit at least one zero-recall seed; Tag 6 is the most severe pooled failure (recall 0.00178, 4 correct of 2,250).",
+      "tag_ids": [
+        3,
+        5,
+        6,
+        7
+      ]
+    }
+  },
+  "generated_at_utc": "2026-07-29T15:35:42.668976+00:00",
+  "p4_derived_information_used": "existing class-collapse conclusion text only",
+  "p4_raw_data_used": false,
+  "pairwise_predictions": [
+    {
+      "collided_peaks": [
+        "Lc",
+        "L3",
+        "L2",
+        "L1"
+      ],
+      "mean_predicted_separation_ghz": 0.06994047619047605,
+      "minimum_predicted_separation_ghz": 0.0071428571428571175,
+      "per_peak": {
+        "L1": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.05476190476190368
+        },
+        "L2": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.0071428571428571175
+        },
+        "L3": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.023809523809522837
+        },
+        "Lc": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.19404761904762058
+        }
+      },
+      "predicted_collision": true,
+      "tag_a": 1,
+      "tag_b": 2
+    },
+    {
+      "collided_peaks": [
+        "Lc",
+        "L3",
+        "L2",
+        "L1"
+      ],
+      "mean_predicted_separation_ghz": 0.06696428571428581,
+      "minimum_predicted_separation_ghz": 0.0011904761904757422,
+      "per_peak": {
+        "L1": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.08095238095238066
+        },
+        "L2": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.07619047619047681
+        },
+        "L3": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.10952380952381002
+        },
+        "Lc": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.0011904761904757422
+        }
+      },
+      "predicted_collision": true,
+      "tag_a": 1,
+      "tag_b": 3
+    },
+    {
+      "collided_peaks": [
+        "Lc",
+        "L3",
+        "L2",
+        "L1"
+      ],
+      "mean_predicted_separation_ghz": 0.11011904761904745,
+      "minimum_predicted_separation_ghz": 0.06904761904761969,
+      "per_peak": {
+        "L1": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.18809523809523743
+        },
+        "L2": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.06904761904761969
+        },
+        "L3": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.10595238095238013
+        },
+        "Lc": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.07738095238095255
+        }
+      },
+      "predicted_collision": true,
+      "tag_a": 1,
+      "tag_b": 4
+    },
+    {
+      "collided_peaks": [
+        "Lc",
+        "L3",
+        "L2",
+        "L1"
+      ],
+      "mean_predicted_separation_ghz": 0.02648809523809481,
+      "minimum_predicted_separation_ghz": 0.0035714285714281147,
+      "per_peak": {
+        "L1": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.011904761904760974
+        },
+        "L2": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.0035714285714281147
+        },
+        "L3": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.03809523809523707
+        },
+        "Lc": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.05238095238095308
+        }
+      },
+      "predicted_collision": true,
+      "tag_a": 1,
+      "tag_b": 5
+    },
+    {
+      "collided_peaks": [
+        "Lc",
+        "L3",
+        "L2",
+        "L1"
+      ],
+      "mean_predicted_separation_ghz": 0.10238095238095202,
+      "minimum_predicted_separation_ghz": 0.05238095238095042,
+      "per_peak": {
+        "L1": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.15119047619047699
+        },
+        "L2": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.13214285714285712
+        },
+        "L3": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.05238095238095042
+        },
+        "Lc": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.07380952380952355
+        }
+      },
+      "predicted_collision": true,
+      "tag_a": 1,
+      "tag_b": 6
+    },
+    {
+      "collided_peaks": [
+        "Lc",
+        "L3",
+        "L2",
+        "L1"
+      ],
+      "mean_predicted_separation_ghz": 0.11785714285714288,
+      "minimum_predicted_separation_ghz": 0.053571428571428825,
+      "per_peak": {
+        "L1": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.1678571428571427
+        },
+        "L2": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.053571428571428825
+        },
+        "L3": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.06666666666666554
+        },
+        "Lc": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.18333333333333446
+        }
+      },
+      "predicted_collision": true,
+      "tag_a": 1,
+      "tag_b": 7
+    },
+    {
+      "collided_peaks": [
+        "Lc",
+        "L3",
+        "L2",
+        "L1"
+      ],
+      "mean_predicted_separation_ghz": 0.1333333333333333,
+      "minimum_predicted_separation_ghz": 0.06904761904761969,
+      "per_peak": {
+        "L1": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.13571428571428434
+        },
+        "L2": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.06904761904761969
+        },
+        "L3": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.13333333333333286
+        },
+        "Lc": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.19523809523809632
+        }
+      },
+      "predicted_collision": true,
+      "tag_a": 2,
+      "tag_b": 3
+    },
+    {
+      "collided_peaks": [
+        "Lc",
+        "L3",
+        "L2",
+        "L1"
+      ],
+      "mean_predicted_separation_ghz": 0.09851190476190541,
+      "minimum_predicted_separation_ghz": 0.06190476190476257,
+      "per_peak": {
+        "L1": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.13333333333333375
+        },
+        "L2": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.06190476190476257
+        },
+        "L3": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.0821428571428573
+        },
+        "Lc": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.11666666666666803
+        }
+      },
+      "predicted_collision": true,
+      "tag_a": 2,
+      "tag_b": 4
+    },
+    {
+      "collided_peaks": [
+        "Lc",
+        "L3",
+        "L2",
+        "L1"
+      ],
+      "mean_predicted_separation_ghz": 0.05059523809523836,
+      "minimum_predicted_separation_ghz": 0.003571428571429003,
+      "per_peak": {
+        "L1": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.042857142857142705
+        },
+        "L2": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.003571428571429003
+        },
+        "L3": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.014285714285714235
+        },
+        "Lc": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.1416666666666675
+        }
+      },
+      "predicted_collision": true,
+      "tag_a": 2,
+      "tag_b": 5
+    },
+    {
+      "collided_peaks": [
+        "Lc",
+        "L3",
+        "L2",
+        "L1"
+      ],
+      "mean_predicted_separation_ghz": 0.09613095238095304,
+      "minimum_predicted_separation_ghz": 0.028571428571427582,
+      "per_peak": {
+        "L1": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.0964285714285733
+        },
+        "L2": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.13928571428571423
+        },
+        "L3": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.028571428571427582
+        },
+        "Lc": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.12023809523809703
+        }
+      },
+      "predicted_collision": true,
+      "tag_a": 2,
+      "tag_b": 6
+    },
+    {
+      "collided_peaks": [
+        "Lc",
+        "L3",
+        "L2",
+        "L1"
+      ],
+      "mean_predicted_separation_ghz": 0.05327380952380989,
+      "minimum_predicted_separation_ghz": 0.01071428571428612,
+      "per_peak": {
+        "L1": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.11309523809523903
+        },
+        "L2": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.04642857142857171
+        },
+        "L3": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.042857142857142705
+        },
+        "Lc": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.01071428571428612
+        }
+      },
+      "predicted_collision": true,
+      "tag_a": 2,
+      "tag_b": 7
+    },
+    {
+      "collided_peaks": [
+        "Lc",
+        "L3",
+        "L2"
+      ],
+      "mean_predicted_separation_ghz": 0.14255952380952341,
+      "minimum_predicted_separation_ghz": 0.0071428571428571175,
+      "per_peak": {
+        "L1": {
+          "predicted_collision": false,
+          "predicted_separation_ghz": 0.2690476190476181
+        },
+        "L2": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.0071428571428571175
+        },
+        "L3": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.21547619047619015
+        },
+        "Lc": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.07857142857142829
+        }
+      },
+      "predicted_collision": true,
+      "tag_a": 3,
+      "tag_b": 4
+    },
+    {
+      "collided_peaks": [
+        "Lc",
+        "L3",
+        "L2",
+        "L1"
+      ],
+      "mean_predicted_separation_ghz": 0.09166666666666656,
+      "minimum_predicted_separation_ghz": 0.053571428571428825,
+      "per_peak": {
+        "L1": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.09285714285714164
+        },
+        "L2": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.0726190476190487
+        },
+        "L3": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.1476190476190471
+        },
+        "Lc": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.053571428571428825
+        }
+      },
+      "predicted_collision": true,
+      "tag_a": 3,
+      "tag_b": 5
+    },
+    {
+      "collided_peaks": [
+        "Lc",
+        "L3",
+        "L2",
+        "L1"
+      ],
+      "mean_predicted_separation_ghz": 0.16934523809523783,
+      "minimum_predicted_separation_ghz": 0.07499999999999929,
+      "per_peak": {
+        "L1": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.23214285714285765
+        },
+        "L2": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.20833333333333393
+        },
+        "L3": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.16190476190476044
+        },
+        "Lc": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.07499999999999929
+        }
+      },
+      "predicted_collision": true,
+      "tag_a": 3,
+      "tag_b": 6
+    },
+    {
+      "collided_peaks": [
+        "Lc",
+        "L3",
+        "L2",
+        "L1"
+      ],
+      "mean_predicted_separation_ghz": 0.15803571428571428,
+      "minimum_predicted_separation_ghz": 0.022619047619047983,
+      "per_peak": {
+        "L1": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.24880952380952337
+        },
+        "L2": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.022619047619047983
+        },
+        "L3": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.17619047619047556
+        },
+        "Lc": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.1845238095238102
+        }
+      },
+      "predicted_collision": true,
+      "tag_a": 3,
+      "tag_b": 7
+    },
+    {
+      "collided_peaks": [
+        "Lc",
+        "L3",
+        "L2",
+        "L1"
+      ],
+      "mean_predicted_separation_ghz": 0.08363095238095264,
+      "minimum_predicted_separation_ghz": 0.024999999999999467,
+      "per_peak": {
+        "L1": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.17619047619047645
+        },
+        "L2": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.06547619047619158
+        },
+        "L3": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.06785714285714306
+        },
+        "Lc": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.024999999999999467
+        }
+      },
+      "predicted_collision": true,
+      "tag_a": 4,
+      "tag_b": 5
+    },
+    {
+      "collided_peaks": [
+        "Lc",
+        "L3",
+        "L2",
+        "L1"
+      ],
+      "mean_predicted_separation_ghz": 0.07380952380952399,
+      "minimum_predicted_separation_ghz": 0.003571428571429003,
+      "per_peak": {
+        "L1": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.03690476190476044
+        },
+        "L2": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.2011904761904768
+        },
+        "L3": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.05357142857142971
+        },
+        "Lc": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.003571428571429003
+        }
+      },
+      "predicted_collision": true,
+      "tag_a": 4,
+      "tag_b": 6
+    },
+    {
+      "collided_peaks": [
+        "Lc",
+        "L3",
+        "L2",
+        "L1"
+      ],
+      "mean_predicted_separation_ghz": 0.04523809523809552,
+      "minimum_predicted_separation_ghz": 0.015476190476190865,
+      "per_peak": {
+        "L1": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.020238095238094722
+        },
+        "L2": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.015476190476190865
+        },
+        "L3": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.03928571428571459
+        },
+        "Lc": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.10595238095238191
+        }
+      },
+      "predicted_collision": true,
+      "tag_a": 4,
+      "tag_b": 7
+    },
+    {
+      "collided_peaks": [
+        "Lc",
+        "L3",
+        "L2",
+        "L1"
+      ],
+      "mean_predicted_separation_ghz": 0.07767857142857126,
+      "minimum_predicted_separation_ghz": 0.014285714285713347,
+      "per_peak": {
+        "L1": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.139285714285716
+        },
+        "L2": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.13571428571428523
+        },
+        "L3": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.014285714285713347
+        },
+        "Lc": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.021428571428570464
+        }
+      },
+      "predicted_collision": true,
+      "tag_a": 5,
+      "tag_b": 6
+    },
+    {
+      "collided_peaks": [
+        "Lc",
+        "L3",
+        "L2",
+        "L1"
+      ],
+      "mean_predicted_separation_ghz": 0.09136904761904807,
+      "minimum_predicted_separation_ghz": 0.02857142857142847,
+      "per_peak": {
+        "L1": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.15595238095238173
+        },
+        "L2": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.05000000000000071
+        },
+        "L3": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.02857142857142847
+        },
+        "Lc": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.13095238095238138
+        }
+      },
+      "predicted_collision": true,
+      "tag_a": 5,
+      "tag_b": 7
+    },
+    {
+      "collided_peaks": [
+        "Lc",
+        "L3",
+        "L2",
+        "L1"
+      ],
+      "mean_predicted_separation_ghz": 0.08154761904761942,
+      "minimum_predicted_separation_ghz": 0.014285714285715123,
+      "per_peak": {
+        "L1": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.01666666666666572
+        },
+        "L2": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.18571428571428594
+        },
+        "L3": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.014285714285715123
+        },
+        "Lc": {
+          "predicted_collision": true,
+          "predicted_separation_ghz": 0.10952380952381091
+        }
+      },
+      "predicted_collision": true,
+      "tag_a": 6,
+      "tag_b": 7
+    }
+  ],
+  "predicted_collision_pairs": [
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      1,
+      4
+    ],
+    [
+      1,
+      5
+    ],
+    [
+      1,
+      6
+    ],
+    [
+      1,
+      7
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      2,
+      4
+    ],
+    [
+      2,
+      5
+    ],
+    [
+      2,
+      6
+    ],
+    [
+      2,
+      7
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      3,
+      5
+    ],
+    [
+      3,
+      6
+    ],
+    [
+      3,
+      7
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      4,
+      6
+    ],
+    [
+      4,
+      7
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      5,
+      7
+    ],
+    [
+      6,
+      7
+    ]
+  ],
+  "preregistered_threshold": {
+    "attained_at": {
+      "peak": "L2",
+      "pooled_within_tag_sd_ghz": 0.1551620285444889,
+      "position": "P1",
+      "tag_pair": [
+        2,
+        6
+      ]
+    },
+    "candidate_pair_peak_position_count": 252,
+    "collision_threshold_ghz": 0.2553571428571413,
+    "definition": "Delta_min is the smallest per-tag mean peak separation, over all source positions and peaks, among tag pairs whose separation exceeds their pooled within-tag standard deviation across the nine (er, surface) conditions.",
+    "delta_min_ghz": 0.1702380952380942,
+    "fixed_before_execution": true,
+    "multiplier": 1.5,
+    "name": "predicted_separation_below_1.5x_minimum_reliably_separated_in_domain_spacing",
+    "reliably_separated_count": 13,
+    "reliably_separated_fraction": 0.051587301587301584
+  },
+  "schema_version": 1,
+  "sub_experiment": "03_peak_warp_prediction",
+  "test_discriminative_power": {
+    "discriminative": false,
+    "note": "If every pair is flagged, the hit counts below are attained trivially with a 100% false-alarm rate on the complement and are not evidence that the additive peak-warp prediction identifies the collapsing tags.",
+    "pairs_flagged": 21,
+    "pairs_total": 21
+  },
+  "verdict": {
+    "few_shot_tracked_collapse_triple": {
+      "correct_rejections": 0,
+      "evidential_weight": "none_test_not_discriminative",
+      "false_alarms": 18,
+      "hits": 3,
+      "misses": 0,
+      "observed_collapse_pairs_recovered": "3/3"
+    },
+    "strict_dg_zero_recall_set": {
+      "correct_rejections": 0,
+      "evidential_weight": "none_test_not_discriminative",
+      "false_alarms": 15,
+      "hits": 6,
+      "misses": 0,
+      "observed_collapse_pairs_recovered": "6/6"
+    }
+  }
+}

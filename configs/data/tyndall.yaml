@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "workflow": "prepare_data",
+  "status": "STATIC_UTILITY_PRE_DG_CUSTODY_PENDING",
+  "dataset": "tyndall",
+  "input_path": "${CRFID_DATA_ROOT:-data}/tyndall_source_input.npz",
+  "output_path": "${CRFID_OUTPUT_ROOT:-outputs}/prepared/tyndall.npz",
+  "class_order": [0, 1, 2, 3, 4, 5, 6],
+  "domain_order": ["P1", "P2", "P3", "P4"],
+  "position_mapping": {"source": ["P1", "P2", "P3"], "target": "P4"},
+  "signal_length": 281,
+  "required_arrays": ["signals", "labels", "domains", "conditions"],
+  "included_domains": ["P1", "P2", "P3"],
+  "metadata_fields": ["sample_id", "class_index", "domain_id", "surface_id", "material_id", "condition_id", "repeat_id"],
+  "random_seeds": [42],
+  "normalization": "none_during_registry_creation"
+}

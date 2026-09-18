@@ -1,0 +1,14 @@
+schema_version: 1
+workflow: external_data1
+status: FROZEN_PROTOCOL_READY_FOR_EXPLICIT_EXECUTION
+mode: pipeline_validation
+dataset_id: external_data1_four_class
+data_root: '${CRFID_EXTERNAL_DATA1_ROOT}'
+reference_root: '${CRFID_EXTERNAL_DATA1_REFERENCE_ROOT}'
+output_path: '${CRFID_OUTPUT_ROOT:-outputs}/external_data1'
+class_order: [0, 1, 2, 3]
+random_seeds: [42, 43, 44, 45, 46]
+protocol_path: configs/external_data1/ev2r_protocol.yaml
+data_authority_path: configs/external_data1/data_authority.yaml
+label_access_path: configs/external_data1/label_access.yaml
+execute_ev4_in_project: false

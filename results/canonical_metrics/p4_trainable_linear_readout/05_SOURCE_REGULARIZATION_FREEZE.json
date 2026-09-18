@@ -1,0 +1,51 @@
+{
+  "candidate_rows": [
+    {
+      "all_optimizations_completed_finite": true,
+      "lambda": 0.01,
+      "maximum_zero_recall_class_frequency": 0.44497354497354497,
+      "mean_overall_macro_f1": 0.190042193654873,
+      "minimum_worst_class_mean_recall": 0.11720370370370368,
+      "minimum_worst_held_position_macro_f1": 0.1340008788073703
+    },
+    {
+      "all_optimizations_completed_finite": true,
+      "lambda": 0.1,
+      "maximum_zero_recall_class_frequency": 0.44761904761904764,
+      "mean_overall_macro_f1": 0.19006655652898452,
+      "minimum_worst_class_mean_recall": 0.1172962962962963,
+      "minimum_worst_held_position_macro_f1": 0.13281875299478893
+    },
+    {
+      "all_optimizations_completed_finite": true,
+      "lambda": 1.0,
+      "maximum_zero_recall_class_frequency": 0.4402116402116402,
+      "mean_overall_macro_f1": 0.19179957368410325,
+      "minimum_worst_class_mean_recall": 0.11253703703703705,
+      "minimum_worst_held_position_macro_f1": 0.13493869112887652
+    },
+    {
+      "all_optimizations_completed_finite": true,
+      "lambda": 10.0,
+      "maximum_zero_recall_class_frequency": 0.43174603174603177,
+      "mean_overall_macro_f1": 0.1930803650537325,
+      "minimum_worst_class_mean_recall": 0.1074814814814815,
+      "minimum_worst_held_position_macro_f1": 0.14180688016427542
+    },
+    {
+      "all_optimizations_completed_finite": true,
+      "lambda": 100.0,
+      "maximum_zero_recall_class_frequency": 0.4185185185185185,
+      "mean_overall_macro_f1": 0.19365598350292748,
+      "minimum_worst_class_mean_recall": 0.08905555555555557,
+      "minimum_worst_held_position_macro_f1": 0.15904966604568097
+    }
+  ],
+  "candidate_summary_sha256": "ac1589d8522a731211f76787914c840bff663b7a29443f64336ff7ba7ed64673",
+  "p4_metrics_used": false,
+  "phase": "PRE_P4_SOURCE_ONLY_REGULARIZATION_FREEZE",
+  "same_value_all_positive_budgets": true,
+  "selected_lambda": 100.0,
+  "selection_population": "frozen P1-P3 FS4 pseudo-target summaries",
+  "selection_rule": "preregistered lexicographic global rule across 1/3/5 shots"
+}

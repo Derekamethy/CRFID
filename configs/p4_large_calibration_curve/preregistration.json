@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "experiment_id": "p4_large_calibration_curve_v1",
+  "status": "SEALED_BEFORE_NEW_CALIBRATION_RESULTS",
+  "sealed_date": "2026-08-09",
+  "scientific_question": "How quickly does held-condition P4 performance recover as progressively more labelled P4 support measurements are supplied to one frozen-encoder cosine-prototype adapter?",
+  "claim_type": "TARGET_ASSISTED_LABELLED_TARGET_CALIBRATION",
+  "source_lineage": {
+    "method": "C1_FIRST_DIFFERENCE_ERM_1DCNN",
+    "encoder_output": "frozen network.12 256-dimensional embedding",
+    "checkpoint_seeds": [42, 43, 44, 45, 46],
+    "checkpoint_state_sha256": {
+      "42": "5b5b8d778d1467c8d751676b316d9ac9e6c1605f634c4e85cde1d827ec8275d3",
+      "43": "5f3f0360e559a6522a1af03e57b98c917096f3889afac5a0bfa65b70d9fa1210",
+      "44": "a39e7a2c9ddc9593d812322d95b18129810cee24ba5a66c24f014d3bb4a53e96",
+      "45": "468c6f1a94ee4ddc16678bc2cc572eccae7f2485220ace919004504da336c776",
+      "46": "a3734a84be6d03e4376772aba8b32ae2d7a46d95f731cc326f616aa94619700a"
+    },
+    "preprocessing": "281 raw values -> 280 first differences -> frozen P1-P3-only population standardization",
+    "encoder_updates": false,
+    "p4_used_for_encoder_or_checkpoint_selection": false
+  },
+  "allowed_data": [
+    "Frozen P1-P3-trained C1 checkpoints and P1-P3-fitted preprocessing state",
+    "Governed A1_P4.csv, A2_P4.csv, and A3_P4.csv",
+    "P4 support features and labels selected by the frozen support manifest",
+    "P4 query features for frozen inference only",
+    "Prior frozen artifacts for lineage and non-comparable contextual references"
+  ],
+  "forbidden_data_use": [
+    "P4 query labels before every query prediction is frozen and SHA-256 registered",
+    "P4 query labels or metrics in support construction, tuning, method choice, representation choice, budget choice, stopping, or reruns",
+    "P4 query-derived preprocessing or transductive statistics",
+    "P4-labelled encoder fitting or checkpoint selection",
+    "Post-result method, threshold, seed, split, budget, or uncertainty changes"
+  ],
+  "adaptation": {
+    "primary_method": "TARGET_ONLY_COSINE_PROTOTYPE",
+    "definition": "L2-normalize each support embedding; average within TagID; L2-normalize each class mean; predict the L2-normalized query embedding by maximum cosine similarity with lowest class index on an exact tie",
+    "trainable_parameters": 0,
+    "hyperparameters_selected_on_p4": false,
+    "secondary_target_finetuning_arm": false
+  },
+  "label_budget": {
+    "primary_x_axis_unit": "total labelled raw P4 measurements across all TagIDs",
+    "independent_information_unit": "TagID x ER x surface x P4 physical condition block",
+    "ordered_total_measurement_budgets": [0, 7, 10, 20, 21, 35, 50, 100, 200, 500],
+    "canonical_shot_anchors": {
+      "1-shot": 7,
+      "3-shot": 21,
+      "5-shot": 35
+    },
+    "maximum_support_rows_per_fold": 2100,
+    "maximum_independent_support_blocks_per_fold": 42,
+    "interpretation": "Budgets through 42 can add condition blocks; budgets above 42 necessarily add repeated acquisitions from already represented blocks. Both counts are reported."
+  },
+  "support_sampling": {
+    "support_seeds": [104729, 130363, 155921, 181081, 205439, 230003, 254959, 280001, 305093, 330017, 355031, 380041, 405019, 430007, 455003, 480017, 505027, 530017, 555029, 580031],
+    "nested": true,
+    "without_row_replacement": true,
+    "policy": "For each fold and support seed, use one SHA-256-derived random permutation of the six eligible factor cells shared across TagIDs. Interleave TagIDs in a SHA-256-derived rotated round robin, drawing one row from every class-by-cell block before a second row from any block. Within each block use a deterministic random permutation of its 50 row ordinals. Every smaller budget is an exact prefix of every larger budget.",
+    "class_balance": "Exact at 7, 21, and 35; otherwise per-TagID counts differ by at most one and the remainder rotates by fold and support seed.",
+    "feature_or_query_outcome_informed": false
+  },
+  "support_query_protocol": {
+    "outer_folds": {
+      "Q0": ["E0xS0", "E1xS1", "E2xS2"],
+      "Q1": ["E0xS1", "E1xS2", "E2xS0"],
+      "Q2": ["E0xS2", "E1xS0", "E2xS1"]
+    },
+    "query_rows_per_fold": 1050,
+    "query_blocks_per_fold": 21,
+    "oof_query_rows": 3150,
+    "oof_query_blocks": 63,
+    "fixed_across_budgets": true,
+    "all_50_repetitions_grouped": true,
+    "exact_signal_cross_block_collisions_observed_pre_design": 0,
+    "query_label_rule": "Global two-phase execution: generate and hash-register every budget/source/support/fold prediction first; only then open query-label seals once for final scoring."
+  },
+  "seeds": {
+    "source": [42, 43, 44, 45, 46],
+    "support_count": 20,
+    "bootstrap": 20260809
+  },
+  "metrics": {
+    "primary": "full-P4 out-of-fold sample Macro-F1, computed per source x support unit then equally averaged",
+    "secondary": [
+      "Accuracy",
+      "balanced accuracy",
+      "per-class precision, recall, and F1",
+      "worst-class F1",
+      "block-majority Macro-F1 and Accuracy",
+      "support-selection variance",
+      "performance by ER and surface",
+      "support condition-block and exact-signal coverage"
+    ],
+    "class_order": [0, 1, 2, 3, 4, 5, 6],
+    "zero_division": 0,
+    "zero_label_anchor": "canonical frozen source head; equal mean across source seeds; must reproduce Accuracy 0.15663492063492063 and Macro-F1 0.11223088363457531 within 1e-15"
+  },
+  "uncertainty": {
+    "method": "crossed hierarchical paired percentile bootstrap",
+    "replicates": 10000,
+    "interval": [0.025, 0.975],
+    "block_resampling": "sample nine physical blocks with replacement within each TagID, retaining all 50 rows in each sampled block",
+    "seed_resampling": "resample five source-seed indices and twenty support-seed indices independently with replacement, then average their crossed paired units",
+    "pairing": "common block/source/support draws for budget-vs-zero and adjacent-budget contrasts",
+    "individual_rows_as_bootstrap_units": false
+  },
+  "primary_comparisons": {
+    "versus_zero": "Macro-F1(b) - Macro-F1(0) for every positive budget",
+    "incremental": "paired adjacent-budget differences in ascending total-label order",
+    "multiple_testing_role": "descriptive curve estimation; no family of null-hypothesis tests"
+  },
+  "predefined_thresholds": {
+    "practical": "first budget with point-estimate Macro-F1 improvement >= 0.05",
+    "reliable": "first budget whose paired 95% interval for Macro-F1 improvement has lower bound > 0",
+    "key_meaningful_recovery": "first budget satisfying both practical and reliable rules",
+    "gap_fraction": "not identifiable because neither retrospective 0.5835693346352661 nor matched within-condition 0.983494 is protocol-comparable",
+    "diminishing_returns": "report adjacent gain and gain per ten added labels without fitting or extrapolating a saturation model"
+  },
+  "classification_rule": {
+    "validity_failure": "CALIBRATION_CURVE_NOT_SCIENTIFICALLY_IDENTIFIABLE",
+    "coverage_dominant": "CONDITION_COVERAGE_MORE_IMPORTANT_THAN_RAW_LABEL_COUNT only if the paired 7-to-35 improvement CI excludes zero, the 50-to-500 CI includes zero, and the point gain per label from 7 to 35 is more than twice that from 50 to 500",
+    "rapid": "RAPID_TARGET_CALIBRATION_RECOVERY if the key meaningful recovery budget is <= 35 labels",
+    "gradual": "GRADUAL_TARGET_CALIBRATION_RECOVERY if the key meaningful recovery budget is > 35 labels",
+    "weak": "WEAK_OR_UNRELIABLE_TARGET_CALIBRATION_GAIN if no budget satisfies the key meaningful recovery rule",
+    "precedence": ["validity_failure", "coverage_dominant", "rapid", "gradual", "weak"]
+  },
+  "historical_connections": {
+    "historical_few_shot": "retain as external provenance values; rerun 7/21/35 matched anchors because the old episode/query and Euclidean protocol differ",
+    "retrospective": "external non-held-out reference only; excluded from curve and gap fractions",
+    "matched_target_assisted": "external within-condition dependence-inflated reference only; excluded from curve and gap fractions"
+  },
+  "stopping_and_amendment_rules": [
+    "Stop before scoring on any checkpoint, preprocessing, P4 hash, split, budget, nesting, class-balance, exact-overlap, encoder-freeze, or query-label-boundary failure",
+    "Run a pre-label smoke test that generates and hashes predictions but never opens query labels",
+    "After the first valid full scoring pass, do not rerun, tune, replace seeds, alter budgets, or select another method",
+    "A genuine implementation defect requires an append-only incident record, minimal repair, new preregistration amendment hash, and preservation of the failed attempt"
+  ],
+  "primary_endpoint": "Macro-F1 calibration curve and paired improvement from the canonical strict-DG zero-label anchor",
+  "secondary_endpoints": [
+    "incremental gains and diminishing-return pattern",
+    "class-level recovery",
+    "condition coverage versus repeated-label phase",
+    "support-selection and source-seed variability"
+  ]
+}

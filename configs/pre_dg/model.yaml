@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "preprocessing": {
+    "input_representation": "native-physical resampled signal plus zero compatibility channel",
+    "input_length": 512,
+    "input_channels": 2,
+    "dtype": "float32",
+    "fit_partition": "train",
+    "mean_axes": [0,2],
+    "std_axes": [0,2],
+    "ddof": 0,
+    "zero_scale_replacement": 1.0,
+    "nan_inf_policy": "reject"
+  },
+  "model": {
+    "architecture": "PreDGDeepCNN",
+    "conv_channels": [128,256,256,128,64],
+    "kernel_sizes": [7,7,7,7,7],
+    "strides": [1,1,1,1,1],
+    "paddings": [3,3,3,3,3],
+    "batch_normalization": true,
+    "activation": "ReLU",
+    "max_pool_after_first_blocks": 4,
+    "adaptive_pool_length": 8,
+    "embedding_dimension": 512,
+    "dropout_candidates": [0.0,0.3],
+    "initialization": "PyTorch module defaults after seeded construction"
+  },
+  "training": {
+    "optimizer": "AdamW",
+    "loss": "CrossEntropyLoss",
+    "learning_rate": 0.001,
+    "weight_decay": 0.00001,
+    "batch_size": 512,
+    "max_epochs": 50,
+    "patience": 10,
+    "minimum_improvement": 0.000001,
+    "scheduler": null,
+    "num_workers": 0,
+    "train_shuffle": true,
+    "validation_shuffle": false,
+    "test_shuffle": false,
+    "checkpoint_selection": "validation_accuracy_then_validation_loss",
+    "candidate_selection": "validation_accuracy_then_validation_loss_then_lower_dropout"
+  }
+}

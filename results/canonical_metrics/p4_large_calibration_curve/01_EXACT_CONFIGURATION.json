@@ -1,0 +1,106 @@
+{
+  "bootstrap": {
+    "replicates": 10000,
+    "seed": 20260809
+  },
+  "budgets": [
+    0,
+    7,
+    10,
+    20,
+    21,
+    35,
+    50,
+    100,
+    200,
+    500
+  ],
+  "checkpoint_file_hashes": {
+    "42": "cc507dcf895b2197d4a98c7c2eeb4c6520911944464da637b5002e1b7f8f9437",
+    "43": "3db0c7d3c3678d0d0b4f78714a86b49759e6526bbbac89a1bb78cd9c1266a6a3",
+    "44": "4acc015a59aed08faab2492c0cd2639d5c7de711c19c3bf1dcbb9cdda85453ce",
+    "45": "8a091de402a9750f5bd0443741afbf694b0155d2c008e6c0aa68123b62b71896",
+    "46": "1cdb5c787ba674e3b5a73fdf03ba0d378f5b46055792408ac4b4ea33a389c879"
+  },
+  "checkpoint_state_hashes": {
+    "42": "5b5b8d778d1467c8d751676b316d9ac9e6c1605f634c4e85cde1d827ec8275d3",
+    "43": "5f3f0360e559a6522a1af03e57b98c917096f3889afac5a0bfa65b70d9fa1210",
+    "44": "a39e7a2c9ddc9593d812322d95b18129810cee24ba5a66c24f014d3bb4a53e96",
+    "45": "468c6f1a94ee4ddc16678bc2cc572eccae7f2485220ace919004504da336c776",
+    "46": "a3734a84be6d03e4376772aba8b32ae2d7a46d95f731cc326f616aa94619700a"
+  },
+  "claim_type": "TARGET_ASSISTED_LABELLED_TARGET_CALIBRATION",
+  "code_identity": {
+    "branch": "codex/p4-large-calibration-curve-v1",
+    "clean_before_execution": true,
+    "commit": "b4c83f35e5777b9691509ce588c8188233ac54f1",
+    "tree": "94cb1f868279791abf9a1954bd6bdc36b4590ad7",
+    "worktree": "<ORIGINAL_WORKSPACE>\\CRFID_research_code_v2_patch_p4_large_calibration_curve_v1"
+  },
+  "experiment_id": "p4_large_calibration_curve_v1",
+  "model": "TARGET_ONLY_COSINE_PROTOTYPE",
+  "p4_source_hashes": {
+    "A1_P4.csv": "8f63f8bee3deb7747a88ac0fe1f47eabe8c0feedfe5a65cb503e25fdcf1377ee",
+    "A2_P4.csv": "6b20fb815d6df40ff9ad4c0ecbf3bc7a82762ac96b8fd7df7170504715d75a00",
+    "A3_P4.csv": "6c3bffcca0e81664398423c5c4828c3d7d4698a69e804fe69368e53bb8a9f6e3"
+  },
+  "preprocessing_hashes": {
+    "FINAL_SOURCE_PREPROCESSING_MEAN_FLOAT64.npy": "a8054ebeb3ab6559d49220e530f7ef03996bd1598b070a3907cf390658baca52",
+    "FINAL_SOURCE_PREPROCESSING_SCALE_FLOAT64.npy": "8709fd10263b60d3384e6b5b198e27314d8aefa85eb49b9c4c3ae0ccd1e9cecb"
+  },
+  "query_folds": {
+    "0": [
+      "E0xS0",
+      "E1xS1",
+      "E2xS2"
+    ],
+    "1": [
+      "E0xS1",
+      "E1xS2",
+      "E2xS0"
+    ],
+    "2": [
+      "E0xS2",
+      "E1xS0",
+      "E2xS1"
+    ]
+  },
+  "runtime": {
+    "compute_platform": "cpu",
+    "environment_id": "CRFID_STRICT_DG_WINDOWS_CPU_V1",
+    "numpy_version": "2.4.6",
+    "python_executable_sha256": "5912d0884b23c0343983a864c6064242391e2265536f50b88624857e353882c9",
+    "python_version": "3.12.13",
+    "torch_version": "2.12.0+cpu"
+  },
+  "source_seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "support_seeds": [
+    104729,
+    130363,
+    155921,
+    181081,
+    205439,
+    230003,
+    254959,
+    280001,
+    305093,
+    330017,
+    355031,
+    380041,
+    405019,
+    430007,
+    455003,
+    480017,
+    505027,
+    530017,
+    555029,
+    580031
+  ],
+  "zero_anchor": "FS0_FROZEN_SOURCE_HEAD"
+}

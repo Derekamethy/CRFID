@@ -1,0 +1,42 @@
+{
+  "final_epochs_by_seed": {
+    "42": 11,
+    "43": 14,
+    "44": 8,
+    "45": 8,
+    "46": 6
+  },
+  "fold_epoch_evidence": {
+    "42": {
+      "S1": 6,
+      "S2": 13,
+      "S3": 11
+    },
+    "43": {
+      "S1": 16,
+      "S2": 10,
+      "S3": 14
+    },
+    "44": {
+      "S1": 17,
+      "S2": 8,
+      "S3": 8
+    },
+    "45": {
+      "S1": 8,
+      "S2": 14,
+      "S3": 2
+    },
+    "46": {
+      "S1": 2,
+      "S2": 7,
+      "S3": 6
+    }
+  },
+  "identical_across_arms": true,
+  "p4_used": false,
+  "rule": "deterministic_median_of_three_selected_A2_fold_epochs_per_seed",
+  "schema_version": 1,
+  "selected_lambda": 0.1,
+  "status": "PASS_SOURCE_ONLY_FINAL_EPOCH_FREEZE"
+}

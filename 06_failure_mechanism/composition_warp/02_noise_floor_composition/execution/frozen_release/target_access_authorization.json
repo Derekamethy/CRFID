@@ -1,0 +1,19 @@
+{
+  "all_checkpoint_reloads_verified": true,
+  "authorization_sha256": "94a8cc5546f4ab53888575eef146cbdad881f8d083ea19313171395a19e8f904",
+  "authorized": true,
+  "authorized_at_utc": "2026-07-29T15:47:17.380810+00:00",
+  "checkpoint_count": 5,
+  "preprocessing_state_sha256": "b9c8af175e9501b2073a73957ca472f856fdb8068803c4d8e3d7934c2cf63407",
+  "prohibited_actions": [
+    "training_on_target",
+    "optimizer_step_on_target",
+    "target_normalization_refit",
+    "recipe_change",
+    "seed_selection"
+  ],
+  "recipe_sha256": "2bb6f07bcb64e6d3aa08ea293076085d66e1829d79727cd33ca714036dc62ff0",
+  "schema_version": 1,
+  "scope": "composition_warp_single_held_out_p4_evaluation",
+  "target_access_before_authorization": false
+}
